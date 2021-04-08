@@ -1,0 +1,38 @@
+<section class="pfmf-grid pfmf-grid__50_50" data-caro-auto-click="true">
+    <div>
+            
+        <article class="js-art__caro h-ds__none">
+            <section class="l-caro-design__cnt h-bg__stripe"
+            data-caro-src="256">
+           {{ range .Site.Pages }}
+                {{ if (eq .File.Dir "patterns/" ) }}
+                <div class="l-blog-crd caro-target__js">
+                    <section>
+                        <picture>
+                            <!--  1280 X 720  -->
+                            <img src="/patterns/{{.Page.Slug}}_tn.webp" alt="{{.Page.Title}}">
+                        </picture>
+                        <!-- {{.Title}} | {{.File.Dir}} -->
+                        <h5> {{.Page.Title}} </h5>
+                        <h6 class="h-smaller"> {{.Page.Summary}} </h6>
+                        <output class="h-ds__none"> {{.Content}} </output>
+                        <p>{{.Date.Format "2006-01-02"}}</p>
+                    </section>
+                </div>
+                {{end}}
+            {{ end }}
+            </section>
+        </article>
+
+    </div>
+    <div>
+
+        <article class="pfmf-crd--black h-center"><p class="js-patterns__caption readable__doc readable__doc--white"
+            >Real-world Vetted Snippets</p></article>
+        <article class="h-bg__stripe"><output
+            data-caro-target="256">
+
+        </output>
+        </article>
+    </div>
+</section>

@@ -1,0 +1,67 @@
+<section class="pfmf-grid pfmf-grid--hero pfmf-grid__100">
+    <div>
+        <article class="pfmf-grid__artc--clear QQQpfmf-grid__artc--hero">
+
+            <section class="pfmf-grid pfmf-grid--hero pfmf-grid__25_25_25_25" >
+                <div></div>
+                <div>
+                    <article class="pfmf-grid__artc--clear">
+                        <p class="lgo-para">
+                            <div class="main-lgo">
+                            <span class="js-lgo-para__left  font_fam4"
+                            data-font-hold="font_fam4" style="color: #54645E;">mach</span>
+                            <span class="js-lgo-para__right font_fam8"
+                            data-font-hold="font_fam8" style="color: #EE7768;">five</span>
+                            </div>
+                        </p>
+                    </article>
+                </div>
+                <div>
+                    <article class="pfmf-grid__artc--clear">
+                        <div class="h-left">
+                            <h6 class="tagline font_fam3">Digital Marketing That Cuts Through the Noise<h6>
+                        </div>
+                    </article>
+                </div>
+                <div></div>
+            </section>
+
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100" >
+
+    <div>
+        <article class="pfmf-grid__artc--clear h-center">
+            <p class="readable__caption">A creative blend of business perspective and technical innovation.</p>
+            <p class="readable__caption">Our work helps both large and small companies find new customers in a more effective manner.</p>
+            <p class="readable__caption">We envision, manage, design, and <b style="color: #EE7768;">deliver.</b></p>
+        </article>
+    </div>
+   
+</section>
+
+<script>
+    "use strict";
+    var aMVLgo = [[4,8],[7,9],[13,19],[15,6],[21,20]];
+    var _d = document;
+    var eL = _d.querySelector(".js-lgo-para__left");
+    var eR = _d.querySelector(".js-lgo-para__right");
+    setInterval(function(){
+        var nL = Math.floor(Math.random() * 4);
+        nL = aMVLgo[ nL ][0];
+        var sPrv = eL.dataset.fontHold;
+        eL.classList.remove( sPrv );
+        eL.classList.add( "font_fam" + nL );
+        eL.dataset.fontHold = "font_fam" + nL;
+    }, 2200);
+    setInterval(function(){
+        var nR = Math.floor(Math.random() * 4);
+        nR = aMVLgo[ nR ][1];        
+        var sPrv = eR.dataset.fontHold;
+        eR.classList.remove( sPrv );
+        eR.classList.add( "font_fam" + nR );
+        eR.dataset.fontHold = "font_fam" + nR;
+    }, 1000);
+</script>

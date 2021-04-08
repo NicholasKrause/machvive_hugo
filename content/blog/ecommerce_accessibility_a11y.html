@@ -1,0 +1,233 @@
+---
+title: "eCommerce Accessibility A11y"
+date: 2020-12-07T20:26:54-06:00
+draft: false
+summary: "Accessibility Challenges Unique to eCommerce"
+description: I have experience making large eCommerce sites accessible. I’ve authored style guides and best practices.
+slug: ecommerce-accessibility-a11y
+categories:
+- A11y
+- eCom
+- UX
+tags:
+- WCAG
+- 508
+- ARIA
+- JavaScript
+---
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>Website accessibility design and development can be both challenging and rewarding. However eCommerce properties by their very nature present an extreme set of challenges and rewards. Focusing on the positive; Improved accessibility can indeed lead to greater online sales. Building a better experience for a greater number of people cannot be bad for the bottom line. Unfortunately the negative side of that coin is that popular eCom sites are often targets of predatory troll litigation. For an eCom front-end developer accessibility has become an extreme sport with real consequences. We’ve had to redefine success, rethink our tool chain, and go back to HTML 101.</p>
+            <p class="h_quote">Accessibility is not so much a destination as it is a journey. It's a cyclical process of constant improvement and re-evaluation.</p>
+            <p>I have experience making large eCommerce sites accessible. I’ve authored a11y pattern guides, automated tests, and best practices that have helped disparate teams achieve WCAG / 508 success criteria. In this article I present tips and tools for achieving eCom accessibility nirvana.</p>
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__70_30 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>In order for improvements to stand the test of time, there must be a company culture that supports accessibility and be willing to make it a requirement even when faced with competing priorities. For example, imagine explaining to an art director that the brand colors cannot be perceived by the color-blind. Imagine telling an SEO consultant that there are too many characters in an alt attribute. These can be awkward conversations if a11y is not prioritized within the organization.</p>
+            <p class="h_quote">Every tier of management must embrace the “engage everyone” mantra because it’s simply too easy to justify cutting corners. The website is not successful until it is accessible.</p>
+            <p>Large eCom sites are particularly challenging because they are always changing. Product information and imagery are managed within a CMS, therefore, there is always a risk of newly-added content being inaccessible. Ideally this situation would be addressed with a cyclical audit. That is a web crawler that captures a11y issues throughout the entire site. Similarly an a11y audit could run as part of automated unit testing upon software build or check in.</p>
+            <p>Finding a11y issues during development is preferred but keep in mind the developers will require more time to become proficient in this discipline and the project estimates should reflect that.</p>
+        </article>
+    </div>
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Color Best Practice|Contrast Ratio|Chrome Dev Tools">Color Contrast</p></article>
+        <article class="h-bg__stripe h-left">
+            <img src="../ecommerce-accessibility-a11y_1.webp" alt="Chrome Dev Tools"
+            style="display:block;width: 66%;margin: 10px auto;">
+            <details >
+               <summary  data-wired4sound="click|4"  class="h-pro-tip">Pro ⚡ Tips</summary>
+                    <p>💡 If you do not see this dialog in Chrome dev tools try swapping the foreground and background colors.</p>
+            </details>
+        </article>       
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p class="text-coy_2001">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - <span class="h_ital">Succinct communication</span>. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>The most significant technical challenges for eCom sites involve interaction complexity. Micro-interaction components such as <a class="h-link" target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria-practices/#carousel">carousels</a>, mini shopping carts, pinch zoom, and promotional popup dialogs are transitional and difficult to describe to the visually impaired. The fact that these interactions are actuated with JavaScript makes it impractical to test automatically. I’ve found the best way to find and fix these types of interactions is with a screen reader and then applying state-full <a class="h-link" target="_blank" rel="noopener" href="https://inclusive-components.design/">ARIA patterns</a> attributes as needed.</p>
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Quick A11y Audit|Basic Audit">Manual Audit</p></article>
+        <article style="padding: 12px 12px;">
+            <p>Here I describe a basic 10 minute audit that you can perform just to get a feeling for how accessible a page is. <a class="h-link" target="_blank" rel="noopener" href="https://www.a11yproject.com/checklist/">Common issues</a> should be apparent when answering these questions:</p>
+            <ol>
+                <li><p>Is there a Skip to Main Content Link from the omnibox?</p></li>
+                <li><p>Can a shopper navigate with the tab key and are the focus styles visible?</p>
+                    <details >
+                       <summary  data-wired4sound="click|4"  class="h-pro-tip">Pro ⚡ Tips</summary>
+                            <p>Generally, do not use a tab index value greater than 0. Use tabindex="0" on an A element that does not have an HREF.</p>
+
+{{< highlight JavaScript >}}
+//  Run in browser console or save as a browser snippet.
+//  Remove ALL tabIndex on the entire page - That is a fun thing to do.  ES5
+//  From the entire document remove tabIndex if its value is greater than 0
+[].slice.call( document.querySelectorAll("[tabIndex]") ).filter(function(el){ // Neodigm 2020
+    console.log("-- | " + el.tabIndex );
+    if(  el.tabIndex >= 1 ){
+        el.tabIndex = "";
+    }
+}); 
+// From the entire document add a tabIndex="0" attrib if an A has no href
+[].slice.call( document.querySelectorAll("A") ).filter(function(el){ 
+    //console.log("== | " + el.tabIndex, el.href );
+    if( !el.href ){
+        el.tabIndex = 0;
+    }
+}); 
+{{< /highlight >}}
+                        <p>💡 Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
+{{< highlight javascript >}}
+document.activeElement
+{{< /highlight >}}
+                        <p>💡 When debugging keyboard access issues in Chrome make sure that the DevTools panel is disconnected from the browser. If it is connected it shares the tab order with the document you are viewing. This makes it difficult to test issues related to "Skip to Main Content".</p>
+                    </details>
+                </li>
+                <li><p>Is there off-screen content that receives the focus?</p></li>
+                <li><p>Can a shopper search, filter, and add to cart with a screen reader?</p></li>
+                <li><p>Do landmark elements / roles represent the document’s information hierarchy?</p></li>
+                <li><p>Is the document's accessibility tree well formed (chrome://accessibility/)?</p></li>
+                
+            </ol>
+        </article>
+    </div>
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Chrome A11y Tools|Browser A11y Tests">Chrome Extensions</p></article>
+        <article style="padding: 12px 12px;">
+            <p>There are some pretty good Chrome extensions that will give you an actionable audit without many false-positives:</p>
+            <ol>
+                <li><p>Google Lighthouse — I use Lighthouse at least daily to get a feel for not only a11y but performance as well.</p></li>
+                <li><p>Wave — This is the WebAIM extension. What I like most about this is its ability to show you the exact line that has the issue.</p></li>
+                <li><p>aXe — Becoming my new fav, this extension exists solely in the developer tools panel. The results are very in-depth. They also offer a command line version that can be hooked into your CI build script.</p>
+                    <details >
+                       <summary  data-wired4sound="click|4"  class="h-pro-tip">Pro ⚡ Tips</summary>
+                            <p>Install aXe CLI</p>
+{{< highlight javascript >}}
+npm i @axe-core/cli
+{{< /highlight >}}
+<p>💡 You can then run the A11Y audit from within VSCode terminal or automate via Gulp watch / Github Actions.</p>
+                    </details>                    
+                </li>
+            </ol>
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Passive Navigation|Circular Tab Focus">JavaScript Keyboard Trap</p></article>
+        <article style="padding: 12px 12px;">
+            <p>Keyboard Trap POC snippet - Prevent the user from tabbing outside of a modal dialog.</p>
+            <details  open="true">
+               <summary  data-wired4sound="click|4" >Circular Keyboard Trap</summary>
+{{< highlight JavaScript >}}
+a55_reveal.aRevAct[i].setAttribute("aria-haspopup", "dialog");
+a55_reveal.aRevAct[i].setAttribute("aria-controls", sDialogId);
+if( !oIDs[ sDialogId ]){ // A11y update the dialog (inert content) only once
+  var eDialog = document.getElementById( sDialogId );
+  if( eDialog ){
+    eDialog.tabIndex = -1;
+    eDialog.setAttribute("role", "dialog");
+    eDialog.setAttribute("aria-modal", "true");
+    window.addEventListener("focus", function(ev){
+        if( a55_reveal.isOpen && (typeof ev.target != "undefined") ){
+          var eTarget = ev.target, bInside = false;
+          if(typeof eTarget.tagName != "undefined"){
+            while( eTarget.tagName !== "HTML" ){ 
+                //  Tab within modal dialog
+                if( eTarget.tagName == "A55-REVEAL" ){
+                  bInside = true; break;
+                }
+              eTarget = eTarget.parentNode;
+            }                    
+          }
+          if( !bInside ){
+            a55_reveal.doFocus();
+            ev.preventDefault(); ev.stopPropagation();
+          }                  
+        }
+      }, true);
+    }
+  oIDs[ sDialogId ] = true;
+}
+{{< /highlight >}}
+            </details>
+        </article>
+    </div>
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="CSS Skip to Content|Tab to Conent Link">Skip to Main Content</p></article>
+        <article style="padding: 12px 12px;">
+            <p>Skip to Main Content - CSS Focus rules that make the link visible when focused from the omnibox.</p>
+            <details  open="true">
+               <summary  data-wired4sound="click|4" >CSS Only Solution - Markup</summary>
+{{< highlight HTML >}}
+<a class="js-skip__main--id skip__main"
+href="#ltdc-skipmain">Skip to Main Content</a>
+{{< /highlight >}}
+                </summary>
+            </details>
+            <details  open="true">
+               <summary  data-wired4sound="click|4" >CSS Only Solution</summary>
+{{< highlight CSS >}}
+a.skip__main:active, a.skip__main:focus {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1em;
+    height: auto; width: 16%;
+    left: auto;
+    margin: 8px 42%;
+    overflow: auto;
+    padding: 4px;
+    text-align: center;
+    top: auto;
+    z-index: 1024;
+}
+a.skip__main {
+    left: -1024px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px; height: 1px;
+    z-index: -1024;
+}
+{{< /highlight >}}
+                </summary>
+            </detail>
+        </article>
+    </div>
+
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>Achieving accessibility nirvana is not easy for an eCommerce site. If you are uninspired, try to think of it in terms of exposing your business to a new group of shoppers who would have trouble shopping at your competitor’s site.</p>
+            <p>Thanks for reading!</p>
+        </article>
+    </div>
+</section>
