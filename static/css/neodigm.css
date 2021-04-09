@@ -317,6 +317,11 @@ section.pfmf-grid > div > article {
 section.pfmf-grid > div > article.pfmf-crd--black {
     background-color: #000;
 }
+
+section.pfmf-grid > div > article.pfmf-crd--gray {
+    background-color: #54645E !important;
+}
+
 section.pfmf-grid > div > article.pfmf-grid__artc--clear {
     border: none;
     border-radius: 0;
@@ -581,7 +586,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     margin: 8px;
 }
 .tiers-artc li .material-icons{
-    color: #9B1B30;
+    color: #EE7768;
     margin-right: 6px;
 }
 .tiers-artc li.tier__off, .tiers-artc li.tier__off .material-icons {
@@ -599,8 +604,8 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     width: 38%;
 }
 .tiers-artc output:hover{
-    border: solid 3px #9B1B30;
-    color: #9B1B30;
+    border: solid 3px #EE7768;
+    color: #EE7768;
 }
 /* Tiers Partial | Features End */
 
