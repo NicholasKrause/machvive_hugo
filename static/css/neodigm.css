@@ -304,6 +304,10 @@ section.pfmf-grid__30_70  { grid-template-columns: 100%; }
 section.pfmf-grid__100    { grid-template-columns: 100%; }
 section.pfmf-grid__33_33_33  { grid-template-columns: 100%; }
 
+.pfmf-bg-white {
+    background-color: #ffffff;
+}
+
 
 section.pfmf-grid > div > article {
     margin: 6px 4px;
