@@ -916,3 +916,10 @@ a.skip__main {
 
 body { background: #DCE2DF;}
 .main-lgo { color: #50655e; }
+
+/* Paralax stuff begin */
+.space-planet {
+    height: 176px; width: 176px;
+    user-select: none;
+}
+/* Paralax stuff end */

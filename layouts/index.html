@@ -2,6 +2,8 @@
 Comment here
 
 -->
+{{ partial "pfmf_script.html" . }}
+
 {{ partial "head.html" . }}
     <body>
         <main id="a11y-skipmain" role="main">
@@ -15,10 +17,6 @@ Comment here
             {{ partial "part_auditing.html" . }}
             {{ partial "part_final_cta.html" . }}
             {{ partial "carousel_knowledge_garden.html" . }}
-
-        
-            {{ partial "pfmf_script.html" . }}
-
         </main>
 {{ partial "part_footer.html" . }}
 {{ partial "jsonld_self.html" . }}
