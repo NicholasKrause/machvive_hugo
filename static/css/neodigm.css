@@ -284,6 +284,14 @@ section.pfmf-grid {
     box-sizing: border-box;
     width: 86%;
 }
+section.pfmf-grid--parax {
+    display: grid;
+    grid-area: box-content;
+    margin: 0 -8;
+    align-content: center;  
+    box-sizing: border-box;
+    width: 100%;
+}
 section.pfmf-grid--hero {
     width: 100%;
 }
@@ -335,19 +343,26 @@ section.pfmf-grid > div > article.pfmf-grid__artc--clear {
 section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     margin: 2px -8px -32px;
     background-color: rgba(255, 255, 255, 0);
-   /*  background-image: url("..//emailreplytimeparallax-02.png");
-    background-position:inherit; */
-    
-   background-image: linear-gradient(
-        to bottom,
+    background-image: linear-gradient(
+    to bottom,
         rgba(155, 27, 48, 1),
         rgba(155, 27, 48, 1),
         rgba(155, 27, 48, 0.984),
         rgba(155, 27, 48, 0.884),
         rgba(155, 27, 48, 0)
-       
-     );
-    
+    );
+}
+
+section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
+    margin: 0 -8px 0;
+    background-color: #000;
+    height: 512px;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    overflow: hidden;
 }
 
 .ggl-btn {
@@ -612,27 +627,6 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     color: #EE7768;
 }
 /* Tiers Partial | Features End */
-
-/* Parallax Partial Begin */
-
-.cd-fixed-bg {
-    position: relative;
-    z-index: 1;
-    min-height: 64%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: linear-gradient(
-        to bottom,
-        rgba(155, 27, 48, 1),
-        rgba(155, 27, 48, 1),
-        rgba(155, 27, 48, 0.984),
-        rgba(155, 27, 48, 0.884),
-        rgba(155, 27, 48, 0)
-     );
-}
-
-/* Parallax Partial End */
 
 /* type type type, and type begin */
 .readable__doc {
@@ -918,8 +912,9 @@ body { background: #DCE2DF;}
 .main-lgo { color: #50655e; }
 
 /* Paralax stuff begin */
-.space-planet {
-    height: 176px; width: 176px;
-    user-select: none;
+.space-sky {
+    height: 1024; width: 101%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 60%, rgba(42,40,117,1) 100%);
 }
 /* Paralax stuff end */
