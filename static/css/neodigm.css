@@ -284,14 +284,6 @@ section.pfmf-grid {
     box-sizing: border-box;
     width: 86%;
 }
-section.pfmf-grid--parax {
-    display: grid;
-    grid-area: box-content;
-    margin: 0 -8;
-    align-content: center;  
-    box-sizing: border-box;
-    width: 100%;
-}
 section.pfmf-grid--hero {
     width: 100%;
 }
@@ -351,18 +343,6 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
         rgba(155, 27, 48, 0.884),
         rgba(155, 27, 48, 0)
     );
-}
-
-section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
-    margin: 0 -8px 0;
-    background-color: #000;
-    height: 512px;
-
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-
-    overflow: hidden;
 }
 
 .ggl-btn {
@@ -912,9 +892,37 @@ body { background: #DCE2DF;}
 .main-lgo { color: #50655e; }
 
 /* Paralax stuff begin */
+section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
+    margin: 0 -8px 0;
+    background-color: #0F4C81;
+    height: 512px;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    overflow: hidden;
+}
+
+section.pfmf-grid--parax {
+    display: grid;
+    grid-area: box-content;
+    margin: 0 -8;
+    align-content: center;  
+    box-sizing: border-box;
+    width: 100%;
+}
 .space-sky {
-    height: 1024; width: 101%;
+    position: relative;
+    height: 1024px; width: 101%;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 60%, rgba(42,40,117,1) 100%);
+    background: linear-gradient(0deg, #FFFFFF 36%, #0F4C81 100%);
+    z-index: 16;
+}
+.space-text {
+    position: relative;
+    margin: 400px 33% 4px 33%;
+    height: 512px; width: 50%;
+    z-index: 32;
 }
 /* Paralax stuff end */
