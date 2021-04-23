@@ -20,22 +20,22 @@
     gsap.timeline({
             scrollTrigger: {
                 trigger: ".js-space__1",
-                toggleActions: 'restart reverse restart reverse',
+                toggleActions: 'restart restart restart restart',
                 // onEnter  onLeave  onEnterback  onLeaveback
                 // play none restart reverse resume
-                start: "top 60%", end: "top 20%",
-                QQQmarkers: true,
-                QQQscrub: true
+                start: "top 76%", end: "top 18%",
+                markers: true,
+                scrub: true
             }
-    }).to(".js-space-sky", 2, {
-        y: -994, ease:Power3.easeOut, position: "+=3"
+    }).to(".js-space-sky", 1, {
+        y: -994, ease:Power3.easeOut
     }).to(".js-space-stars", 2, {
         scale: 1.6,
-        y: -494, ease:Power3.easeOut, position: "-=6"
+        y: -494, ease:Power3.easeOut, position: "-=3"
     }).to(".js-space-dunes", 4, {
         y: -284, ease:Power3.easeOut, position: "-=4"
     }).to(".js-space-banner", 4, {
-        y: 390, ease:Power3.easeOut, position: "+=6"
+        y: 390, ease:Power3.easeOut, position: "-=6"
     })
 </script>
 <style>
