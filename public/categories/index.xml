@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Scott C. Krause 🚀 neodigm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Mar 2021 18:24:48 -0600</lastBuildDate><atom:link href="https://thescottkrause.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Mar 2021 22:39:33 -0500</lastBuildDate><atom:link href="https://thescottkrause.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Main</title>
+      <link>https://thescottkrause.com/categories/main/</link>
+      <pubDate>Thu, 18 Mar 2021 22:39:33 -0500</pubDate>
+      
+      <guid>https://thescottkrause.com/categories/main/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Legal</title>
       <link>https://thescottkrause.com/categories/legal/</link>
@@ -17,56 +26,29 @@
     </item>
     
     <item>
-      <title>Dashboard</title>
-      <link>https://thescottkrause.com/categories/dashboard/</link>
-      <pubDate>Sat, 27 Feb 2021 19:56:40 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/dashboard/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data</title>
-      <link>https://thescottkrause.com/categories/data/</link>
-      <pubDate>Sat, 27 Feb 2021 19:56:40 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DataViz</title>
-      <link>https://thescottkrause.com/categories/dataviz/</link>
+      <title>Blog</title>
+      <link>https://thescottkrause.com/categories/blog/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/dataviz/</guid>
+      <guid>https://thescottkrause.com/categories/blog/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Force-Directed Layout</title>
-      <link>https://thescottkrause.com/categories/force-directed-layout/</link>
+      <title>Email Analytics</title>
+      <link>https://thescottkrause.com/categories/email-analytics/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/force-directed-layout/</guid>
+      <guid>https://thescottkrause.com/categories/email-analytics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Skills</title>
-      <link>https://thescottkrause.com/categories/skills/</link>
+      <title>Email Tech</title>
+      <link>https://thescottkrause.com/categories/email-tech/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/skills/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Visualization</title>
-      <link>https://thescottkrause.com/categories/visualization/</link>
-      <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/visualization/</guid>
+      <guid>https://thescottkrause.com/categories/email-tech/</guid>
       <description></description>
     </item>
     
@@ -103,78 +85,6 @@
       <pubDate>Tue, 29 Dec 2020 11:11:27 -0600</pubDate>
       
       <guid>https://thescottkrause.com/categories/ux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DOM</title>
-      <link>https://thescottkrause.com/categories/dom/</link>
-      <pubDate>Mon, 21 Dec 2020 16:52:19 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/dom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Media Query</title>
-      <link>https://thescottkrause.com/categories/media-query/</link>
-      <pubDate>Sat, 19 Dec 2020 12:05:26 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/media-query/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>User Peference</title>
-      <link>https://thescottkrause.com/categories/user-peference/</link>
-      <pubDate>Sat, 19 Dec 2020 12:05:26 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/user-peference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design System</title>
-      <link>https://thescottkrause.com/categories/design-system/</link>
-      <pubDate>Wed, 16 Dec 2020 21:12:06 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/design-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Microinteraction</title>
-      <link>https://thescottkrause.com/categories/microinteraction/</link>
-      <pubDate>Wed, 16 Dec 2020 21:12:06 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/microinteraction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>UI Components</title>
-      <link>https://thescottkrause.com/categories/ui-components/</link>
-      <pubDate>Wed, 16 Dec 2020 21:12:06 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/ui-components/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GEOLOCATION</title>
-      <link>https://thescottkrause.com/categories/geolocation/</link>
-      <pubDate>Sun, 13 Dec 2020 22:17:37 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/geolocation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NGS</title>
-      <link>https://thescottkrause.com/categories/ngs/</link>
-      <pubDate>Sun, 13 Dec 2020 22:17:37 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/ngs/</guid>
       <description></description>
     </item>
     
