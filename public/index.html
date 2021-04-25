@@ -791,8 +791,9 @@ if( e3 ) {
         y: -160, ease:Power3.easeOut, position: "-=2"
     }).to(".js-space-shuttle", 4, {
         y: -700, ease:Power3.easeOut, position: "-=2"
-    }).fromTo(".js-space-banner", 4, {
-        scale: 4.08, ease:Power3.easeOut, position: "-=2"
+    }).to(".js-space-banner", 4, {
+        scale: 1.08,
+        y: 350, ease:Power3.easeOut, position: "-=2"
     })
     
 </script>
