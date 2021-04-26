@@ -765,7 +765,6 @@ if( e3 ) {
         </article>
 <script>
     gsap.registerPlugin(ScrollTrigger);
-    
     gsap.timeline({
             scrollTrigger: {
                 trigger: ".js-space__1",
@@ -793,6 +792,7 @@ if( e3 ) {
         y: -718, ease:Power3.easeOut, position: "-=2"
     }).to(".js-space-stars", 4, {scale: 2.1, rotation: 32})
 </script>
+
 <style>
  
 section.pfmf-grid--parax {
@@ -812,12 +812,11 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     box-shadow: none;
     overflow: hidden;
 }
-
 .space-sky {
     position: relative;
     height: 1024px; width: 101%;
-    background: #DCE2DF;
-    background: radial-gradient(circle farthest-side, #DCE2DF, #1E3145);
+    QQQbackground: #DCE2DF;
+    background: radial-gradient(circle farthest-side, #DCE2DF 2%, #1E3145 60%);
     z-index: 16;
 }
 .js-space-stars {
@@ -848,7 +847,6 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     stroke: #DCE2DF;
     z-index: 76;
 }
-
  
 </style>
     </div>
