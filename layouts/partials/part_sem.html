@@ -25,26 +25,26 @@
                 toggleActions: 'restart restart restart restart',
                 // onEnter  onLeave  onEnterback  onLeaveback
                 // play none restart reverse resume
-                start: "top 86%", end: "top 10%",
+                start: "top 76%", end: "top 10%",
                 QQQQmarkers: true,
                 scrub: true
             }
     }).to(".js-space-sky", 4, {
         y: -1184, ease:Power3.easeOut
-    }).to(".js-space-stars", 4, {
+    }, "-=2.4").to(".js-space-stars", 4, {
         scale: 1.6,
-        y: -490, ease:Power3.easeOut, position: "-=2"
-    }).to(".js-space-dunes", 4, {
+        y: -490, ease:Power3.easeOut
+    }, "-=2.4").to(".js-space-dunes", 4, {
         scale: 1.08,
-        y: -210, ease:Power3.easeOut, position: "-=2"
-    }).to(".js-space-banner", 4, {
-        y: 370, ease:Power3.easeOut, position: "-=2"
-    }).to(".js-space-dunes", 4, {
+        y: -210, ease:Power3.easeOut
+    }, "-=2.4").to(".js-space-banner", 4, {
+        y: 370, ease:Power3.easeOut
+    }, "-=2.4").to(".js-space-dunes", 4, {
         scale: 1.3,
-        y: -132, ease:Power3.easeOut, position: "-=2"
-    }).to(".js-space-shuttle", 4, {
-        y: -718, ease:Power3.easeOut, position: "-=2"
-    }).to(".js-space-stars", 4, {scale: 2.1, rotation: 32})
+        y: -132, ease:Power3.easeOut
+    }, "-=2.4").to(".js-space-shuttle", 4, {
+        y: -718, ease:Power3.easeOut
+    }, "-=6").to(".js-space-stars", 4, {scale: 2.1, rotation: 32})
 </script>
 
 <style>
