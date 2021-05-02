@@ -835,17 +835,20 @@ a.skip__main {
     background-color: #edba08;
 }
 .c2a-mvm {
+    cursor: pointer;
     font-family: 'Exo 2', sans-serif;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1;
-    width: 88%;
+    width: 34%;
     border-radius: 6px;
-    background: linear-gradient(#a94300,#892300);
-    font-size: 19px;
-    margin: 6px auto;
-    padding: 8px;
-    color: #e6dd91;
+    background: linear-gradient(#DE6758,#EE7768);
+    margin: 16px auto; padding: 6px 8px 10px 8px;
+    color: #fff;
     border: 0;
+}
+
+.c2a-mvm:hover {
+    background: linear-gradient(#EE7768,#DE6758);
 }
 
 .l-term-type-cont {
