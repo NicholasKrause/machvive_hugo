@@ -834,7 +834,7 @@ a.skip__main {
     padding: 8px; margin: 8px;
     background-color: #edba08;
 }
-.c2a-mvm {
+.c2a-mfm {
     cursor: pointer;
     font-family: 'Exo 2', sans-serif;
     font-size: 21px;
@@ -842,12 +842,12 @@ a.skip__main {
     width: 34%;
     border-radius: 6px;
     background: linear-gradient(#DE6758,#EE7768);
-    margin: 16px auto; padding: 6px 8px 10px 8px;
+    margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
     border: 0;
 }
 
-.c2a-mvm:hover {
+.c2a-mfm:hover {
     background: linear-gradient(#EE7768,#DE6758);
 }
 
