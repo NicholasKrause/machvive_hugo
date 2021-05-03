@@ -324,6 +324,7 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 
 section.pfmf-grid > div > article.pfmf-crd--gray {
     background-color: #54645E !important;
+    width: 100%;
 }
 
 section.pfmf-grid > div > article.pfmf-grid__artc--clear {
