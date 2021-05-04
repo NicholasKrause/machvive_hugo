@@ -4,13 +4,41 @@
         <article class="pfmf-grid__artc--clear h-center">
             <p class="lgo-para">
                 <div class="main-lgo">
-                <span class="js-lgo-para__left  font_fam4"
+                <span class="js-lgo-para__left font_fam4"
                 data-font-hold="font_fam4" style="color: #54645E;">mach</span>
                 <span class="js-lgo-para__right font_fam8"
-                data-font-hold="font_fam8" style="color: #EE7768;">five</span>
-                </div>
+                data-font-hold="font_fam8" style="color: #EE7768;">five</span>    
+            </div>
             </p>
+            
             <button class="js-cta__contact c2a-mfm">Let's Chat</button>  
         </article>
     </div>
 </section>
+
+
+
+
+<script>
+    "use strict";
+    var aMVLgo = [[4,8],[7,9],[13,19],[15,6],[21,20]];
+    var _d = document;
+    var eL = _d.querySelector(".js-lgo-para__left");
+    var eR = _d.querySelector(".js-lgo-para__right");
+    setInterval(function(){
+        var nL = Math.floor(Math.random() * 4);
+        nL = aMVLgo[ nL ][0];
+        var sPrv = eL.dataset.fontHold;
+        eL.classList.remove( sPrv );
+        eL.classList.add( "font_fam" + nL );
+        eL.dataset.fontHold = "font_fam" + nL;
+    }, 2200);
+    setInterval(function(){
+        var nR = Math.floor(Math.random() * 4);
+        nR = aMVLgo[ nR ][1];        
+        var sPrv = eR.dataset.fontHold;
+        eR.classList.remove( sPrv );
+        eR.classList.add( "font_fam" + nR );
+        eR.dataset.fontHold = "font_fam" + nR;
+    }, 1000);
+</script>

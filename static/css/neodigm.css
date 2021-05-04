@@ -841,6 +841,7 @@ a.skip__main {
     font-size: 21px;
     line-height: 1;
     width: 34%;
+    max-width: 280px;
     border-radius: 6px;
     background: linear-gradient(#DE6758,#EE7768);
     margin: 16px auto; padding: 12px 8px 20px 8px;
