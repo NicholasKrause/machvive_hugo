@@ -1,3 +1,9 @@
+body { background: #DCE2DF;
+        margin: 0;
+
+}
+.brand-text { color: #50655e; }
+
 :root {
     --wp-dark-mode-bg: #1b2836;
     --wp-dark-mode-text: #fff;
@@ -68,6 +74,24 @@ div.caro-target__js:not(.h--select) {
 }
 
 /*  Logo Text End */
+
+/* Hero Caption Begin */
+
+.hero-caption {
+    position: absolute;
+    top: 100;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    text-align: center;
+    margin: 4px;
+    padding: 4px;
+    color: #fff;
+    user-select: none;
+}
+
+/* Hero Caption End */
 
 /*  Branded Font Type Begin */
 
@@ -143,9 +167,43 @@ div.caro-target__js:not(.h--select) {
 .l-capt__vect img {width: 42px;}
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
     .l-capt__vect img {width: 66px;}
+    /* Hero Caption Begin */
+
+.hero-caption {
+    position: absolute;
+    top: 100;
+    width: 100%;
+    font-size: 28px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    text-align: center;
+    margin: 1px;
+    padding: 1px;
+    color: #fff;
+    user-select: none;
+}
+
+/* Hero Caption End */
 }
 @media only screen and (min-width:62.1em){/* lg */
     .l-capt__vect img {width: 88px;}
+    /* Hero Caption Begin */
+
+.hero-caption {
+    position: absolute;
+    top: 100;
+    width: 100%;
+    font-size: 28px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    text-align: center;
+    margin: 1px;
+    padding: 1px;
+    color: #fff;
+    user-select: none;
+}
+
+/* Hero Caption End */
 }
 /* Caption Vivid Vect end */
 
@@ -812,12 +870,20 @@ a.skip__main {
     font-size: 24px;
     user-select: none;
 }
-.main-lgo {
+.brand-text {
     font-size: 58px;
     text-align: center;
     user-select: none;
     line-height: 1;
 }
+
+.main-lgo
+{
+    margin-top: -98px;
+    position: relative;
+    z-index: 3200;
+}
+
 .l-contact-us {
     position: fixed;
     bottom: 1px;
@@ -952,7 +1018,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 @media only screen and (max-width:48em)
 {
 /* small */
-    .main-lgo {
+    .brand-text {
         font-size: 48px;
     }
 }
@@ -968,5 +1034,3 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 
 }
 
-body { background: #DCE2DF;}
-.main-lgo { color: #50655e; }
