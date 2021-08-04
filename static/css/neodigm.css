@@ -80,7 +80,7 @@ div.caro-target__js:not(.h--select) {
     position: absolute;
     top: 100;
     width: 100%;
-    font-size: 14px;
+    font-size: 24px;
     font-family: 'Comfortaa', cursive;
     font-weight: 300;
     text-align: center;
@@ -172,7 +172,7 @@ div.caro-target__js:not(.h--select) {
 @media only screen and (min-width:62.1em){/* lg */
     .l-capt__vect img {width: 88px;}
     /* Hero Caption Begin */
-    .hero-caption { font-size: 28px; }
+    .hero-caption { font-size: 48px; }
     /* Hero Caption End */
 }
 /* Caption Vivid Vect end */
@@ -351,7 +351,7 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 }
 
 section.pfmf-grid > div > article.pfmf-crd--gray {
-    background-color: #54645E !important;
+    background-color: #213042 !important;
     width: 100%;
 }
 
@@ -384,7 +384,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     font-size: 16px; font-weight: 500;
     line-height: 44px;
     letter-spacing: .21px;
-    background-color: #EE7768;
+    background-color: #213042;
     border: none;
     border-radius: 3px;
     color: #fff;
@@ -568,17 +568,17 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     display: block;
     margin: 6px; padding: 2px 12px;
     border-radius: 4px;
-    border: solid 1px #9B1B30;
+    border: solid 1px #213042;
     font-size: 16px;
     width: 96px;
 }
 .mm-btn__login {
-    background-color: #9B1B30;
+    background-color: #213042;
     color: #fff;
 }
 .mm-btn__signup {
     background-color: #fff;
-    color: #9B1B30;
+    color: #213042;
     margin-right: 16px;
 }
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
@@ -811,7 +811,7 @@ a.skip__main {
     bottom: 16px; left: calc(50vw - 56px);
     width: 112px; height: 112px;
     border-radius: 100%;
-    background-color: #EE7768;
+    background-color: #213042;
     margin: 6px auto;
     padding: 8px;
     color: #50655e;
@@ -851,7 +851,7 @@ a.skip__main {
 
 .main-lgo
 {
-    margin-top: -98px;
+    margin-top: -128px;
     position: relative;
     z-index: 3200;
 }
@@ -881,7 +881,7 @@ a.skip__main {
     width: 34%;
     max-width: 280px;
     border-radius: 6px;
-    background: linear-gradient(#DE6758,#EE7768);
+    background: linear-gradient(#213042,#213042);
     margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
     border: 0;
