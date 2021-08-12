@@ -19,7 +19,9 @@ body { background: #DCE2DF;
     text-shadow: none;
 }
 body, [role='main'] {
-    background: linear-gradient(to right, #DCE2DF, #DCE2DF, #DCE2DF)
+    background: linear-gradient(to right, #213042, #213042, #213042)
+    /* background: linear-gradient(to right, #DCE2DF, #DCE2DF, #DCE2DF) 
+    213042 */
 }
 .h-center { text-align: center;}
 .h-left { text-align: left;}
@@ -78,7 +80,7 @@ div.caro-target__js:not(.h--select) {
 /* Hero Caption Begin */
 .hero-caption {
     position: absolute;
-    top: 100;
+    top: 20;
     width: 100%;
     font-size: 24px;
     font-family: 'Comfortaa', cursive;
@@ -89,6 +91,21 @@ div.caro-target__js:not(.h--select) {
     color: #fff;
     user-select: none;
 }
+
+.hero-content-2 {
+    position: absolute;
+    top: 350;
+    width: 100%;
+    user-select: none;
+}
+
+.hero-content {
+    position: absolute;
+    top: 600;
+    width: 100%;
+    user-select: none;
+}
+
 /* Hero Caption End */
 
 /*  Branded Font Type Begin */
@@ -654,8 +671,17 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     margin: 4px; padding: 2px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1.3em;
-    line-height: 1.2;
+    font-size: 1.4em;
+    line-height: 1.4;
+}
+
+.readable__caption_white {
+    color: #fafafa;
+    margin: 4px; padding: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 1.4;
 }
 
 .readable__service {
@@ -811,7 +837,7 @@ a.skip__main {
     bottom: 16px; left: calc(50vw - 56px);
     width: 112px; height: 112px;
     border-radius: 100%;
-    background-color: #213042;
+    background-color: #EE7768;
     margin: 6px auto;
     padding: 8px;
     color: #50655e;
@@ -881,14 +907,15 @@ a.skip__main {
     width: 34%;
     max-width: 280px;
     border-radius: 6px;
-    background: linear-gradient(#213042,#213042);
+    background: linear-gradient(#EE7768,#DE6758);
     margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
     border: 0;
 }
 
 .c2a-mfm:hover {
-    background: linear-gradient(#EE7768,#DE6758);
+    background: linear-gradient(#fafafa,#ffffff);
+    color: #213042;    
 }
 
 .l-term-type-cont {
@@ -922,7 +949,7 @@ section.pfmf-grid--parax {
 }
 section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     margin: 0 -8px 0;
-    background-color: #1E3145;
+    background-color: #213042;
     height: 512px;
     border: none;
     border-radius: 0;
@@ -932,7 +959,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 .space-sky {
     position: relative;
     height: 1024px; width: 101%;
-    background: radial-gradient(circle farthest-side, #DCE2DF 2%, #1E3145 60%);
+    background: radial-gradient(circle farthest-side, #DCE2DF 2%, #213042 60%);
     z-index: 16;
 }
 .js-space-stars {
