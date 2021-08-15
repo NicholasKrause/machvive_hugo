@@ -1,6 +1,5 @@
 body { background: #DCE2DF;
         margin: 0;
-
 }
 .brand-text { color: #50655e; }
 
@@ -13,6 +12,23 @@ body { background: #DCE2DF;
 }
 
 /* Doc helpers begin */
+*::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+}
+*::-webkit-scrollbar-track
+{
+    background: #213042;
+}
+*::-webkit-scrollbar-thumb
+{
+    background: #EE7768;
+}
+a
+{
+    outline: none;
+}
 ::selection {
     color: #fff;
     background: #EE7768;
