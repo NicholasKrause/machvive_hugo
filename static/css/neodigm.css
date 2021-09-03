@@ -967,7 +967,7 @@ a.skip__main {
     display: none;
 }
 
-/* Paralax stuff begin */
+/* Space Parallax stuff begin */
 section.pfmf-grid--parax {
     display: grid;
     grid-area: box-content;
@@ -1020,7 +1020,236 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     stroke: #DCE2DF;
     z-index: 76;
 }
-/* Paralax stuff end */
+/* Space Paralax stuff end */
+
+/* Parallax stuff begin */
+.parallax-world-of-tcs h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    padding: 0;
+    margin: 0;
+  }
+  .parallax-world-of-tcs h2 {
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 10;
+    opacity: 0.9;
+  }
+
+/* Section - Title */
+/**************************/
+.parallax-world-of-tcs .title {
+    background: white;
+    padding: 60px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .parallax-world-of-tcs .title h1 {
+    font-size: 35px;
+    letter-spacing: 8px;
+  }
+  
+  /* Section - Block */
+  /**************************/
+  .parallax-world-of-tcs .block {
+    background: white;
+    padding: 60px;
+    width: 820px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  .parallax-world-of-tcs .block-gray {
+    background: #f2f2f2;
+    padding: 60px;
+  }
+  .parallax-world-of-tcs .section-overlay-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+  }
+  
+  /* Section - Parallax */
+  /**************************/
+  .parallax-world-of-tcs .parallax-one {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2252&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    filter: opacity(85%);
+    filter: contrast(70%);
+  
+  
+  
+    
+  }
+  .parallax-world-of-tcs .parallax-two {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1518365050014-70fe7232897f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: opacity(85%);
+    filter: contrast(70%);
+  
+  
+  }
+  .parallax-world-of-tcs .parallax-three {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2252&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: opacity(85%);
+    filter: contrast(70%);
+  
+  
+  }
+
+  .parallax-world-of-tcs .parallax-four {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1517052269751-4ae3ad86cc59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: opacity(85%);
+    filter: contrast(70%);
+  
+  
+  }
+
+  .parallax-world-of-tcs .parallax-five {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1614121181207-4b6c334d353d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: opacity(85%);
+    filter: contrast(70%);
+  
+  
+  }
+  
+  
+  
+  /* Extras */
+  /**************************/
+  .parallax-world-of-tcs .line-break {
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin: 0 auto;
+  }
+  
+  /* Media Queries */
+  /**************************/
+  @media screen and (max-width: 959px) and (min-width: 768px) {
+    .parallax-world-of-tcs .block {
+      padding: 40px;
+      width: 620px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .parallax-world-of-tcs .block {
+      padding: 30px;
+      width: 420px;
+    }
+    .parallax-world-of-tcs h2 {
+      font-size: 30px;
+    }
+    .parallax-world-of-tcs .block {
+      padding: 30px;
+    }
+    .parallax-world-of-tcs .parallax-one,
+    .parallax-world-of-tcs .parallax-two,
+    .parallax-world-of-tcs .parallax-three {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .parallax-world-of-tcs .block {
+      padding: 30px 15px;
+      width: 290px;
+    }
+  }
+  
+  /* Paralax stuff end */
+
+/* Hero Caption Begin */
+.hero-caption {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    font-size: 44px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 4px;
+    padding: 4px;
+    color: #fff;
+    user-select: none;
+    filter: drop-shadow(8px 15px 6px #000000);
+    }
+    .hero-caption-2{
+    position: absolute;
+    top: 240px;
+    width: 100%;
+    font-size: 38px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin: 4px;
+    padding: 4px;
+    color: #fff;
+    user-select: none;
+    filter: drop-shadow(8px 15px 6px #000000);
+    } 
+    /* Hero Caption End */
 
 /* CTA Begin */
 .c2a {
