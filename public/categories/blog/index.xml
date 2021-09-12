@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Scott C. Krause 🚀 neodigm</title>
+    <link>https://thescottkrause.com/categories/blog/</link>
+    <description>Recent content in Blog on Scott C. Krause 🚀 neodigm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Feb 2021 19:38:41 -0600</lastBuildDate><atom:link href="https://thescottkrause.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Email Analytics To Track</title>
+      <link>https://thescottkrause.com/blog/what_email_analytics_to_track/</link>
+      <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/blog/what_email_analytics_to_track/</guid>
+      <description>First Response Time and more</description>
+    </item>
+    
+  </channel>
+</rss>

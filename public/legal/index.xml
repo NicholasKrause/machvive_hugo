@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Legals on Scott C. Krause 🚀 neodigm</title>
+    <link>https://thescottkrause.com/legal/</link>
+    <description>Recent content in Legals on Scott C. Krause 🚀 neodigm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Mar 2021 18:24:48 -0600</lastBuildDate><atom:link href="https://thescottkrause.com/legal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://thescottkrause.com/legal/privacy-policy/</link>
+      <pubDate>Mon, 08 Mar 2021 18:24:48 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/legal/privacy-policy/</guid>
+      <description>Privacy Policy</description>
+    </item>
+    
+    <item>
+      <title>Terms and Conditions</title>
+      <link>https://thescottkrause.com/legal/terms-and-conditions/</link>
+      <pubDate>Mon, 08 Mar 2021 18:22:59 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/legal/terms-and-conditions/</guid>
+      <description>Terms and Conditions</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -19,11 +19,11 @@ body { background: #DCE2DF;
 }
 *::-webkit-scrollbar-track
 {
-    background: #213042;
+    background: #EE7768;
 }
 *::-webkit-scrollbar-thumb
 {
-    background: #EE7768;
+    background: #fafafa;
 }
 a
 {
@@ -381,6 +381,19 @@ section.pfmf-grid__33_33_33  { grid-template-columns: 100%; }
 .pfmf-bg-white {
     background-color: #DCE2DF;
 }
+
+.pfmf-bg-gradient {
+    background-image: linear-gradient(
+        to bottom,
+            rgba(220, 226, 223, 1),
+            rgba(220, 226, 223, 1),
+            rgba(220, 226, 223, 1),
+            rgba(220, 226, 223, 1),
+            rgba(220, 226, 223, 1)
+        );
+    width: 100%;
+    }
+
 
 
 section.pfmf-grid > div > article {
@@ -967,18 +980,62 @@ a.skip__main {
     display: none;
 }
 
+
+
+/* Single Hero Carousel begin */
+.l-shc {
+    display: none;
+    }
+    .l-shc--50{
+    max-height: 250px;
+    }
+    .l-shc--50 .shc-cell{
+    width: 100%; max-height: 250px;
+    }
+    
+    .l-shc--50 .shc-cell img{
+    width: 100%; max-height: 250px;
+    }
+    @media only screen and (min-width:48.1em)
+    { /* medium */ /* large */
+    .l-shc, .l-shc--50 {
+        display: block;
+        margin: 12px auto;
+    }
+    .l-shc{
+        width: 46%;
+    }
+    .l-shc     .shc-cell{
+        width: 100%;
+    }
+    .l-shc     .shc-cell img{
+        width: 100%; height: auto;
+        min-height: 450px;
+    }
+    
+    .l-shc--50 {
+        width: 420px; height: 236px;
+    }
+    .l-shc--50 .shc-cell{
+        width: 420px; height: 236px;
+    }
+    .l-shc--50 .shc-cell img{
+        width: 420px; height: 236px;
+    }
+    }
+    /* Single Hero Carousel end */
+
+
 /* Space Parallax stuff begin */
 section.pfmf-grid--parax {
     display: grid;
-    grid-area: box-content;
-    margin: 0 -8;
+    grid-area: box-content;    margin: 0 -8;
     align-content: center;  
     box-sizing: border-box;
     width: 100%;
 }
 section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     margin: 0 -8px 0;
-    background-color: #213042;
     height: 512px;
     border: none;
     border-radius: 0;
@@ -988,7 +1045,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 .space-sky {
     position: relative;
     height: 1024px; width: 101%;
-    background: radial-gradient(circle farthest-side, #DCE2DF 2%, #213042 60%);
+    background-color: radial-gradient(circle farthest-side, #DCE2DF 2%,);
     z-index: 16;
 }
 .js-space-stars {
@@ -1086,16 +1143,14 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2252&q=80);
+    background-image: url(/img/machfive_marketing_ppc_agency.jpg);
+    filter: #92a8d1;
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
-    filter: opacity(85%);
-    filter: contrast(70%);
-  
+    background-position: middle center;
   
   
     
@@ -1106,7 +1161,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1518365050014-70fe7232897f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80);
+    background-image: url(/img/machfive_marketing_conversion_tracking.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -1124,7 +1179,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2252&q=80);
+    background-image: url(/img/machfive_marketing_automation.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -1143,7 +1198,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1517052269751-4ae3ad86cc59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80);
+    background-image: url(/img/machfive_marketing_content.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -1162,7 +1217,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1614121181207-4b6c334d353d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80);
+    background-image: url(/img/machfive_marketing_seo_ppc_auditing.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
