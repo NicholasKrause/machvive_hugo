@@ -1,4 +1,4 @@
-<section class="pfmf-bg-gradient pfmf-g readable__doc rid__100 tiers-artc">
+<section class="pfmf-g readable__doc rid__100 tiers-artc">
     <div>
         <br>
         <br> 
@@ -12,30 +12,6 @@
     <!--    <div>
         <h1 class="h-center">Fresh Perspective</h1>
     -->      
-     <div class="l-caro-design">
- 
-        <article class="js-art__caro h-ds__none">
-            <section class="l-caro-design__cnt">
-            {{ range .Site.Pages }}
-                {{ if (eq .File.Dir "emerging_tech/" ) }}
-                <a class="l-blog-crd" href="{{.Permalink}}">
-                <section>
-                    <picture>
-                        <!--  1280 X 720  -->
-                        <img class="caro-target__js" src="/emerging_tech/{{.Page.Slug}}_tn.webp" alt="{{.Page.Title}}">
-                    </picture>
-                    <p>Email Tech</p>
-                    <!-- {{.Title}} | {{.File.Dir}} -->
-                    <h5> {{.Page.Title}} </h5>
-                    <h6> {{.Page.Summary}} </h6>
-                    <p>{{.Date.Format "2006-01-02"}}</p>
-                </section>
-                </a>
-                {{end}}
-            {{ end }}
-            </section>
-        </article>
-
-    </div>
+    
     </div>
 </section> 
