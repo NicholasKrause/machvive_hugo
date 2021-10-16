@@ -705,5 +705,56 @@ if( e3 ) { // Delay 3d call if still null
     }; pfmfModal.init();
 </script>
 
-
-
+<script>
+    setTimeout(()=>{
+        let oSydTab = ((_d, _q)=>{
+            let oST = {}  //  SydTabs (one or more within current page)
+            let nC = 0, nCmob = 0
+            setTimeout( ()=> {oSydTab.init()}, 6)
+            return {
+                "init": ()=>{
+                    [ ... _d.querySelectorAll( _q[0] )].forEach((st)=>{
+                        const sID = "st_" + nC++
+                        oST[sID] = st
+                        oST[sID].aBt = [ ... oST[sID].querySelectorAll( _q[1] )]  //  buttons
+                        oST[sID].eSh = oST[sID].querySelector( _q[2] )  //  Show article desktop
+                        oST[sID].aTp = [ ... oST[sID].querySelectorAll( _q[3] )]  //  Templates
+                        oST[sID].aBt.forEach((sydbtn)=>{
+                            sydbtn.addEventListener("click", (ev) => { oSydTab.doClick(ev, sID) });
+                            if( isMobile() ){
+                                let sMU = '<div class="cont__mobile cont__mobile--hidden">' + oST[sID].aTp[ nCmob++ ].innerHTML + '</div>'
+                                sydbtn.insertAdjacentHTML('afterend', sMU)
+                            }
+                        })
+                        if( isMobile() ){
+                            oST[sID].aBt[0].nextSibling.classList.remove("cont__mobile--hidden")
+                        }else{
+                            if( oST[sID].eSh ) oST[sID].eSh.innerHTML = oST[sID].aTp[0].innerHTML
+                        }
+                    })
+                    nC = nCmob = 0
+                },
+                "doClick": (ev, sID)=>{
+                    oST[sID].aBt.forEach((sydbtn)=>{
+                        sydbtn.dataset.sydtabState = "false"
+                    })
+                    ev.currentTarget.dataset.sydtabState = "true"
+                    oST[sID].aBt.map((btn)=>{
+                        if( btn.dataset.sydtabState === "true" ){
+                            if( isMobile() ){
+                                [ ... oST[sID].querySelectorAll(".cont__mobile") ].forEach((cnt_mob)=>{
+                                    cnt_mob.classList.add("cont__mobile--hidden")
+                                })
+                                btn.nextSibling.classList.remove("cont__mobile--hidden")
+                            }else{
+                                if( oST[sID].eSh ) oST[sID].eSh.innerHTML = oST[sID].aTp[ nC ].innerHTML
+                            }
+                        }
+                        nC++;
+                    })
+                    nC = 0
+                }
+            }
+        })(document, [".l-sydtab", "button", "[data-sydtab-show]", "[data-sydtab-content]"]);
+    }, 400)
+    </script>

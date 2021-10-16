@@ -107,7 +107,6 @@ div.caro-target__js:not(.h--select) {
     user-select: none;
 }
 
-
 .hero-caption-2 {
 
     width: 100%;
@@ -225,6 +224,102 @@ div.caro-target__js:not(.h--select) {
     /* Hero Caption End */
 }
 /* Caption Vivid Vect end */
+
+/*  Syd Nav Widget begin  */
+.l-sydtab {
+    display: block;
+    margin: 2px auto;
+    background: #fff;
+    width: 100%;
+  }
+  .l-sydtab > article {
+    display: none;
+  }
+  .l-sydtab button {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 80px calc(100% - 80px);
+    grid-column-gap: 12px;
+    align-items: center;
+    border: solid 1px #aaa; border-radius: 16px;
+    font-size: .8em;
+    background-color: #33495E;
+    margin: 4px; padding: 2px;
+    width: 100%; height: 100px;
+    user-select: none;
+  }
+  .l-sydtab button svg {
+    width: 64px;
+  }
+  .l-sydtab button h6 {
+    color: #fff;
+    margin: 2px; padding: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.01em;
+    line-height: 1;
+  }
+  .l-sydtab button:hover h6 {
+    color: #EE7768;
+  }
+  .l-sydtab button picture {
+    display: block;
+    border: solid 3px #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 84px; width: 84px;
+    transition: 1s ease;
+  }
+  .l-sydtab button:hover picture {
+    background-color:  #Faf2e7;
+    border: solid 3px #EE7768;
+  }
+  .l-sydtab [data-sydtab-state='true'] {
+    background-color:  #213042;
+  }
+  .l-sydtab [data-sydtab-state='true'] h6 {
+    color:  #EE7768;
+  }
+  .l-sydtab [data-sydtab-state] picture {
+    border: solid 3px #EE7768;
+  }
+  .l-sydtab .cont__mobile--hidden {
+    display: none;
+  }
+  @media only screen and (min-width:48.1em)
+  { /* medium */ /* large */
+    .l-sydtab {
+        display: grid;
+        grid-template-columns: 38% 62%;
+        margin: 0 auto;
+        background: rgba(22, 22, 22, 0);
+        width: 100%;
+    }
+    .l-sydtab > article {
+        display: block;
+        border: solid 1px #33495E;
+        border-left: 0;
+        border-radius: 0 16px 16px 0;
+        margin: 4px 0; padding: 6px;
+        background-color:  #213042;
+    }
+    .l-sydtab button {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 80px calc(100% - 80px);
+        align-items: center;
+        border: solid 1px #33495E; border-radius: 16px 0 0 16px;
+        font-size: 1.1em;
+        background-color: #33495E;
+        margin: 4px; padding: 2px;
+        width: 100%; height: 100px;
+        user-select: none;
+    }
+    .l-sydtab .cont__mobile {
+        display: none;
+    }
+  }
+  /*  Syd Nav Widget end  */
 
 /* Tag Chips and Categories begin */
 .l-cat-chip {
