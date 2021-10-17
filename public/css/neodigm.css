@@ -19,11 +19,11 @@ body { background: #DCE2DF;
 }
 *::-webkit-scrollbar-track
 {
-    background: #EE7768;
+    background: #fafafa;
 }
 *::-webkit-scrollbar-thumb
 {
-    background: #fafafa;
+    background: #EE7768;
 }
 a
 {
@@ -106,7 +106,6 @@ div.caro-target__js:not(.h--select) {
     color: #fff;
     user-select: none;
 }
-
 
 .hero-caption-2 {
 
@@ -205,6 +204,9 @@ div.caro-target__js:not(.h--select) {
  .text-coy_2020  {color: #0F4C81;}  /* Classic Blue */
  .text-coy_2021  {color: #939597;}  /* Ultimate Gray */
  .text-coy_2021b {color: #F5DF4D;}  /* Illuminating */
+ .text-coy_2021c {color: #213042;}  /* MachFive Blue */
+ .text-coy_2021d {color: #DD4326;}  /* MachFive Orange */
+
  /* Color of the Year end */
 
 /* Caption Vivid Vect begin */
@@ -222,6 +224,102 @@ div.caro-target__js:not(.h--select) {
     /* Hero Caption End */
 }
 /* Caption Vivid Vect end */
+
+/*  Syd Nav Widget begin  */
+.l-sydtab {
+    display: block;
+    margin: 2px auto;
+    background: #fff;
+    width: 100%;
+  }
+  .l-sydtab > article {
+    display: none;
+  }
+  .l-sydtab button {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 80px calc(100% - 80px);
+    grid-column-gap: 12px;
+    align-items: center;
+    border: solid 1px #aaa; border-radius: 16px;
+    font-size: .8em;
+    background-color: #33495E;
+    margin: 4px; padding: 2px;
+    width: 100%; height: 100px;
+    user-select: none;
+  }
+  .l-sydtab button svg {
+    width: 64px;
+  }
+  .l-sydtab button h6 {
+    color: #fff;
+    margin: 2px; padding: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.01em;
+    line-height: 1;
+  }
+  .l-sydtab button:hover h6 {
+    color: #EE7768;
+  }
+  .l-sydtab button picture {
+    display: block;
+    border: solid 3px #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 84px; width: 84px;
+    transition: 1s ease;
+  }
+  .l-sydtab button:hover picture {
+    background-color:  #Faf2e7;
+    border: solid 3px #EE7768;
+  }
+  .l-sydtab [data-sydtab-state='true'] {
+    background-color:  #213042;
+  }
+  .l-sydtab [data-sydtab-state='true'] h6 {
+    color:  #EE7768;
+  }
+  .l-sydtab [data-sydtab-state] picture {
+    border: solid 3px #EE7768;
+  }
+  .l-sydtab .cont__mobile--hidden {
+    display: none;
+  }
+  @media only screen and (min-width:48.1em)
+  { /* medium */ /* large */
+    .l-sydtab {
+        display: grid;
+        grid-template-columns: 38% 62%;
+        margin: 0 auto;
+        background: rgba(22, 22, 22, 0);
+        width: 100%;
+    }
+    .l-sydtab > article {
+        display: block;
+        border: solid 1px #33495E;
+        border-left: 0;
+        border-radius: 0 16px 16px 0;
+        margin: 4px 0; padding: 6px;
+        background-color:  #213042;
+    }
+    .l-sydtab button {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 80px calc(100% - 80px);
+        align-items: center;
+        border: solid 1px #33495E; border-radius: 16px 0 0 16px;
+        font-size: 1.1em;
+        background-color: #33495E;
+        margin: 4px; padding: 2px;
+        width: 100%; height: 100px;
+        user-select: none;
+    }
+    .l-sydtab .cont__mobile {
+        display: none;
+    }
+  }
+  /*  Syd Nav Widget end  */
 
 /* Tag Chips and Categories begin */
 .l-cat-chip {
@@ -377,24 +475,11 @@ section.pfmf-grid__70_30 > div:nth-child(1) { order: 1; }
 section.pfmf-grid__30_70  { grid-template-columns: 100%; }
 section.pfmf-grid__100    { grid-template-columns: 100%; }
 section.pfmf-grid__33_33_33  { grid-template-columns: 100%; }
+section.pfmf-grid__10_40_40_10  { grid-template-columns: 100%; }
 
 .pfmf-bg-white {
     background-color: #DCE2DF;
 }
-
-.pfmf-bg-gradient {
-    background-image: linear-gradient(
-        to bottom,
-            rgba(220, 226, 223, 1),
-            rgba(220, 226, 223, 1),
-            rgba(220, 226, 223, 1),
-            rgba(220, 226, 223, 1),
-            rgba(220, 226, 223, 1)
-        );
-    width: 100%;
-    }
-
-
 
 section.pfmf-grid > div > article {
     margin: 6px 4px;
@@ -473,6 +558,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     section.pfmf-grid__70_30  { grid-template-columns: 70% 30%; }
     section.pfmf-grid__30_70  { grid-template-columns: 30% 70%; }
     section.pfmf-grid__33_33_33  { grid-template-columns: 33.3% 33.3% 33.4%; }
+    section.pfmf-grid__10_40_40_10  { grid-template-columns: 10% 40% 40% 10%; }
 }
 @media only screen and (min-width:62.1em){/* lg */
     section.pfmf-grid--hero {width: 100%;}
@@ -488,16 +574,18 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     section.pfmf-grid__70_30  { grid-template-columns: 70% 30%; }
     section.pfmf-grid__30_70  { grid-template-columns: 30% 70%; }
     section.pfmf-grid__33_33_33  { grid-template-columns: 33.3% 33.3% 33.4%; }
+    section.pfmf-grid__10_40_40_10  { grid-template-columns: 10% 40% 40% 10%; }
+
 }
 /* Pan Fried Monkey Fisticufs grid end */
 
 /* megamenu begin */
 .megamenu {
-    background-color: #fff;
+    background-color: #EE7768;
     padding: 0; margin: 0;
     width: 100%;
     overflow: hidden;
-    z-index: 16;
+    z-index: 2000;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
     user-select: none;
 }
@@ -513,7 +601,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
-    background-color: #fff;
+    background-color: #fafafa;
     height: 56px; width: 100%;
 
     display: grid;
@@ -521,7 +609,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     align-content: center;
     grid-gap: 4px;
   
-    grid-template-columns: 52px 1fr 268px;
+    grid-template-columns: 1fr 190px;
   
     box-sizing: border-box;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
@@ -534,7 +622,6 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     margin: 6px 0;
 }
 .megamenu .megamenu__grd--top > * {
-    text-align: center;
     overflow: hidden;
 }
 .megamenu .megamenu__grd--card {
@@ -562,6 +649,10 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     font-size: 22px;
     letter-spacing: -.008em;
 }
+.megamenu .megamenu__grd--top .mm__link--top span {
+    font-size: 18px;
+}
+
 .megamenu .megamenu__grd--card .mm__link--card {
     height: 50vw;
     color: #fff;
@@ -625,10 +716,10 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 .mm-btn {
     cursor: pointer;
     display: block;
-    margin: 6px; padding: 2px 12px;
+    margin: 2px 2px; padding: 2px 8px;
     border-radius: 4px;
     border: solid 1px #213042;
-    font-size: 16px;
+    font-size: 12px;
     width: 96px;
 }
 .mm-btn__login {
@@ -641,6 +732,17 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     margin-right: 16px;
 }
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
+    .megamenu .megamenu__grd--top .mm__link--top span {
+        font-size: 22px;
+    }
+    .mm-btn{
+        margin: 4px 6px; padding: 6px 12px;
+        width: 176px;
+        font-size: 16px;
+    }
+    .megamenu .megamenu__grd--top{
+        grid-template-columns: 1fr 260px;
+    }
     .megamenu .megamenu__grd--bottom {
         display: grid;
     }
@@ -652,6 +754,17 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     }
 }
 @media only screen and (min-width:62.1em){/* lg */
+    .megamenu .megamenu__grd--top .mm__link--top span {
+        font-size: 22px;
+    }
+    .mm-btn{
+        margin: 4px 6px; padding: 6px 12px;
+        width: 176px;
+        font-size: 16px;
+    }
+    .megamenu .megamenu__grd--top{
+        grid-template-columns: 1fr 260px;
+    }
     .megamenu .megamenu__grd--bottom {
         display: grid;
     }
@@ -727,7 +840,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 }
 
 .readable__service {
-    color: #EE7768;
+    color: #fafafa;
     margin: 4px; padding: 2px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -1025,6 +1138,12 @@ a.skip__main {
     }
     /* Single Hero Carousel end */
 
+/* CSS Tabs Begin */
+
+
+
+/* CSS Tabs End */
+
 
 /* Space Parallax stuff begin */
 section.pfmf-grid--parax {
@@ -1135,6 +1254,169 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     opacity: 0.7;
   }
   
+/* Login Box Begin */
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #fafafa;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fafafa;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #213042;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #EE7768,
+                0 0 25px #EE7768,
+                0 0 50px #EE7768,
+                0 0 100px #EE7768;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #EE7768);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #EE7768);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #EE7768);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #EE7768);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
+  /* Login Box End */
+
+
   /* Section - Parallax */
   /**************************/
   .parallax-world-of-tcs .parallax-one {
@@ -1143,17 +1425,14 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(/static/img/machfive_marketing_ppc_agency.webp);
+    background-image: url(/img/machfive_marketing_ppc_agency.jpg);
     filter: #92a8d1;
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
-    filter: opacity(85%);
-    filter: contrast(70%);
-  
+    background-position: middle center;
   
   
     
@@ -1164,7 +1443,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1518365050014-70fe7232897f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=80);
+    background-image: url(/img/machfive_marketing_conversion_tracking.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -1182,7 +1461,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2252&q=80);
+    background-image: url(/img/machfive_marketing_automation.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -1201,7 +1480,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1517052269751-4ae3ad86cc59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80);
+    background-image: url(/img/machfive_marketing_content.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -1220,7 +1499,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1614121181207-4b6c334d353d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80);
+    background-image: url(/img/machfive_marketing_seo_ppc_auditing.jpg);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
