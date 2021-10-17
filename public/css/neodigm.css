@@ -225,7 +225,7 @@ div.caro-target__js:not(.h--select) {
 }
 /* Caption Vivid Vect end */
 
-/*  Syd Nav Widget begin  */
+/*  Syd Nav Widget begin  */ 
 .l-sydtab {
     display: block;
     margin: 2px auto;
@@ -272,7 +272,6 @@ div.caro-target__js:not(.h--select) {
   }
   .l-sydtab button:hover picture {
     background-color:  #Faf2e7;
-    border: solid 3px #EE7768;
   }
   .l-sydtab [data-sydtab-state='true'] {
     background-color:  #213042;
@@ -280,8 +279,11 @@ div.caro-target__js:not(.h--select) {
   .l-sydtab [data-sydtab-state='true'] h6 {
     color:  #EE7768;
   }
-  .l-sydtab [data-sydtab-state] picture {
+  .l-sydtab [data-sydtab-state='true'] picture {
     border: solid 3px #EE7768;
+  }
+  .l-sydtab [data-sydtab-state='true'] picture SVG{
+    fill: #EE7768;
   }
   .l-sydtab .cont__mobile--hidden {
     display: none;
