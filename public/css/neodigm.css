@@ -609,7 +609,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
-    background-color: rgba(240,240,240,.46);
+    background-color: rgba(98,98,98,.46);
     height: 56px; width: 100%;
 
     display: grid;
@@ -650,7 +650,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 }
 .megamenu .megamenu__grd--top .mm__link--top {
     display: block;
-    color: #000;
+    color: #fff;
     cursor: pointer;
     line-height: 1.6;
     font-family: 'Roboto Condensed',sans-serif;
