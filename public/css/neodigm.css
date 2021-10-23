@@ -609,7 +609,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
-    background-color: rgba(98,98,98,.46);
+    background-color: rgba(13,19,26,.24);
     height: 56px; width: 100%;
 
     display: grid;
