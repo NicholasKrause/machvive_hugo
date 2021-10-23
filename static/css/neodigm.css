@@ -991,6 +991,9 @@ a.skip__main {
         font-weight: 300;
         font-size: 2.46em;
     }
+    .c2a-mfm {
+        font-size: 21px !important;
+    }
 }
 /* Tablet and Desktop End */
 
@@ -1045,41 +1048,24 @@ a.skip__main {
     z-index: 3200;
 }
 
-.l-contact-us {
-    position: fixed;
-    bottom: 1px;
-    min-height: 96px;
-    background-color: #edba08;
-    width: 100%;
-}
-.l-contact-us INPUT {
-    color: #50655e; 
-    font-family: 'Exo 2', sans-serif;
-    font-size: 22px;
-    line-height: 1;
-    border: 1px #000 solid;
-    border-radius: 6px;
-    padding: 8px; margin: 8px;
-    background-color: #edba08;
-}
 .c2a-mfm {
     cursor: pointer;
     font-family: 'Exo 2', sans-serif;
-    font-size: 21px;
+    font-size: 16px;
     line-height: 1;
-    width: 34%;
-    max-width: 280px;
-    border-radius: 6px;
-    background: linear-gradient(#EE7768,#DE6758);
+    width: 33%; max-width: 340px;
+    border-radius: 8px;
+    background: linear-gradient(#EE7768,#aE3728);
     margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
-    border: 0;
 }
 
 .c2a-mfm:hover {
-    background: linear-gradient(#fafafa,#ffffff);
-    color: #213042;    
+    background: linear-gradient(#aE3728,#EE7768);
 }
+
+.c2a-mfm--md { width: 44%; }
+.c2a-mfm--lg { width: 66%; }
 
 .l-term-type-cont {
     background-color: #7E7F74;
