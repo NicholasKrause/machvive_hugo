@@ -36,8 +36,6 @@ a
 }
 body, [role='main'] {
     background: linear-gradient(to right, #213042, #33495E, #213042)
-    /* background: linear-gradient(to right, #DCE2DF, #DCE2DF, #DCE2DF) 
-    213042 */
 }
 .h-center { text-align: center;}
 .h-left { text-align: left;}
@@ -58,6 +56,7 @@ body, [role='main'] {
 .h_code {font-family: monospace !important; font-weight: bolder;}
 .h_quote {font-style: italic; border-left: solid 3px #777;padding-left: 12px}
 .h-ds__none {display: none;}
+.h-ds__none--mob {display: none;}
 .h-ds__block {display: block;}
 .h-ds__inline {display: inline;}
 .h-3d-canvas canvas { display: block;margin: 0 auto; outline: none;}
@@ -70,6 +69,7 @@ body, [role='main'] {
 { /* medium */ /* large */
     .h-vect__rwd--sm { width: 22%; }
     .h-vect__rwd { width: 32%; }
+    .h-ds__none--mob {display: block !important;}
 }
 .l-blog-crd.caro-target__js.h--select {
     border-bottom: solid 4px #C74375;
@@ -609,7 +609,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
-    background-color: rgba(13,19,26,.24);
+    background-color: rgba(13,19,26,.44);
     height: 56px; width: 100%;
 
     display: grid;
@@ -991,6 +991,9 @@ a.skip__main {
         font-weight: 300;
         font-size: 2.46em;
     }
+    .c2a-mfm {
+        font-size: 21px !important;
+    }
 }
 /* Tablet and Desktop End */
 
@@ -1045,41 +1048,24 @@ a.skip__main {
     z-index: 3200;
 }
 
-.l-contact-us {
-    position: fixed;
-    bottom: 1px;
-    min-height: 96px;
-    background-color: #edba08;
-    width: 100%;
-}
-.l-contact-us INPUT {
-    color: #50655e; 
-    font-family: 'Exo 2', sans-serif;
-    font-size: 22px;
-    line-height: 1;
-    border: 1px #000 solid;
-    border-radius: 6px;
-    padding: 8px; margin: 8px;
-    background-color: #edba08;
-}
 .c2a-mfm {
     cursor: pointer;
     font-family: 'Exo 2', sans-serif;
-    font-size: 21px;
+    font-size: 16px;
     line-height: 1;
-    width: 34%;
-    max-width: 280px;
-    border-radius: 6px;
-    background: linear-gradient(#EE7768,#DE6758);
+    width: 33%; max-width: 340px;
+    border-radius: 8px;
+    background: linear-gradient(#EE7768,#aE3728);
     margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
-    border: 0;
 }
 
 .c2a-mfm:hover {
-    background: linear-gradient(#fafafa,#ffffff);
-    color: #213042;    
+    background: linear-gradient(#aE3728,#EE7768);
 }
+
+.c2a-mfm--md { width: 44%; }
+.c2a-mfm--lg { width: 66%; }
 
 .l-term-type-cont {
     background-color: #7E7F74;

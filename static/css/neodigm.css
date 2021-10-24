@@ -36,8 +36,6 @@ a
 }
 body, [role='main'] {
     background: linear-gradient(to right, #213042, #33495E, #213042)
-    /* background: linear-gradient(to right, #DCE2DF, #DCE2DF, #DCE2DF) 
-    213042 */
 }
 .h-center { text-align: center;}
 .h-left { text-align: left;}
@@ -58,6 +56,7 @@ body, [role='main'] {
 .h_code {font-family: monospace !important; font-weight: bolder;}
 .h_quote {font-style: italic; border-left: solid 3px #777;padding-left: 12px}
 .h-ds__none {display: none;}
+.h-ds__none--mob {display: none;}
 .h-ds__block {display: block;}
 .h-ds__inline {display: inline;}
 .h-3d-canvas canvas { display: block;margin: 0 auto; outline: none;}
@@ -70,6 +69,7 @@ body, [role='main'] {
 { /* medium */ /* large */
     .h-vect__rwd--sm { width: 22%; }
     .h-vect__rwd { width: 32%; }
+    .h-ds__none--mob {display: block !important;}
 }
 .l-blog-crd.caro-target__js.h--select {
     border-bottom: solid 4px #C74375;
@@ -609,7 +609,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
-    background-color: rgba(13,19,26,.24);
+    background-color: rgba(13,19,26,.44);
     height: 56px; width: 100%;
 
     display: grid;
