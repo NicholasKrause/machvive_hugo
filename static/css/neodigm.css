@@ -850,6 +850,10 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     line-height: 1.4;
 }
 
+p.readable__caption > svg {
+    margin-left: -40px;
+}
+
 .readable__service {
     color: #fafafa;
     margin: 4px; padding: 2px;
@@ -1443,6 +1447,18 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 }
 /* CTA end */
 
+/* Forms Begin */
+input.m5m-input {
+    display: block;
+    color: #383838;
+    font-size: 18px;
+    border: solid 1px #585858; border-radius: 20px;
+    line-height: 1.1;
+    width: 76%;
+    margin: 8px auto; padding: 10px 8px;
+}
+/* Forms End */
+
 @media only screen and (max-width:48em)
 {
 /* small */
@@ -1461,4 +1477,3 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 /* lg */
 
 }
-
