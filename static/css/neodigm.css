@@ -1448,7 +1448,7 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 /* CTA end */
 
 /* Forms Begin */
-input.m5m-input {
+input.m5m-input, textarea.m5m-input {
     display: block;
     color: #383838;
     font-size: 18px;
