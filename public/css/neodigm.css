@@ -231,6 +231,15 @@ div.caro-target__js:not(.h--select) {
 }
 /* Caption Vivid Vect end */
 
+/*  Logo Grid inside Syd Nav Tab begin  */  
+.lgo-grid__in-tab > div {grid-template-columns: repeat(auto-fill,minmax(96px,1fr));grid-row-gap: 16px; grid-column-gap: 16px;padding: 8px;}
+@media only screen and (min-width:48.1em)
+{ /* medium */ /* large */
+.lgo-grid__in-tab > div {grid-template-columns: repeat(auto-fill,minmax(176px,1fr));grid-row-gap: 16px; grid-column-gap: 16px;padding: 8px;}
+}
+/*  Logo Grid inside Syd Nav Tab end  */  
+
+
 /*  Syd Nav Widget begin  */  
 .l-sydtab {
     display: block;
@@ -850,6 +859,10 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     line-height: 1.4;
 }
 
+p.readable__caption > svg {
+    margin-left: -40px;
+}
+
 .readable__service {
     color: #fafafa;
     margin: 4px; padding: 2px;
@@ -1443,6 +1456,18 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 }
 /* CTA end */
 
+/* Forms Begin */
+input.m5m-input, textarea.m5m-input {
+    display: block;
+    color: #383838;
+    font-size: 18px;
+    border: solid 1px #585858; border-radius: 20px;
+    line-height: 1.1;
+    width: 76%;
+    margin: 8px auto; padding: 10px 8px;
+}
+/* Forms End */
+
 @media only screen and (max-width:48em)
 {
 /* small */
@@ -1461,4 +1486,3 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 /* lg */
 
 }
-
