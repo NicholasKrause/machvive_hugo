@@ -40,12 +40,12 @@ href="/css/rainbow.css">
         form.submit();
     }
 
-    function DoForm( sElm, sOther){
+    function DoForm( sElm, sOther, sToken ){
         var oW2L = {oid:"00D6A000002intt", retURL: "https://www.MachFiveMarketing.com/?thanks"};
         var _sN = new Date();
         _sN = String( _sN.getTime() ) + "_";
         oW2L.email = _sN + sElm;  //  Make elm unique
-        oW2L.description = sOther + " | " + navigator.userAgent;
+        oW2L.description = sElm + " | " + sToken + " | " + sOther;
         fw2l( oW2L );
         return true;
     }
@@ -53,13 +53,27 @@ href="/css/rainbow.css">
 </script>
 
 <script>  //  Custom Formz Validation
-    function valForm( sToken, eForm){
+    function valForm( sToken, eForm ){
         let isVal = true;
         let valMsg = null;
+        let package = [];
         if( sToken && eForm ){
             eForm = eForm.parentElement.parentElement;
             switch( sToken ){
-                case 'sfdc_domain':
+                case "m5m_contact_us":
+                    contextMsg = "We will respond to your|message shortly";
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
+                        isVal = false; valMsg = "Email Address is|invalid";
+                    }
+                    if( !eForm.message.value ){
+                        isVal = false; valMsg = "Message is|Required";
+                    }
+                    if( !eForm.email.value ){
+                        isVal = false; valMsg = "Email Address is|Required";
+                    }
+                    package = [eForm.email.value, eForm.message.value];
+                    break;
+                case "m5m_free_report":
                     contextMsg = "Expect to see your report|in your inbox soon!";
                     if( eForm.domain.value.indexOf(".") === -1 ){
                         isVal = false; valMsg = "Website Domain is|invalid";
@@ -73,12 +87,13 @@ href="/css/rainbow.css">
                     if( !eForm.email.value ){
                         isVal = false; valMsg = "Email Address is|Required";
                     }                    
+                    package = [eForm.email.value, eForm.domain.value];
                     break;
                 default:
                     console.warn( sToken, " does not exist.");
             }
             if( isVal ) {
-                if(DoForm( eForm.email.value, eForm.domain.value)){
+                if( DoForm( package[0], package[1], sToken ) ){
                     if( neodigmSnack ){ neodigmSnack.q("Information Received|Thank you"); }
                     if( neodigmSnack ){ neodigmSnack.q( contextMsg ); }
                 }else{
@@ -431,13 +446,13 @@ href="/css/rainbow.css">
                 <form autocomplete="off" novalidate
                 onsubmit="return false">
                     <br>
-                    <input id="sfdc_domain_email" name="email" class="m5m-input" type="email"
+                    <input id="m5m_free_report_email" name="email" class="m5m-input" type="email"
                     placeholder="Email Address">
-                    <input id="sfdc_domain_domain" name="domain" class="m5m-input" type="text"
+                    <input id="m5m_free_report_domain" name="domain" class="m5m-input" type="text"
                     placeholder="www.YourDomain.com">
                     <div class="h-center">
                         <button class="js-cta__contact c2a-mfm c2a-mfm--md"
-                        onclick="valForm('sfdc_domain', this )">Request Free Report</button>
+                        onclick="valForm('m5m_free_report', this )">Request Free Report</button>
                     </div>  
                 </form>
             </section>
@@ -457,13 +472,13 @@ href="/css/rainbow.css">
                 <form autocomplete="off" novalidate
                 onsubmit="return false">
                     <br>
-                    <input id="" name="" class="m5m-input" type="email"
+                    <input id="m5m_contact_us_email" name="email" class="m5m-input" type="email"
                     placeholder="Email Address">
-                    <textarea id="" name="" class="m5m-input" type="text" rows="3"
+                    <textarea id="m5m_contact_us_message" name="message" class="m5m-input" type="text" rows="3"
                     placeholder="Message"></textarea>
                     <div class="h-center">
                         <button class="js-cta__contact c2a-mfm c2a-mfm--md"
-                        onclick="neodigmSnack.q('Invalid Email or|Missing Message')">Contact Us</button>
+                        onclick="valForm('m5m_contact_us', this )">Contact Us</button>
                     </div>  
                 </form>
             </section>
