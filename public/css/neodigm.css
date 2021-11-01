@@ -1460,9 +1460,9 @@ section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
 input.m5m-input, textarea.m5m-input {
     display: block;
     color: #383838;
-    font-size: 18px;
-    border: solid 1px #585858; border-radius: 20px;
+    font-family: 'Montserrat', sans-serif; font-size: 18px;
     line-height: 1.1;
+    border: solid 1px #585858; border-radius: 20px;
     width: 76%;
     margin: 8px auto; padding: 10px 8px;
 }
