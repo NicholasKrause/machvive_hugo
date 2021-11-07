@@ -232,15 +232,21 @@ div.caro-target__js:not(.h--select) {
 /* Caption Vivid Vect end */
 
 /*  Logo Grid inside Syd Nav Tab begin  */
-.lgo-grid__in-tab > div {grid-template-columns: repeat(auto-fill,minmax(96px,1fr));grid-row-gap: 16px; grid-column-gap: 16px;padding: 8px;}
-.lgo-grid__in-tab svg {
+.lgo-grid__in-tab svg, .cont__mobile svg {
     border: solid 1px #33495e;
     border-radius: 100%;
+    width: 124px;
+    margin: 6px; padding: 6px;
 }
 
-@media only screen and (min-width:48.1em)
+@media only screen and (min-width:48.1em) 
 { /* medium */ /* large */
-.lgo-grid__in-tab > div {grid-template-columns: repeat(auto-fill,minmax(176px,1fr));grid-row-gap: 16px; grid-column-gap: 16px;padding: 8px;}
+    .lgo-grid__in-tab svg, .cont__mobile svg {
+        border: solid 1px #33495e;
+        border-radius: 100%;
+        max-width: 176px;
+        margin: 16px; padding: 16px;
+    }
 }
 /*  Logo Grid inside Syd Nav Tab end  */  
 
