@@ -72,13 +72,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
 
         <main id="a11y-skipmain" role="main">
 
-            <ltdc-snackbar class="l-snackbar" role="alert">
-    <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
-        <div class="snackbar__progbar"></div>
-        <p class="snackbar__msg"></p>
-    </section>
-</ltdc-snackbar>
-
             
     <div>
         <article style="padding: 12px 12px;">
@@ -327,6 +320,14 @@ href="/css/rainbow.css">
 <script src="/js/ScrollTrigger.min.js"></script>
 
 <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1.css">
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/sw.js");
+        });
+    }
+</script>
 
 <script>
     var _d = oD = document;

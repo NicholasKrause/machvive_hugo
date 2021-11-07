@@ -9,6 +9,14 @@ href="/css/rainbow.css">
 <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1.css">
 
 <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/sw.js");
+        });
+    }
+</script>
+
+<script>
     var _d = oD = document;
     var isMobile = function(){ return (oD.body.clientWidth <= 768) ? true : false; }
 </script>

@@ -90,13 +90,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <h1 class="readable__title h-center"> What Email Analytics To Track </h1>
             <p class="readable__doc h-center">Fred C. Krause | Saturday, Feb 20, 2021</p>
 
-            <ltdc-snackbar class="l-snackbar" role="alert">
-    <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
-        <div class="snackbar__progbar"></div>
-        <p class="snackbar__msg"></p>
-    </section>
-</ltdc-snackbar>
-
             
 <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
 <script src="https://unpkg.com/layout-base/layout-base.js"></script>
@@ -472,6 +465,14 @@ href="/css/rainbow.css">
 <script src="/js/ScrollTrigger.min.js"></script>
 
 <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1.css">
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/sw.js");
+        });
+    }
+</script>
 
 <script>
     var _d = oD = document;
