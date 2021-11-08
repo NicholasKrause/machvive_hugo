@@ -1,135 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Scott C. Krause 🚀 neodigm</title>
-    <link>https://thescottkrause.com/categories/</link>
-    <description>Recent content in Categories on Scott C. Krause 🚀 neodigm</description>
+    <title>Categories on MachFive Marketing</title>
+    <link>https://machfivemarketing.com/categories/</link>
+    <description>Recent content in Categories on MachFive Marketing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Mar 2021 22:39:33 -0500</lastBuildDate><atom:link href="https://thescottkrause.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Mar 2021 22:39:33 -0500</lastBuildDate><atom:link href="https://machfivemarketing.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Main</title>
-      <link>https://thescottkrause.com/categories/main/</link>
+      <link>https://machfivemarketing.com/categories/main/</link>
       <pubDate>Thu, 18 Mar 2021 22:39:33 -0500</pubDate>
       
-      <guid>https://thescottkrause.com/categories/main/</guid>
+      <guid>https://machfivemarketing.com/categories/main/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Legal</title>
-      <link>https://thescottkrause.com/categories/legal/</link>
+      <link>https://machfivemarketing.com/categories/legal/</link>
       <pubDate>Mon, 08 Mar 2021 18:24:48 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/legal/</guid>
+      <guid>https://machfivemarketing.com/categories/legal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://thescottkrause.com/categories/blog/</link>
+      <link>https://machfivemarketing.com/categories/blog/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/blog/</guid>
+      <guid>https://machfivemarketing.com/categories/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Email Analytics</title>
-      <link>https://thescottkrause.com/categories/email-analytics/</link>
+      <link>https://machfivemarketing.com/categories/email-analytics/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/email-analytics/</guid>
+      <guid>https://machfivemarketing.com/categories/email-analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Email Tech</title>
-      <link>https://thescottkrause.com/categories/email-tech/</link>
+      <link>https://machfivemarketing.com/categories/email-tech/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/email-tech/</guid>
+      <guid>https://machfivemarketing.com/categories/email-tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mobile</title>
-      <link>https://thescottkrause.com/categories/mobile/</link>
+      <link>https://machfivemarketing.com/categories/mobile/</link>
       <pubDate>Tue, 29 Dec 2020 11:11:27 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/mobile/</guid>
+      <guid>https://machfivemarketing.com/categories/mobile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality</title>
-      <link>https://thescottkrause.com/categories/quality/</link>
+      <link>https://machfivemarketing.com/categories/quality/</link>
       <pubDate>Tue, 29 Dec 2020 11:11:27 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/quality/</guid>
+      <guid>https://machfivemarketing.com/categories/quality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Responsive</title>
-      <link>https://thescottkrause.com/categories/responsive/</link>
+      <link>https://machfivemarketing.com/categories/responsive/</link>
       <pubDate>Tue, 29 Dec 2020 11:11:27 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/responsive/</guid>
+      <guid>https://machfivemarketing.com/categories/responsive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>UX</title>
-      <link>https://thescottkrause.com/categories/ux/</link>
+      <link>https://machfivemarketing.com/categories/ux/</link>
       <pubDate>Tue, 29 Dec 2020 11:11:27 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/categories/ux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A11y</title>
-      <link>https://thescottkrause.com/categories/a11y/</link>
-      <pubDate>Mon, 07 Dec 2020 20:26:54 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/a11y/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eCom</title>
-      <link>https://thescottkrause.com/categories/ecom/</link>
-      <pubDate>Mon, 07 Dec 2020 20:26:54 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/ecom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gameification</title>
-      <link>https://thescottkrause.com/categories/gameification/</link>
-      <pubDate>Mon, 02 Nov 2020 09:51:37 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/gameification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWA</title>
-      <link>https://thescottkrause.com/categories/pwa/</link>
-      <pubDate>Mon, 02 Nov 2020 09:51:37 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/pwa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://thescottkrause.com/categories/tutorial/</link>
-      <pubDate>Mon, 02 Nov 2020 09:51:37 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/tutorial/</guid>
+      <guid>https://machfivemarketing.com/categories/ux/</guid>
       <description></description>
     </item>
     

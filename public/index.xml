@@ -1,108 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Scott C. Krause 🚀 neodigm</title>
-    <link>https://thescottkrause.com/</link>
-    <description>Recent content on Scott C. Krause 🚀 neodigm</description>
+    <title>MachFive Marketing</title>
+    <link>https://machfivemarketing.com/</link>
+    <description>Recent content on MachFive Marketing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Mar 2021 22:39:33 -0500</lastBuildDate><atom:link href="https://thescottkrause.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Mar 2021 22:39:33 -0500</lastBuildDate><atom:link href="https://machfivemarketing.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Knowledge Garden</title>
-      <link>https://thescottkrause.com/secure/knowledge-garden/</link>
+      <link>https://machfivemarketing.com/secure/knowledge-garden/</link>
       <pubDate>Thu, 18 Mar 2021 22:39:33 -0500</pubDate>
       
-      <guid>https://thescottkrause.com/secure/knowledge-garden/</guid>
+      <guid>https://machfivemarketing.com/secure/knowledge-garden/</guid>
       <description>Frequently Asked Questions</description>
     </item>
     
     <item>
       <title>Enterprise Dashboards</title>
-      <link>https://thescottkrause.com/secure/enterprise-dashboards/</link>
+      <link>https://machfivemarketing.com/secure/enterprise-dashboards/</link>
       <pubDate>Thu, 18 Mar 2021 22:39:16 -0500</pubDate>
       
-      <guid>https://thescottkrause.com/secure/enterprise-dashboards/</guid>
+      <guid>https://machfivemarketing.com/secure/enterprise-dashboards/</guid>
       <description>Enterprise Dashboards</description>
     </item>
     
     <item>
       <title>Pricing</title>
-      <link>https://thescottkrause.com/secure/pricing/</link>
+      <link>https://machfivemarketing.com/secure/pricing/</link>
       <pubDate>Thu, 18 Mar 2021 22:39:06 -0500</pubDate>
       
-      <guid>https://thescottkrause.com/secure/pricing/</guid>
+      <guid>https://machfivemarketing.com/secure/pricing/</guid>
       <description>Frequently Asked Questions</description>
     </item>
     
     <item>
       <title>Safe &amp; Secure</title>
-      <link>https://thescottkrause.com/secure/safe/</link>
+      <link>https://machfivemarketing.com/secure/safe/</link>
       <pubDate>Thu, 18 Mar 2021 22:38:59 -0500</pubDate>
       
-      <guid>https://thescottkrause.com/secure/safe/</guid>
+      <guid>https://machfivemarketing.com/secure/safe/</guid>
       <description>Safe, Secure, and Private</description>
     </item>
     
     <item>
       <title>Privacy Policy</title>
-      <link>https://thescottkrause.com/legal/privacy-policy/</link>
+      <link>https://machfivemarketing.com/legal/privacy-policy/</link>
       <pubDate>Mon, 08 Mar 2021 18:24:48 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/legal/privacy-policy/</guid>
+      <guid>https://machfivemarketing.com/legal/privacy-policy/</guid>
       <description>Privacy Policy</description>
     </item>
     
     <item>
       <title>Terms and Conditions</title>
-      <link>https://thescottkrause.com/legal/terms-and-conditions/</link>
+      <link>https://machfivemarketing.com/legal/terms-and-conditions/</link>
       <pubDate>Mon, 08 Mar 2021 18:22:59 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/legal/terms-and-conditions/</guid>
+      <guid>https://machfivemarketing.com/legal/terms-and-conditions/</guid>
       <description>Terms and Conditions</description>
     </item>
     
     <item>
       <title>What Email Analytics To Track</title>
-      <link>https://thescottkrause.com/blog/what_email_analytics_to_track/</link>
+      <link>https://machfivemarketing.com/blog/what_email_analytics_to_track/</link>
       <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/blog/what_email_analytics_to_track/</guid>
+      <guid>https://machfivemarketing.com/blog/what_email_analytics_to_track/</guid>
       <description>First Response Time and more</description>
     </item>
     
     <item>
       <title>Neodigm55 Mobile Resizer</title>
-      <link>https://thescottkrause.com/utils/neodigm55-mobile-resizer/</link>
+      <link>https://machfivemarketing.com/utils/neodigm55-mobile-resizer/</link>
       <pubDate>Tue, 29 Dec 2020 11:11:27 -0600</pubDate>
       
-      <guid>https://thescottkrause.com/utils/neodigm55-mobile-resizer/</guid>
+      <guid>https://machfivemarketing.com/utils/neodigm55-mobile-resizer/</guid>
       <description>View a Page with common mobile / tablet form factors</description>
     </item>
     
     <item>
-      <title>eCommerce Accessibility A11y</title>
-      <link>https://thescottkrause.com/blog/ecommerce-accessibility-a11y/</link>
-      <pubDate>Mon, 07 Dec 2020 20:26:54 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/blog/ecommerce-accessibility-a11y/</guid>
-      <description>Accessibility Challenges Unique to eCommerce</description>
-    </item>
-    
-    <item>
-      <title>Roll Dice in High-Fidelity 3D</title>
-      <link>https://thescottkrause.com/blog/gameification-threejs-webcrypto-accelerator-blender-gltf/</link>
-      <pubDate>Mon, 02 Nov 2020 09:51:37 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/blog/gameification-threejs-webcrypto-accelerator-blender-gltf/</guid>
-      <description>Create 3D Dice with Strong Random Entropy</description>
-    </item>
-    
-    <item>
       <title>Faq</title>
-      <link>https://thescottkrause.com/secure/faq/</link>
+      <link>https://machfivemarketing.com/secure/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thescottkrause.com/secure/faq/</guid>
+      <guid>https://machfivemarketing.com/secure/faq/</guid>
       <description>Frequently Asked Questions</description>
     </item>
     
