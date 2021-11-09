@@ -1172,7 +1172,7 @@ section.pfmf-grid--parax {
     grid-area: box-content;    margin: 0 -8;
     align-content: center;  
     box-sizing: border-box;
-    width: 100%;
+    width: 99%;
 }
 section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
     margin: 0 -8px 0;
