@@ -150,14 +150,14 @@ href="/css/rainbow.css">
             }
             if( isVal ) {
                 if( DoForm( package[0], package[1], sToken ) ){
-                    if( neodigmSnack ){ neodigmSnack.q("Information Received|Thank you"); }
-                    if( neodigmSnack ){ neodigmSnack.q( contextMsg ); }
+                    if( neodigmToast ){ neodigmToast.q("Information Received|Thank you"); }
+                    if( neodigmToast ){ neodigmToast.q( contextMsg ); }
                 }else{
-                    if( neodigmSnack ){ neodigmSnack.q("Service is unavailable|Please try again later"); }
+                    if( neodigmToast ){ neodigmToast.q("Service is unavailable|Please try again later"); }
                 }
                 neodigmPop.close();
             }else{
-                if( neodigmSnack ){ neodigmSnack.q( valMsg ); }
+                if( neodigmToast ){ neodigmToast.q( valMsg ); }
             }
         }
     }
@@ -482,7 +482,7 @@ href="/css/rainbow.css">
                     placeholder="Password">
                     <div class="h-center">
                         <button class="js-cta__contact c2a-mfm c2a-mfm--md"
-                        onclick="neodigmSnack.q('Invalid Email and Password')">Sign In</button>
+                        onclick="neodigmToast.q('Invalid Email and Password')">Sign In</button>
                     </div>  
                 </form>
             </section>
@@ -617,10 +617,10 @@ href="/css/rainbow.css">
 </style>
 
 <script>
-    setTimeout(function(){ neodigmSnack.q("Better Tools|Better Engagement")}, 38800)
-    setTimeout(function(){ neodigmSnack.q("Free Digital Landscape Snapshot|sent directly to your Inbox")}, 68800)
-    setTimeout(function(){ neodigmSnack.q("We ensure you have proper|conversion tracking across your pipeline")}, 128000)
-    setTimeout(function(){ neodigmSnack.q("Strong content marketing is key|to maintaining organic traffic")}, 256000)
+    setTimeout(function(){ neodigmToast.q("Better Tools|Better Engagement")}, 38800)
+    setTimeout(function(){ neodigmToast.q("Free Digital Landscape Snapshot|sent directly to your Inbox")}, 68800)
+    setTimeout(function(){ neodigmToast.q("We ensure you have proper|conversion tracking across your pipeline")}, 128000)
+    setTimeout(function(){ neodigmToast.q("Strong content marketing is key|to maintaining organic traffic")}, 256000)
 </script>
 
 <template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_1.min.js"></template>
