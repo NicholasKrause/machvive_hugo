@@ -405,13 +405,13 @@ href="/css/rainbow.css">
                 }else{
                     if( neodigmToast ){ neodigmToast.q("Service is unavailable|Please try again later"); }
                 }
-                neodigmPop.close();
+                neodigmSodaPop.close();
             }else{
+                neodigmSodaPop.shake();
                 if( neodigmToast ){ neodigmToast.q( valMsg ); }
             }
         }
     }
-
 </script>
 
 <script>
@@ -546,7 +546,9 @@ href="/css/rainbow.css">
             <ul class="readable__doc" style="border-top: solid #DD4326 1px;">
                 <p><span class="material-icons">done</span>Engaging Landing Pages</p>
                 <p><span class="material-icons">done</span>Effortless UX</p>
+                <p><span class="material-icons">done</span>Laravel PHP | Vue.js | AWS</p>
                 <p><span class="material-icons">done</span>Mobile Responsive</p>
+                <p><span class="material-icons">done</span>React | Node | Three.js</p>
                 <p><span class="material-icons">done</span>Custom 3D Animation</p>
                 <p><span class="material-icons">done</span>Custom Product Videos</p>
                 <p><span class="material-icons">done</span>Digital Menu Kiosks</p>
@@ -714,7 +716,7 @@ href="/css/rainbow.css">
                     placeholder="Message"></textarea>
                     <div class="h-center">
                         <button class="js-cta__contact c2a-mfm c2a-mfm--md"
-                        onclick="valForm('m5m_contact_us', this )">Contact Us</button>
+                        onclick="valForm('m5m_contact_us', this )">Contact Us</button> 
                     </div>  
                 </form>
             </section>
