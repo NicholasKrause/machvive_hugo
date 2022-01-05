@@ -1,15 +1,16 @@
+:root {
+    --machfive-theme-primary: #92a8d1;   --machfive-theme-primary-alt: #465C85;  /* Serenity 30% darker */
+    --machfive-theme-secondary: #939597; --machfive-theme-secondary-alt: #47494B;  /* Ultimate Gray */
+    --machfive-theme-success: #009473;   --machfive-theme-success-alt: #004827;  /* Emerald */
+    --machfive-theme-danger: #DD4124;    --machfive-theme-danger-alt: #910000;  /* Tangerine Tango */
+    --machfive-theme-warning: #F5DF4D;   --machfive-theme-warning-alt: #A99301;  /* Illuminating */
+    --machfive-theme-info: #7BC4C4;      --machfive-theme-info-alt: #2F7878;  /* Aqua Sky */
+}
+
 body { background: #DCE2DF;
         margin: 0;
 }
 .brand-text { color: #50655e; }
-
-:root {
-    --wp-dark-mode-bg: #1b2836;
-    --wp-dark-mode-text: #fff;
-    --wp-dark-mode-link: #5A5B9F;
-    --wp-dark-mode-btn: #2f3c4a;
-    --wp-dark-mode-border: #394654;
-}
 
 /* Doc helpers begin */
 *::-webkit-scrollbar
@@ -23,7 +24,7 @@ body { background: #DCE2DF;
 }
 *::-webkit-scrollbar-thumb
 {
-    background: #EE7768;
+    background: #DD4124;
 }
 a
 {
@@ -31,7 +32,7 @@ a
 }
 ::selection {
     color: #fff;
-    background: #EE7768;
+    background: #DD4124;
     text-shadow: none;
 }
 body, [role='main'] {
@@ -211,7 +212,7 @@ div.caro-target__js:not(.h--select) {
  .text-coy_2021  {color: #939597;}  /* Ultimate Gray */
  .text-coy_2021b {color: #F5DF4D;}  /* Illuminating */
  .text-coy_2021c {color: #213042;}  /* MachFive Blue */
- .text-coy_2021d {color: #DD4326;}  /* MachFive Orange */
+ .text-coy_2021d {color: #DD4124;}  /* MachFive Orange reverted to Tang Tango !DD4326*/
 
  /* Color of the Year end */
 
@@ -286,7 +287,7 @@ div.caro-target__js:not(.h--select) {
     line-height: 1;
   }
   .l-sydtab button:hover h6 {
-    color: #EE7768;
+    color: #DD4124;
   }
   .l-sydtab button picture {
     display: block;
@@ -303,13 +304,13 @@ div.caro-target__js:not(.h--select) {
     background-color:  #213042;
   }
   .l-sydtab [data-sydtab-state='true'] h6 {
-    color:  #EE7768;
+    color:  #DD4124;
   }
   .l-sydtab [data-sydtab-state='true'] picture {
-    border: solid 3px #EE7768;
+    border: solid 3px #DD4124;
   }
   .l-sydtab [data-sydtab-state='true'] picture SVG{
-    fill: #EE7768;
+    fill: #DD4124;
   }
   .l-sydtab .cont__mobile--hidden {
     display: none;
@@ -609,7 +610,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 /* megamenu begin */
 .megamenu {
-    background-color: #EE7768;
+    background-color: #DD4124;
     padding: 0; margin: 0;
     width: 100%;
     overflow: hidden;
@@ -752,12 +753,12 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     width: 96px;
 }
 .mm-btn__login {
-    border: solid 1px #DD4326;
+    border: solid 1px var( --machfive-theme-danger );
     background-color: #213042;
     color: #fff;
 }
 .mm-btn__signup {
-    border: solid 1px #DD4326;
+    border: solid 1px var( --machfive-theme-danger );
     background-color: #213042;
     color: #fff;
     margin-right: 16px;
@@ -817,7 +818,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     margin: 8px;
 }
 .tiers-artc li .material-icons{
-    color: #EE7768;
+    color: #DD4124;
     margin-right: 6px;
 }
 .tiers-artc li.tier__off, .tiers-artc li.tier__off .material-icons {
@@ -835,8 +836,8 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     width: 38%;
 }
 .tiers-artc output:hover{
-    border: solid 3px #EE7768;
-    color: #EE7768;
+    border: solid 3px #DD4124;
+    color: #DD4124;
 }
 /* Tiers Partial | Features End */
 
@@ -853,12 +854,11 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     color: #fff;
 }
 .readable__caption {
-    color: #484848;
-    margin: 4px; padding: 2px;
+    margin: 6px; padding: 4px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    line-height: 1.4;
+    font-weight: 200;
+    font-size: 1.22em;
+    line-height: 1.24;
 }
 
 .readable__caption_white {
@@ -1030,7 +1030,7 @@ a.skip__main {
     bottom: 16px; left: calc(50vw - 56px);
     width: 112px; height: 112px;
     border-radius: 100%;
-    background-color: #EE7768;
+    background-color: #DD4124;
     margin: 6px auto;
     padding: 8px;
     color: #50655e;
@@ -1082,13 +1082,13 @@ a.skip__main {
     line-height: 1;
     width: 33%; max-width: 340px;
     border-radius: 8px;
-    background: linear-gradient(#EE7768,#aE3728);
+    background: linear-gradient(#DD4124,#aE3728);
     margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
 }
 
 .c2a-mfm:hover {
-    background: linear-gradient(#aE3728,#EE7768);
+    background: linear-gradient(#aE3728,#DD4124);
 }
 
 .c2a-mfm--md { width: 44%; }
