@@ -1080,14 +1080,15 @@ a.skip__main {
     font-size: 16px;
     line-height: 1;
     width: 33%; max-width: 340px;
-    border-radius: 8px;
-    background: linear-gradient(#DD4124,#aE3728);
+    border-radius: 8px 38px;
+    background: linear-gradient(#aE3728,#DD4124);
     margin: 16px auto; padding: 12px 8px 20px 8px;
     color: #fff;
+    border: solid 1px #ee3728;
 }
 
 .c2a-mfm:hover {
-    background: linear-gradient(#aE3728,#DD4124);
+    background: linear-gradient(#DD4124,#aE3728);
 }
 
 .c2a-mfm--md { width: 44%; }
@@ -1163,7 +1164,6 @@ a.skip__main {
 
 
 /* CSS Tabs End */
-
 
 /* Space Parallax stuff begin */
 section.pfmf-grid--parax {
