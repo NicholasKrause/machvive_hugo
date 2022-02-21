@@ -742,9 +742,14 @@ let neodigmOptCustom = {
                     <input id="" name="" class="m5m-input" type="password"
                     placeholder="Password">
                     <div class="h-center">
-                        <button class="js-cta__contact c2a-mfm c2a-mfm--md"
+                        <a id="cta-btn-m5m-client-auth-id" data-n55-enchanted-cta
+                        tabindex="0" aria-haspopup="true"
+                        data-n55-enchanted-cta-size="medium"
+                        data-n55-theme="danger"
                         data-neodigm-toast="Invalid Email and Password"
-                        onclick="neodigmSodaPop.shake()">Sign In</button>
+                        onclick="neodigmSodaPop.shake()">
+                        <span>Sign In</span><span>Welcome Back</span>
+                        </a>
                     </div>  
                 </form>
             </section>
@@ -763,8 +768,15 @@ let neodigmOptCustom = {
                     <input id="m5m_free_report_domain" name="domain" class="m5m-input" type="text"
                     placeholder="www.YourDomain.com">
                     <div class="h-center">
-                        <button class="js-cta__contact c2a-mfm c2a-mfm--md"
-                        onclick="valForm('m5m_free_report', this )">Request Free Report</button>
+                        <br>
+                        <a data-n55-enchanted-cta id="cta-btn-free-dla-id"
+                        tabindex="0" aria-haspopup="true"
+                        data-n55-enchanted-cta-size="large"
+                        data-n55-theme="danger"
+                        onclick="valForm('m5m_free_report', this )"
+                        data-n55-enchanted-cta-ambient="radius">
+                            <span>Request Free Report</span><span>Digital Landscape Report</span>
+                        </a>
                     </div>  
                 </form>
             </section>
@@ -783,8 +795,13 @@ let neodigmOptCustom = {
                     <textarea id="m5m_contact_us_message" name="message" class="m5m-input" type="text" rows="3"
                     placeholder="Message"></textarea>
                     <div class="h-center">
-                        <button class="js-cta__contact c2a-mfm c2a-mfm--md"
-                        onclick="valForm('m5m_contact_us', this )">Contact Us</button> 
+                        <a data-n55-enchanted-cta id="cta-btn-m5m-contact-us-id"
+                        tabindex="0" aria-haspopup="true"
+                        data-n55-enchanted-cta-size="medium"
+                        data-n55-theme="danger"
+                        onclick="valForm('m5m_contact_us', this )">
+                        <span>Contact Us</span><span>Let's Chat</span>
+                        </a>
                     </div>  
                 </form>
             </section>
