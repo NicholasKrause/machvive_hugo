@@ -642,6 +642,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
   
     box-sizing: border-box;
     z-index: 64;
+    border-bottom: solid 1px var( --machfive-theme-danger );
 }
 .megamenu .mm__vect, .megamenu .scheme__vect{
     cursor: pointer;
@@ -651,6 +652,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 }
 .megamenu .megamenu__grd--top > * {
     overflow: hidden;
+    
 }
 .megamenu .megamenu__grd--card {
     position: fixed; top: 55px;
@@ -752,8 +754,8 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     width: 96px;
 }
 .mm-btn__login {
-    border: solid 1px var( --machfive-theme-danger );
-    background-color: #213042;
+    border: solid 0px rgba(12,12,12,0);
+    background-color: rgba(12,12,12,0);
     color: #fff;
 }
 .mm-btn__signup {
@@ -1159,259 +1161,31 @@ a.skip__main {
     }
     /* Single Hero Carousel end */
 
-/* CSS Tabs Begin */
+  /* Paralax stuff begin  */
 
-
-
-/* CSS Tabs End */
-
-/* Space Parallax stuff begin */
-section.pfmf-grid--parax {
-    display: grid;
-    grid-area: box-content;    margin: 0 -8;
-    align-content: center;  
-    box-sizing: border-box;
-    width: 99%;
-}
-section.pfmf-grid--parax > div > article.pfmf-grid__artc--parax {
-    margin: 0 -8px 0;
-    height: 512px;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    overflow: hidden;
-}
-.space-sky {
-    position: relative;
-    height: 1024px; width: 101%;
-    background-color: radial-gradient(circle farthest-side, #DCE2DF 2%,);
-    z-index: 16;
-}
-.js-space-stars {
-    position: relative;
-    margin: 0 auto 0;
-    width: 36%; height: auto;
-    opacity: .6;
-    z-index: 20;
-}
-.js-space-shuttle {
-    position: relative;
-    margin: 0 auto 0;
-    width: 256px; height: 256px;
-    top: calc(100vw - (72vw * 2));
-    opacity: 0;
-    z-index: 32;
-}
-.js-space-dunes {
-    position: relative;
-    margin: 0 auto 0;
-    width: 120%; height: auto;
-    bottom: -412px;
-    z-index: 64;
-}
-.space-text {
-    position: relative;
-    margin: 44px auto 0;
-    width: 66%;
-    stroke: #DCE2DF;
-    z-index: 76;
-}
-/* Space Paralax stuff end */
-
-/* Parallax stuff begin */
-.parallax-world-of-tcs h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: black;
-    padding: 0;
-    margin: 0;
-  }
-  .parallax-world-of-tcs h2 {
-    font-size: 70px;
-    letter-spacing: 10px;
-    text-align: center;
-    color: white;
-    font-weight: 400;
-    text-transform: uppercase;
-    z-index: 10;
-    opacity: 0.9;
-  }
-
-/* Section - Title */
-/**************************/
-.parallax-world-of-tcs .title {
-    background: white;
-    padding: 60px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .parallax-world-of-tcs .title h1 {
-    font-size: 35px;
-    letter-spacing: 8px;
-  }
-  
-  /* Section - Block */
-  /**************************/
-  .parallax-world-of-tcs .block {
-    background: white;
-    padding: 60px;
-    width: 820px;
-    margin: 0 auto;
-    text-align: justify;
-  }
-  .parallax-world-of-tcs .block-gray {
-    background: #f2f2f2;
-    padding: 60px;
-  }
-  .parallax-world-of-tcs .section-overlay-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.7;
-  }
-  
-  /* Section - Parallax */
-  /**************************/
-  .parallax-world-of-tcs .parallax-one {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url(/img/machfive_marketing_ppc_agency.jpg);
-    filter: #92a8d1;
-    background-attachment: fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: middle center;
-  
-  
-    
-  }
-  .parallax-world-of-tcs .parallax-two {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url(/img/machfive_marketing_conversion_tracking.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    filter: opacity(85%);
-    filter: contrast(70%);
-  
-  
-  }
-  .parallax-world-of-tcs .parallax-three {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url(/img/machfive_marketing_automation.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    filter: opacity(85%);
-    filter: contrast(70%);
-  
-  
-  }
-
-  .parallax-world-of-tcs .parallax-four {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url(/img/machfive_marketing_content.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    filter: opacity(85%);
-    filter: contrast(70%);
-  
-  
-  }
-
-  .parallax-world-of-tcs .parallax-five {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url(/img/machfive_marketing_seo_ppc_auditing.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    filter: opacity(85%);
-    filter: contrast(70%);
-  
-  
-  }
-  
-  
-  
-  /* Extras */
-  /**************************/
-  .parallax-world-of-tcs .line-break {
-    border-bottom: 1px solid black;
-    width: 150px;
-    margin: 0 auto;
-  }
-  
-  /* Media Queries */
-  /**************************/
-  @media screen and (max-width: 959px) and (min-width: 768px) {
-    .parallax-world-of-tcs .block {
-      padding: 40px;
-      width: 620px;
+    neodigm-parallax h2.hero-caption {
+        font-size: 32px; font-weight: 300;
+        margin-top: 32px;
+        letter-spacing: 12px;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        z-index: 10;
+        opacity: 0.8;
+        transition: all .5s ease;
     }
-  }
-  @media screen and (max-width: 767px) {
-    .parallax-world-of-tcs .block {
-      padding: 30px;
-      width: 420px;
+    neodigm-parallax:hover h2.hero-caption {
+        letter-spacing: 14px;
+        opacity: 1;
     }
-    .parallax-world-of-tcs h2 {
-      font-size: 30px;
+
+    @media only screen and (min-width:48.1em)
+    { /* medium */ /* large */
+        neodigm-parallax h2.hero-caption {
+            font-size: 66px; font-weight: 300;
+        }
     }
-    .parallax-world-of-tcs .block {
-      padding: 30px;
-    }
-    .parallax-world-of-tcs .parallax-one,
-    .parallax-world-of-tcs .parallax-two,
-    .parallax-world-of-tcs .parallax-three {
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
-  }
-  @media screen and (max-width: 479px) {
-    .parallax-world-of-tcs .block {
-      padding: 30px 15px;
-      width: 290px;
-    }
-  }
-  
+
   /* Paralax stuff end */
 
 /* Hero Caption Begin */
