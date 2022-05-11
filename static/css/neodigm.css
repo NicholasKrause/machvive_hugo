@@ -1,10 +1,7 @@
 :root {
-    --machfive-theme-primary: #92a8d1;   --machfive-theme-primary-alt: #465C85;  /* Serenity 30% darker */
-    --machfive-theme-secondary: #939597; --machfive-theme-secondary-alt: #47494B;  /* Ultimate Gray */
-    --machfive-theme-success: #009473;   --machfive-theme-success-alt: #004827;  /* Emerald */
-    --machfive-theme-danger: #DD4124;    --machfive-theme-danger-alt: #910000;  /* Tangerine Tango */
-    --machfive-theme-warning: #F5DF4D;   --machfive-theme-warning-alt: #A99301;  /* Illuminating */
-    --machfive-theme-info: #7BC4C4;      --machfive-theme-info-alt: #2F7878;  /* Aqua Sky */
+    --machfive-theme-primary: #DD4124;  --machfive-theme-primary-alt: #910000; 
+    --machfive-theme-secondary:#33495e; --machfive-theme-secondary-alt: #23394e;  
+    --machfive-theme-danger: #DD4124;   --machfive-theme-danger-alt: #810000; 
 }
 
 body { background: #DCE2DF;
@@ -20,7 +17,7 @@ body { background: #DCE2DF;
 }
 *::-webkit-scrollbar-track
 {
-    background: #33495E;
+    background: var( --machfive-theme-secondary );
 }
 *::-webkit-scrollbar-thumb
 {
@@ -36,7 +33,7 @@ a
     text-shadow: none;
 }
 body, [role='main'] {
-    background: linear-gradient(to right, #213042, #33495E, #213042)
+    background: linear-gradient(to right, #fff, #e2e2e2, #fff)
 }
 .h-center { text-align: center;}
 .h-left { text-align: left;}
@@ -234,7 +231,7 @@ div.caro-target__js:not(.h--select) {
 
 /*  Logo Grid inside Syd Nav Tab begin  */
 .lgo-grid__in-tab svg, .cont__mobile svg {
-    border: solid 1px #33495e;
+    border: solid 1px var( --machfive-theme-secondary );
     border-radius: 100%;
     width: 124px;
     margin: 6px; padding: 6px;
@@ -243,10 +240,14 @@ div.caro-target__js:not(.h--select) {
 @media only screen and (min-width:48.1em) 
 { /* medium */ /* large */
     .lgo-grid__in-tab svg, .cont__mobile svg {
-        border: solid 1px #33495e;
+        border: solid 1px var( --machfive-theme-secondary );
         border-radius: 100%;
         max-width: 176px;
         margin: 16px; padding: 16px;
+    }
+    .lgo-grid__in-tab svg:hover, .cont__mobile svg:hover {
+        background-color: var( --machfive-theme-secondary-alt );
+        TODO_cursor: pointer;
     }
 }
 /*  Logo Grid inside Syd Nav Tab end  */  
@@ -257,6 +258,8 @@ div.caro-target__js:not(.h--select) {
     display: block;
     margin: 2px auto;
     background: rgba(22, 22, 22, 0);
+    background: repeating-linear-gradient(45deg, #213042, #1d2e40 24px,#213042 24px,#213042 48px);
+
     width: 100%;
   }
   .l-sydtab > article {
@@ -270,7 +273,7 @@ div.caro-target__js:not(.h--select) {
     align-items: center;
     border: solid 1px #aaa; border-radius: 16px;
     font-size: .8em;
-    background-color: #33495E;
+    background-color: var( --machfive-theme-secondary );
     margin: 4px; padding: 2px;
     width: 100%; height: 100px;
     user-select: none;
@@ -301,7 +304,7 @@ div.caro-target__js:not(.h--select) {
     background-color:  #Faf2e7;
   }
   .l-sydtab [data-sydtab-state='true'] {
-    background-color:  #213042;
+    background: repeating-linear-gradient(45deg, #213042, #1d2e40 24px,#213042 24px,#213042 48px);
   }
   .l-sydtab [data-sydtab-state='true'] h6 {
     color:  #DD4124;
@@ -325,8 +328,9 @@ div.caro-target__js:not(.h--select) {
         width: 100%;
     }
     .l-sydtab > article {
+        background: repeating-linear-gradient(45deg, #213042, #1d2e40 24px,#213042 24px,#213042 48px);
         display: block;
-        border: solid 1px #33495E;
+        border: solid 1px var( --machfive-theme-secondary );
         border-left: 0;
         border-radius: 0 16px 16px 0;
         margin: 4px 0; padding: 6px;
@@ -337,15 +341,20 @@ div.caro-target__js:not(.h--select) {
         display: grid;
         grid-template-columns: 80px calc(100% - 80px);
         align-items: center;
-        border: solid 1px #33495E; border-radius: 16px 0 0 16px;
+        border: solid 1px var( --machfive-theme-secondary ); border-radius: 16px 0 0 16px;
         font-size: 1.1em;
-        background-color: #33495E;
+        background-color: var( --machfive-theme-secondary );
         margin: 4px; padding: 2px;
         width: 100%; height: 100px;
         user-select: none;
     }
     .l-sydtab .cont__mobile {
+
         display: none;
+    }
+    #QQQQa11y-skipmain > section.pfmf-g.readable__doc.rid__100.tiers-artc > section > nav > div:nth-child(2) {
+        background: repeating-linear-gradient(45deg, #213042, #1d2e40 24px,#213042 24px,#213042 48px);
+
     }
   }
   /*  Syd Nav Widget end  */
@@ -630,7 +639,7 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
-    background-color: rgba(13,19,26,.44);
+    background-color: rgba(13, 19, 28, 0.88);
     height: 56px; width: 100%;
 
     display: grid;
@@ -852,9 +861,10 @@ section.pfmf-grid > div > article.pfmf-grid__artc--hero {
     line-height: 1.5;
 }
 .readable__doc--white {
-    color: #fff;
+    color: #fff !important;
 }
 .readable__caption {
+    color: var( --machfive-theme-secondary );
     margin: 6px; padding: 4px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
@@ -876,7 +886,7 @@ p.readable__caption > svg {
 }
 
 .readable__service {
-    color: #fafafa;
+    color: var( --machfive-theme-secondary );
     margin: 4px; padding: 2px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;

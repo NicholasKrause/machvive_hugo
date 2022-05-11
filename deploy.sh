@@ -1,7 +1,7 @@
 hugo
-cp -r public/* ../../2019/interactive_resume
-cd ../../2019/interactive_resume
+cp -r public/* ../machfivemarketing
+cd ../machfivemarketing
 git status
 git add -A
-git commit -m Neodigm_interactive
+git commit -m M5M
 git push
