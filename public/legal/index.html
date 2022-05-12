@@ -629,6 +629,22 @@ let neodigmOptCustom = {
 olark.identify('7233-815-10-7742');
 </script>
 
+<script>
+    window.addEventListener('DOMContentLoaded', (ev) => {
+        setTimeout(function(){
+            if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
+                neodigmSodaPop.setOnAfterOpen( function(){
+    NeodigmClaire.showCanv('neodigm-sodapop').setTheme('danger').initCanv('neodigm-sodapop').waxOn('neodigm-sodapop')
+                    neodigmMetronome.init()
+                        neodigmMarquee.init()
+                            neodigmEnchantedCTA.init()
+                });
+                neodigmSodaPop.setOnBeforeUserExit( function(){ neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info") } )
+            }
+        }, 3e3)
+    });
+</script>
+
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
         <script>

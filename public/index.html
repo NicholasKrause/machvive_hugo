@@ -582,6 +582,22 @@ let neodigmOptCustom = {
 olark.identify('7233-815-10-7742');
 </script>
 
+<script>
+    window.addEventListener('DOMContentLoaded', (ev) => {
+        setTimeout(function(){
+            if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
+                neodigmSodaPop.setOnAfterOpen( function(){
+    NeodigmClaire.showCanv('neodigm-sodapop').setTheme('danger').initCanv('neodigm-sodapop').waxOn('neodigm-sodapop')
+                    neodigmMetronome.init()
+                        neodigmMarquee.init()
+                            neodigmEnchantedCTA.init()
+                });
+                neodigmSodaPop.setOnBeforeUserExit( function(){ neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info") } )
+            }
+        }, 3e3)
+    });
+</script>
+
     <body>
         <main id="a11y-skipmain" role="main">
 
@@ -1170,9 +1186,9 @@ data-n55-parallax-size="small">
             <div class="brand-text">
                 <p class="lgo-para">
                     <span class="js-lgo-para__left font_fam4"
-                    data-font-hold="font_fam4" style="color: #33495e;">mach</span>
+                    data-font-hold="font_fam4" style="color: #33495e;">Mach</span>
                     <span class="js-lgo-para__right font_fam8"
-                    data-font-hold="font_fam8" style="color: #DD4124;">five</span>    
+                    data-font-hold="font_fam8" style="color: #DD4124;">Five</span>    
                 </p>
             </div>
             <a data-n55-enchanted-cta id="cta-btn-contactus-bottom-id"
