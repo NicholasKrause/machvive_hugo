@@ -552,9 +552,7 @@ let neodigmOptCustom = {
 </template>
 
 
-<a55-rv class="l-reveal"> 
-    <aside id="id-reveal__scrim" class="close-reveal-modal"></aside> 
-</a55-rv>
+ 
 
 <script> 
     setTimeout(()=>{
@@ -610,13 +608,6 @@ let neodigmOptCustom = {
     }, 400)
 </script>
 
-<neodigm-snack class="l-snackbar" role="alert">
-    <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
-        <div class="snackbar__progbar"></div>
-        <p class="snackbar__msg"></p>
-    </section>
-</neodigm-snack>
-
 <script>
     setTimeout(function(){ neodigmToast.q("Better Tools|Better Engagement","danger")}, 38800)
     setTimeout(function(){ neodigmToast.q("Free Digital Landscape Snapshot|sent directly to your Inbox","danger")}, 68800)
@@ -634,14 +625,21 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-    NeodigmClaire.showCanv('neodigm-sodapop').setTheme('danger').initCanv('neodigm-sodapop').waxOn('neodigm-sodapop')
-                    neodigmMetronome.init()
-                        neodigmMarquee.init()
-                            neodigmEnchantedCTA.init()
-                });
+                    NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ["danger", "primary"] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
+                        neodigmMetronome.init().pause( 2400 )
+                            neodigmMarquee.init().pause( 2600 )
+                                neodigmEnchantedCTA.init()
+                    });
                 neodigmSodaPop.setOnBeforeUserExit( function(){ neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info") } )
             }
         }, 3e3)
+        setTimeout(function(){
+            if( neodigmSodaPop && NeodigmClaire ){
+                neodigmSodaPop.setOnClose( function(){
+                    NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff('neodigm-sodapop')
+                });
+            }
+        }, 4e3)
     });
 </script>
 

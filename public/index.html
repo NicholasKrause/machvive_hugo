@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.89.1" />
+	<meta name="generator" content="Hugo 0.99.1" />
         
 <title>Mach Five Marketing | Digital Marketing</title>
 
@@ -505,9 +505,7 @@ let neodigmOptCustom = {
 </template>
 
 
-<a55-rv class="l-reveal"> 
-    <aside id="id-reveal__scrim" class="close-reveal-modal"></aside> 
-</a55-rv>
+ 
 
 <script> 
     setTimeout(()=>{
@@ -563,13 +561,6 @@ let neodigmOptCustom = {
     }, 400)
 </script>
 
-<neodigm-snack class="l-snackbar" role="alert">
-    <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
-        <div class="snackbar__progbar"></div>
-        <p class="snackbar__msg"></p>
-    </section>
-</neodigm-snack>
-
 <script>
     setTimeout(function(){ neodigmToast.q("Better Tools|Better Engagement","danger")}, 38800)
     setTimeout(function(){ neodigmToast.q("Free Digital Landscape Snapshot|sent directly to your Inbox","danger")}, 68800)
@@ -587,14 +578,21 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-    NeodigmClaire.showCanv('neodigm-sodapop').setTheme('danger').initCanv('neodigm-sodapop').waxOn('neodigm-sodapop')
-                    neodigmMetronome.init()
-                        neodigmMarquee.init()
-                            neodigmEnchantedCTA.init()
-                });
+                    NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ["danger", "primary"] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
+                        neodigmMetronome.init().pause( 2400 )
+                            neodigmMarquee.init().pause( 2600 )
+                                neodigmEnchantedCTA.init()
+                    });
                 neodigmSodaPop.setOnBeforeUserExit( function(){ neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info") } )
             }
         }, 3e3)
+        setTimeout(function(){
+            if( neodigmSodaPop && NeodigmClaire ){
+                neodigmSodaPop.setOnClose( function(){
+                    NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff('neodigm-sodapop')
+                });
+            }
+        }, 4e3)
     });
 </script>
 
@@ -840,8 +838,10 @@ style="stroke: #DD4124;" ><title>Laravel</title><path d="M49.626 11.564a.809.809
         </section>
 </section> 
 
-            <neodigm-parallax data-n55-parallax="/img/machfive_marketing_ppc_agency.jpg"
-data-n55-parallax-size="small">
+            <neodigm-parallax id="prllx-sem" data-n55-parallax="/img/machfive_marketing_ppc_agency.jpg"
+data-n55-parallax-size="small"
+onmouseenter=" NeodigmClaire.showCanv('#prllx-sem', .56).setTheme( ['info','success','primary','danger','warning','marcom'] ).initCanvOn('#prllx-sem').waxOn('#prllx-sem')">
+
     <section>
         <aside><h2 class="hero-caption">Search Engine Management (SEM)</h2></aside>
     </section>
@@ -921,8 +921,10 @@ data-n55-parallax-size="small">
             <br>
 
 
-<neodigm-parallax data-n55-parallax="/img/machfive_marketing_automation.jpg"
-data-n55-parallax-size="small">
+<neodigm-parallax id="prllx-conv" data-n55-parallax="/img/machfive_marketing_automation.jpg"
+data-n55-parallax-size="small"
+onmouseenter=" NeodigmClaire.showCanv('#prllx-conv', .56).setTheme( ['info','success','primary','danger','warning','marcom'] ).initCanvOn('#prllx-conv').waxOn('#prllx-conv')">
+
     <section>
         <aside><h2 class="hero-caption">Marketing Tech</h2></aside>
     </section>
@@ -1034,8 +1036,10 @@ data-n55-parallax-size="small">
 
             
 
-<neodigm-parallax data-n55-parallax="/img/machfive_marketing_conversion_tracking.jpg"
-data-n55-parallax-size="small">
+<neodigm-parallax id="prllx-conv" data-n55-parallax="/img/machfive_marketing_conversion_tracking.jpg"
+data-n55-parallax-size="small"
+onmouseenter=" NeodigmClaire.showCanv('#prllx-conv', .56).setTheme( ['info','success','primary','danger','warning','marcom'] ).initCanvOn('#prllx-conv').waxOn('#prllx-conv')">
+
     <section>
         <aside><h2 class="hero-caption">Analytics and Conversion Tracking</h2></aside>
     </section>
@@ -1079,8 +1083,10 @@ data-n55-parallax-size="small">
 
             
  
-<neodigm-parallax data-n55-parallax="/img/machfive_marketing_content.jpg"
-data-n55-parallax-size="small">
+<neodigm-parallax id="prllx-cont" data-n55-parallax="/img/machfive_marketing_content.jpg"
+data-n55-parallax-size="small"
+onmouseenter=" NeodigmClaire.showCanv('#prllx-cont', .56).setTheme( ['info','success','primary','danger','warning','marcom'] ).initCanvOn('#prllx-cont').waxOn('#prllx-cont')">
+
     <section>
         <aside><h2 class="hero-caption">Content</h2></aside>
     </section>
@@ -1126,8 +1132,10 @@ data-n55-parallax-size="small">
 
             
 
-<neodigm-parallax data-n55-parallax="/img/machfive_marketing_seo_ppc_auditing.jpg"
-data-n55-parallax-size="small">
+<neodigm-parallax id="prllx-audit" data-n55-parallax="/img/machfive_marketing_seo_ppc_auditing.jpg"
+data-n55-parallax-size="small"
+onmouseenter=" NeodigmClaire.showCanv('#prllx-audit', .56).setTheme( ['info','success','primary','danger','warning','marcom'] ).initCanvOn('#prllx-audit').waxOn('#prllx-audit')">
+
     <section>
         <aside><h2 class="hero-caption">Auditing</h2></aside>
     </section>
