@@ -1181,10 +1181,8 @@ a.skip__main {
         color: #fff;
         text-transform: uppercase;
         z-index: 10;
-        opacity: 0.8;
-        transition: all .5s ease;
     }
-    neodigm-parallax:hover h2.hero-caption {
+    QQQQneodigm-parallax:hover h2.hero-caption {
         letter-spacing: 14px;
         opacity: 1;
     }

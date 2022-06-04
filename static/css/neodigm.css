@@ -1181,12 +1181,6 @@ a.skip__main {
         color: #fff;
         text-transform: uppercase;
         z-index: 10;
-        opacity: 0.8;
-        transition: all .5s ease;
-    }
-    neodigm-parallax:hover h2.hero-caption {
-        letter-spacing: 14px;
-        opacity: 1;
     }
 
     @media only screen and (min-width:48.1em)
