@@ -1182,10 +1182,6 @@ a.skip__main {
         text-transform: uppercase;
         z-index: 10;
     }
-    QQQQneodigm-parallax:hover h2.hero-caption {
-        letter-spacing: 14px;
-        opacity: 1;
-    }
 
     @media only screen and (min-width:48.1em)
     { /* medium */ /* large */

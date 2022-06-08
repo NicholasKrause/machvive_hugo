@@ -132,10 +132,10 @@ let neodigmOptCustom = {
     neodigmMarquee: true}
 </script>
 
-<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_0.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_0.css">
-<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_0.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_0.js"></script>
+<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_1.min.css"></template>
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_1.css">
+<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_1.min.js"></template>
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_1.js"></script>
 
 <script>
     if ("serviceWorker" in navigator) {
@@ -647,7 +647,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-                    NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ["danger", "primary"] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
+                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "primary"], .8)
                         neodigmMetronome.init().pause( 2400 )
                             neodigmMarquee.init().pause( 2600 )
                                 neodigmEnchantedCTA.init()

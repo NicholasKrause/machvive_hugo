@@ -63,10 +63,10 @@ let neodigmOptCustom = {
     neodigmMarquee: true}
 </script>
 
-<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_0.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_0.css">
-<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_0.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_0.js"></script>
+<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_1.min.css"></template>
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_1.css">
+<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_1.min.js"></template>
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_1.js"></script>
 
 <script>
     if ("serviceWorker" in navigator) {
@@ -578,7 +578,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-                    NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ["danger", "primary"] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
+                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "primary"], .8)
                         neodigmMetronome.init().pause( 2400 )
                             neodigmMarquee.init().pause( 2600 )
                                 neodigmEnchantedCTA.init()
@@ -659,7 +659,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <section class="pfmf-grid--parax pfmf-grid__100 readable__doc" style="position: relative;">
     <div>
         <article>
-            <div style="width: 99%; overflow: hidden; margin: 0 auto;">
+            <div style="width: 99%; overflow: hidden; margin: 0 auto; height: 44vh;">
                 <canvas id="js-space-gen"></canvas>
             </div>
         </article>
@@ -667,7 +667,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
         style="background-color: rgba(0,0,0,.16);
         border-radius: 54px 6px 54px 6px;
         position: absolute;
-        top: 30%;
+        top: 14%;
         left: 12%;
         right: 12%;
         z-index: 24;
@@ -697,7 +697,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
 </section>
 
 <script>
-    var canvas=document.getElementById("js-space-gen"),ctx=canvas.getContext("2d"),w=canvas.width=window.innerWidth,h=canvas.height=window.innerHeight,hue=211,stars=[],count=0,maxStars=1400,canvas2=document.createElement("canvas"),ctx2=canvas2.getContext("2d");canvas2.width=100;canvas2.height=100;var half=canvas2.width/2,gradient2=ctx2.createRadialGradient(half,half,0,half,half,half);gradient2.addColorStop(.025,"#fff");gradient2.addColorStop(.1,"hsl(150, 9%, 87%)");gradient2.addColorStop(.25,"hsl(150, 64%, 6%)");
+    var canvas=document.getElementById("js-space-gen"),ctx=canvas.getContext("2d"),w=canvas.width=window.innerWidth,h=canvas.height=window.innerHeight,hue=211,stars=[],count=0,maxStars=160,canvas2=document.createElement("canvas"),ctx2=canvas2.getContext("2d");canvas2.width=100;canvas2.height=100;var half=canvas2.width/2,gradient2=ctx2.createRadialGradient(half,half,0,half,half,half);gradient2.addColorStop(.025,"#fff");gradient2.addColorStop(.1,"hsl(150, 9%, 87%)");gradient2.addColorStop(.25,"hsl(150, 64%, 6%)");
     gradient2.addColorStop(1,"transparent");ctx2.fillStyle=gradient2;ctx2.beginPath();ctx2.arc(half,half,half,0,2*Math.PI);ctx2.fill();function random(a,b){2>arguments.length&&(b=a,a=0);if(a>b){var c=b;b=a;a=c}return Math.floor(Math.random()*(b-a+1))+a}function maxOrbit(a,b){var c=Math.max(a,b);return Math.round(Math.sqrt(c*c+c*c))/2}
     var Star=function(){this.orbitRadius=random(maxOrbit(w,h));this.radius=random(60,this.orbitRadius)/12;this.orbitX=w/2;this.orbitY=h/2;this.timePassed=random(0,maxStars);this.speed=random(this.orbitRadius)/15E4;this.alpha=random(2,10)/10;count++;stars[count]=this};
     Star.prototype.draw=function(){var a=Math.sin(this.timePassed)*this.orbitRadius+this.orbitX,b=Math.cos(this.timePassed)*this.orbitRadius+this.orbitY,c=random(10);1===c&&0<this.alpha?this.alpha-=.05:2===c&&1>this.alpha&&(this.alpha+=.05);ctx.globalAlpha=this.alpha;ctx.drawImage(canvas2,a-this.radius/2,b-this.radius/2,this.radius,this.radius);this.timePassed+=this.speed};for(var i=0;i<maxStars;i++)new Star;
