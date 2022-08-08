@@ -9,7 +9,7 @@
 
 <meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height"/>
 <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Audiowide|Comfortaa:300|Exo+2:200x600|Fredericka+the+Great|La+Belle+Aurore|Londrina+Sketch|Meddon|Special+Elite|Srisakdi|Tulpen+One&display=swap" rel="stylesheet">
-<meta name="description" content="We envision, manage, design, and deliver. Chicago Digital Marketing Agency.">
+<meta name="description" content="We manage, design, and deliver. Chicago Digital Marketing Agency. GA4 Set up conversion events">
 
 <link rel="canonical" href="https://www.machfivemarketing.com/index.html" />
 
@@ -106,10 +106,8 @@ let neodigmOptCustom = {
     neodigmMarquee: true}
 </script>
 
-<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_1.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_1.css">
-<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_1.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_1.js"></script>
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_3.css">
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_3.js"></script>
 
 <script>
     if ("serviceWorker" in navigator) {
@@ -348,7 +346,13 @@ let neodigmOptCustom = {
 
 <template id="js-web--id" data-n55-sodapop-modal="false"  data-n55-sodapop-size="small">
         <article class="rev-artc">
-            <h4 class="h-center readable__caption">Web Services</h4>
+<section style="background-color: #242424;border-radius: 8px;">
+<h4 class="h-center readable__caption_white">Web Services</h4>
+<neodigm-marquee data-n55-marquee-text=" UX Cloud CMS Landing Pages Laravel WordPress Graphic Design eCommerce 3D Animation Mobile Apps Custom Dashboards"
+data-n55-marquee-size="medium">
+<pre data-n55-theme="info"></pre>
+</neodigm-marquee>
+</section>
             <ul class="readable__doc" style="border-top: solid #DD4326 1px;">
                 <p><span class="material-icons">done</span>Engaging Landing Pages</p>
                 <p><span class="material-icons">done</span>Effortless UX</p>
@@ -496,7 +500,7 @@ let neodigmOptCustom = {
 </template>
 
 <template id="js-reportrequest--id" data-n55-sodapop-modal="false"  data-n55-sodapop-size="small">
-        <article class="rev-artc">
+        <div class="QQQQrev-artc">
             <h4 class="h-center readable__caption">Report Request</h4>
             <section class="readable__doc" style="border-top: solid #DD4326 1px;">
                 <form autocomplete="off" novalidate
@@ -519,7 +523,7 @@ let neodigmOptCustom = {
                     </div>  
                 </form>
             </section>
-        </article>
+        </div>
 </template>
 
 <template id="js-contact--id" data-n55-sodapop-modal="false"  data-n55-sodapop-size="small">
@@ -621,7 +625,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "primary"], .8)
+                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "primary"], "random", .8)
                         neodigmMetronome.init().pause( 2400 )
                             neodigmMarquee.init().pause( 2600 )
                                 neodigmEnchantedCTA.init()
@@ -632,7 +636,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && NeodigmClaire ){
                 neodigmSodaPop.setOnClose( function(){
-                    NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff('neodigm-sodapop')
+                    NeodigmClaire.doWaxOff("neodigm-sodapop", ["danger", "primary"], "random", .8)
                 });
             }
         }, 4e3)
