@@ -5,6 +5,6 @@
     "taxonomies": {
       "category": "categories",
       "tag": "tags",
-      "skill": "skills"
+      "accelerator": "accelerators"
    }
  }
