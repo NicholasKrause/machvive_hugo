@@ -519,7 +519,7 @@ section.pfmf-grid__10_40_40_10  { grid-template-columns: 100%; }
     background-color: #DCE2DF;
 }
 
-section.pfmf-grid > div > article {
+QQQQsection.pfmf-grid > div > article {
     margin: 6px 4px;
     padding: 4px;
     border: solid 1px #bbb;
