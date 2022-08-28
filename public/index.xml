@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MachFive Marketing</title>
+    <title>Mach Five Marketing | Chicago</title>
     <link>https://machfivemarketing.com/</link>
-    <description>Recent content on MachFive Marketing</description>
+    <description>Recent content on Mach Five Marketing | Chicago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Aug 2022 17:33:25 -0500</lastBuildDate><atom:link href="https://machfivemarketing.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Migrate to Google Analytics 4</title>
+      <title>Google Analytics 4 Migration | GA4</title>
       <link>https://machfivemarketing.com/accelerators/google_analytics_ga4_migration/</link>
       <pubDate>Mon, 08 Aug 2022 17:33:25 -0500</pubDate>
       
       <guid>https://machfivemarketing.com/accelerators/google_analytics_ga4_migration/</guid>
-      <description>Google Analytics GA 4 Migration</description>
+      <description>Google Analytics 4 Migration | GA4</description>
     </item>
     
   </channel>
