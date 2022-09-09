@@ -1,9 +1,14 @@
 <section class="pfmf-grid--parax pfmf-grid__100 readable__doc" style="position: relative;">
     <div>
         <article>
-            <div style="width: 99%; overflow: hidden; margin: 0 auto; height: 44vh;">
-                <canvas id="js-space-gen"></canvas>
-            </div>
+            <style>
+                #l-space-gen {width: 99%; overflow: hidden; margin: 0 auto; height: 64vh;}
+                @media only screen and (min-width:48.1em)
+                { /* medium */ /* large */
+                    #l-space-gen {height: 44vh;}
+                }
+            </style>
+            <div id="l-space-gen"><canvas id="js-space-gen"></canvas></div>
         </article>
         <article
         style="background-color: rgba(0,0,0,.16);

@@ -77,7 +77,7 @@ let neodigmOptCustom = {
     *::-webkit-scrollbar-thumb { background: #000; }
     ::selection { color: #930; background:  #fff600; text-shadow: none; }
     [data-pref-scheme] .hd1, [data-pref-scheme] .hd2, [data-pref-scheme] .hd3, [data-pref-scheme] .hd4 { color: #DD4124; }
-    .vec-bullet { fill: #810000; }
+    .vec-bullet { fill: #810000; height: 32px; width: 32px;}
     .vec-bullet:hover { fill: #DD4124; }
 </style>
 
@@ -668,9 +668,14 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <section class="pfmf-grid--parax pfmf-grid__100 readable__doc" style="position: relative;">
     <div>
         <article>
-            <div style="width: 99%; overflow: hidden; margin: 0 auto; height: 44vh;">
-                <canvas id="js-space-gen"></canvas>
-            </div>
+            <style>
+                #l-space-gen {width: 99%; overflow: hidden; margin: 0 auto; height: 64vh;}
+                @media only screen and (min-width:48.1em)
+                {    
+                    #l-space-gen {height: 44vh;}
+                }
+            </style>
+            <div id="l-space-gen"><canvas id="js-space-gen"></canvas></div>
         </article>
         <article
         style="background-color: rgba(0,0,0,.16);
@@ -718,6 +723,22 @@ href="#a11y-skipmain">Skip to Main Content</a>
 
     <h1 class="h-center" style="color: #DD4124;">GA4 Configuration - GA4 Experts</h1>
 
+    <div style="text-align: center;">
+        <a id="js-open-pup--sm" href="/accelerators/google_analytics_ga4_migration/"
+        target="_blank" rel="noopener" tabindex="0" aria-haspopup="true"
+        data-n55-enchanted-cta
+        data-n55-enchanted-cta-alt="Managed|GA4 Configuration"
+        data-n55-enchanted-cta-ambient="radius"
+        data-n55-enchanted-cta-dont-touch="false"
+        data-n55-enchanted-cta-shape-off="false"
+        data-n55-enchanted-cta-size="medium"
+        data-n55-flash-theme="marcom"
+        data-n55-theme="night"
+        data-n55-toast="Get GA4 Expertise!"
+        data-n55-wired4sound-click="7"
+        ><span data-n55-wired4sound-mouseover="3">Fast GA4 Migration</span><span>Get GA4 Expertise!</span>
+        </a>
+    </div>
     
     <p class="readable__doc h-center" style="margin-left: 25px; margin-right: 25px;">Our platforms and partnerships enable us to achieve and maintain success for your brand.</p>
     <p class="readable__doc h-center" style="margin-left: 25px; margin-right: 25px;">We believe that in order to consistently deliver value to our clients, we must stay at the forefront of technology, data intelligence and customer management.</p>
