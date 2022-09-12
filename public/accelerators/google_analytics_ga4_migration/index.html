@@ -74,7 +74,17 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <template style="height: 64px; margin: 2px;"></template>
             <h1 class="hd1 h-center"> Google Analytics 4 Migration Services </h1>
 
-            <style>
+            <script>
+    let neodigmOptCustom = {
+        neodigmToast: true,
+        neodigmSodaPop: true,
+        neodigmUtils: true,
+        neodigmWired4Sound: true,
+        QQQQneodigmParallax: false,  //  Issue with iPhone!
+        QQQQPRLX_MOBILE: true,  //  Show Parallax on Mobile
+        neodigmMarquee: true}
+    </script>
+<style>
     /*  overrides */
     :root { --m5lc-theme-brand: #edba08; --m5lc-theme-brand-alt: #915E00; }
     *::-webkit-scrollbar-thumb { background: #000; }
@@ -217,11 +227,11 @@ href="#a11y-skipmain">Skip to Main Content</a>
 <br>
 <div id="intro-gray" data-pref-scheme="light">
     <section class="sec-inverse__gray">
-        <section class="pfmf-grid pfmf-grid__50_50">
+        <section class="pfmf-grid pfmf-grid__60_40">
             <div>
                 <article>
                     <h2 class="hd2">Google is moving to GA4 in July 2023. Are you ready?</h2>
-                    <p class="txt-readable prg">In late 2020, Google Analytics 4 (GA4) officially became the default tool for organizations tracking any new digital properties. The race to migrate from Universal Analytics was set in motion.</p>
+                    <p class="txt-readable prg">In late 2020, Google Analytics 4 (GA4) officially became the default tool for organizations tracking any new digital properties. The race to migrate from Universal Analytics began.</p>
                     <section class="l-bullets txt-readable">
                         <svg class="vec-bullet" viewbox="0 0 24 24"
                          onClick="neodigmToast.q('Smart Conversions|Get it done with Confidence', 'danger')"
@@ -247,7 +257,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
             </div>
             <div>
                 <article>
-                    <div style="width: 56%; height: 56%;
+                    <div style="width: 58%; height: 58%;
                     position: relative; top: -64px; opacity: .94; margin: 0 auto;"
                     onclick="NeodigmClaire.showCanv('#intro-gray', .5).setTheme('danger').initCanvOn('#intro-gray').waxOn('#intro-gray'); neodigmEnchantedCTA.flashTheme('marcom')">
                         <lottie-player src="/lottie/lf30_editor_hhrmo6xg.json" background="transparent" speed=".2" style="width: 100%; height: 100%;" autoplay loop></lottie-player>
@@ -261,7 +271,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
 
 <section class="pfmf-grid pfmf-grid__100 readable__caption">
     <div>
-        <article class="h-bg__stripe" style="min-height: 128px;text-align: center;padding: 16px 8px;">
+        <article class="h-bg__stripe" style="min-height: 128px;text-align: center;padding: 2px; margin: 2px;">
             <section class="l-caro__sec h-ds__none">
                 <div class="main-carousel">
                     <div class="carousel-cell">
@@ -277,7 +287,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                         <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/25.webp" alt="GA4 Conversion Data">
                     </div>
                     <div class="carousel-cell">
-                        <neodigm-marquee style="border-radius: 8px;" data-n55-marquee-text=" You don’t have to waste your time fighting bad data to be a good marketer.  Your reports will no longer exist.  We can help you build the dashboards that will drive your business decisions well into the future.  "
+                        <neodigm-marquee style="border-radius: 8px;" data-n55-marquee-text=" You don’t have to waste your time fighting bad data to be a good marketer.  Your UA reports will no longer exist.  We can help you build the dashboards that will drive your business decisions well into the future.  "
                         data-n55-marquee-size="small" data-n55-marquee-direction="false"><pre data-n55-theme="primary"></pre>
                         </neodigm-marquee>
                         <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/30.webp" alt="UA to GA4 Infographic">
@@ -343,12 +353,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
 
 
 
-
-
-
-
-
-
 <section id="price-crds" class="pfmf-grid pfmf-grid__33_33_33 l-saas-crd">
     <article id="saas-crd-1" class="sm-crd-inver__night-alt h-pos__rel" data-pref-scheme="dark">
         <br><div class="saas-crd__rib--side" data-pref-scheme="dark"><div class="h-center"><span class="banner-cap">$450</span></div></div>
@@ -356,7 +360,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
         <main>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
-        <p class="txt-readable prg h-center">7-14 Days</p></main>
+        <p class="txt-readable prg h-center h-ital">7-14 Days</p></main>
         <nav class="h-center">
             <a id="saas-crd-cta-1"
             data-n55-enchanted-cta
@@ -365,9 +369,8 @@ href="#a11y-skipmain">Skip to Main Content</a>
             data-n55-enchanted-cta-size="medium"
             data-n55-flash-theme="marcom" 
             data-n55-sodapop-id="js-pup-saas-crd-1"
-            data-n55-theme="warning"
+            data-n55-theme="danger"
             data-n55-wired4sound-click="5"
-            onclick="NeodigmClaire.showCanv('#price-crds').initCanvOff('#price-crds').doConfetti('#price-crds')"
             >
                 <span>Get Started</span>
                 <span>Let's Do This!</span>
@@ -384,7 +387,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
-        <p class="txt-readable prg h-center">20 - 30 Days</p></main>
+        <p class="txt-readable prg h-center h-ital">20 - 30 Days</p></main>
         <nav class="h-center">
             <a id="saas-crd-cta-2"
             data-n55-enchanted-cta
@@ -393,9 +396,8 @@ href="#a11y-skipmain">Skip to Main Content</a>
             data-n55-enchanted-cta-size="medium"
             data-n55-flash-theme="marcom" 
             data-n55-sodapop-id="js-pup-saas-crd-2"
-            data-n55-theme="warning"
+            data-n55-theme="danger"
             data-n55-wired4sound-click="5"
-            onclick="NeodigmClaire.showCanv('#price-crds').initCanvOff('#price-crds').doConfetti('#price-crds')"
             >
                 <span>Get Started</span>
                 <span>Let's Do This!</span>
@@ -409,7 +411,8 @@ href="#a11y-skipmain">Skip to Main Content</a>
         <main>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
         <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
-        <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p></main>
+        <p class="txt-readable prg">Qui aliquid fugiat ut consequatur optio et dicta officiis et atque aliquam</p>
+        <p class="txt-readable prg h-center h-ital">Phased Deliverables</p></main>
         <nav class="h-center">
             <a id="saas-crd-cta-3"
             data-n55-enchanted-cta
@@ -418,9 +421,8 @@ href="#a11y-skipmain">Skip to Main Content</a>
             data-n55-enchanted-cta-size="medium"
             data-n55-flash-theme="marcom" 
             data-n55-sodapop-id="js-pup-saas-crd-3"
-            data-n55-theme="warning"
+            data-n55-theme="danger"
             data-n55-wired4sound-click="5"
-            onclick="NeodigmClaire.showCanv('#price-crds').initCanvOff('#price-crds').doConfetti('#price-crds')"
             >
                 <span>Get Started</span>
                 <span>Let's Do This!</span>
@@ -428,10 +430,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
         </nav>
     </article>
 </section>
-
-
-
-
 
 
 
@@ -452,7 +450,6 @@ data-n55-flash-theme="marcom"
 data-n55-enchanted-cta-size="xlarge"
 data-n55-theme="night"
 data-n55-enchanted-cta-ambient="emit"
-QQQdata-n55-enchanted-cta-alt="Ask|Mach Five Marketing"
 data-n55-sodapop-id="js-cheatsheet--id">
     <span>Let's Chat</span>
     <span>
@@ -465,10 +462,10 @@ data-n55-sodapop-id="js-cheatsheet--id">
 </aside>
 </section>
 </neodigm-parallax> 
-<!-- Universal Analytics Data Collection Ends on July 1st, 2022.  It's Time to Migrate to GA4 to Measure Year-over-Year Data. -->
+
 <div data-pref-scheme="dark">
     <section class="sec-inverse__darkgray" style="height: 100%;">
-        <section class="pfmf-grid pfmf-grid__50_50">
+        <section class="pfmf-grid pfmf-grid__60_40">
             <div>
                 <article>
                     <h2 class="hd2">Lorem ipsum dolor sit amet</h2>
@@ -520,13 +517,74 @@ data-n55-sodapop-id="js-cheatsheet--id">
     if( eIFCont ){
         const eIF = eIFCont.querySelector("article")
         setTimeout(function(){
+            if( neodigmWired4Sound ) neodigmWired4Sound.setVolume(.02)
             if( eIF && trends?.embed ){
                 eIFCont.classList.remove("h-ds__none")
                 trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"ga4","geo":"US","time":"today 12-m"},{"keyword":"tealium","geo":"US","time":"today 12-m"},{"keyword":"adobe analytics","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=ga4,tealium,adobe%20analytics&date=today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
             }
         }, 4600)
     }
-</script>  
+</script>
+
+<template id="js-pup-saas-crd-1" data-n55-sodapop-modal="false"  data-n55-sodapop-size="small">
+    <article class="rev-artc">
+<section style="background-color: #242424;border-radius: 8px;">
+<h4 class="h-center readable__caption_white">Introduction</h4>
+<neodigm-marquee data-n55-marquee-text=" Universal Analytics Data Collection Ends on July 1st, 2022.  It's Time to Migrate to GA4 to Measure Year-over-Year Data.  "
+data-n55-marquee-size="small">
+<pre data-n55-theme="info"></pre>
+</neodigm-marquee>
+</section>
+        <ul class="readable__doc" style="border-top: solid #DD4326 1px;">
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+        </ul>
+    </article>
+</template>
+
+<template id="js-pup-saas-crd-2" data-n55-sodapop-modal="false"  data-n55-sodapop-size="small">
+    <article class="rev-artc">
+<section style="background-color: #242424;border-radius: 8px;">
+<h4 class="h-center readable__caption_white">Enterprise</h4>
+<neodigm-marquee data-n55-marquee-text=" Universal Analytics Data Collection Ends on July 1st, 2022.  It's Time to Migrate to GA4 to Measure Year-over-Year Data.  "
+data-n55-marquee-size="small">
+<pre data-n55-theme="info"></pre>
+</neodigm-marquee>
+</section>
+        <ul class="readable__doc" style="border-top: solid #DD4326 1px;">
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+        </ul>
+    </article>
+</template>
+
+<template id="js-pup-saas-crd-3" data-n55-sodapop-modal="false"  data-n55-sodapop-size="small">
+    <article class="rev-artc">
+<section style="background-color: #242424;border-radius: 8px;">
+<h4 class="h-center readable__caption_white">Custom Solution</h4>
+<neodigm-marquee data-n55-marquee-text=" Universal Analytics Data Collection Ends on July 1st, 2022.  It's Time to Migrate to GA4 to Measure Year-over-Year Data.  "
+data-n55-marquee-size="small">
+<pre data-n55-theme="info"></pre>
+</neodigm-marquee>
+</section>
+        <ul class="readable__doc" style="border-top: solid #DD4326 1px;">
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+            <p><span class="material-icons">done</span>ducks</p>
+        </ul>
+    </article>
+</template>  
             
             
 
