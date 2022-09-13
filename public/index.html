@@ -168,6 +168,22 @@ let neodigmOptCustom = {
                     }                    
                     package = [eForm.email.value, eForm.domain.value];
                     break;
+                case "ga4_saas_crd_CUSTOM":
+                    contextMsg = "Expect to see next steps|in your inbox soon!";
+                    if( eForm.domain.value.indexOf(".") === -1 ){
+                        isVal = false; valMsg = "Primary Website Domain is|invalid";
+                    }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
+                        isVal = false; valMsg = "Email Address is|invalid";
+                    }
+                    if( !eForm.domain.value ){
+                        isVal = false; valMsg = "Website Domain is|Required";
+                    }
+                    if( !eForm.email.value ){
+                        isVal = false; valMsg = "Email Address is|Required";
+                    }                    
+                    package = [eForm.email.value, eForm.domain.value];
+                    break;
                 default:
                     console.warn( sToken, " does not exist.");
             }
