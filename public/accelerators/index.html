@@ -212,6 +212,38 @@ let neodigmOptCustom = {
                     }                    
                     package = [eForm.email.value, eForm.domain.value];
                     break;
+                case "ga4_saas_crd_INTRO":
+                    contextMsg = "Expect to see next steps|in your inbox soon!";
+                    if( eForm.domain.value.indexOf(".") === -1 ){
+                        isVal = false; valMsg = "Primary Website Domain is|invalid";
+                    }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
+                        isVal = false; valMsg = "Email Address is|invalid";
+                    }
+                    if( !eForm.domain.value ){
+                        isVal = false; valMsg = "Website Domain is|Required";
+                    }
+                    if( !eForm.email.value ){
+                        isVal = false; valMsg = "Email Address is|Required";
+                    }                    
+                    package = [eForm.email.value, eForm.domain.value + " | " + eForm.message.value ];
+                    break;
+                case "ga4_saas_crd_ENTERPRISE":
+                    contextMsg = "Expect to see next steps|in your inbox soon!";
+                    if( eForm.domain.value.indexOf(".") === -1 ){
+                        isVal = false; valMsg = "Primary Website Domain is|invalid";
+                    }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
+                        isVal = false; valMsg = "Email Address is|invalid";
+                    }
+                    if( !eForm.domain.value ){
+                        isVal = false; valMsg = "Website Domain is|Required";
+                    }
+                    if( !eForm.email.value ){
+                        isVal = false; valMsg = "Email Address is|Required";
+                    }                    
+                    package = [eForm.email.value, eForm.domain.value + " | " + eForm.message.value ];
+                    break;
                 case "ga4_saas_crd_CUSTOM":
                     contextMsg = "Expect to see next steps|in your inbox soon!";
                     if( eForm.domain.value.indexOf(".") === -1 ){
@@ -226,7 +258,7 @@ let neodigmOptCustom = {
                     if( !eForm.email.value ){
                         isVal = false; valMsg = "Email Address is|Required";
                     }                    
-                    package = [eForm.email.value, eForm.domain.value];
+                    package = [eForm.email.value, eForm.domain.value + " | " + eForm.message.value ];
                     break;
                 default:
                     console.warn( sToken, " does not exist.");
@@ -647,7 +679,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "primary"], "random", .8)
+                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "marcom"], "random", .7)
                         neodigmMetronome.init().pause( 2400 )
                             neodigmMarquee.init().pause( 2600 )
                                 neodigmEnchantedCTA.init()
@@ -658,7 +690,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && NeodigmClaire ){
                 neodigmSodaPop.setOnClose( function(){
-                    NeodigmClaire.doWaxOff("neodigm-sodapop", ["danger", "primary"], "random", .8)
+                    NeodigmClaire.doWaxOff("neodigm-sodapop", ["danger", "warning", "marcom"], "random", .7)
                 });
             }
         }, 4e3)
