@@ -174,17 +174,40 @@ let neodigmOptCustom = {
             }
             if( isVal ) {
                 if( DoForm( package[0], package[1], sToken ) ){
-                    if( neodigmToast ){ neodigmToast.q("Information Received|Thank you"); }
+                    if( neodigmToast ){ neodigmToast.q("Information Received|Thank You"); }
                     if( neodigmToast ){ neodigmToast.q( contextMsg ); }
                 }else{
-                    if( neodigmToast ){ neodigmToast.q("Service is unavailable|Please try again later"); }
+                    if( neodigmToast ){ neodigmToast.q("Service is Unavailable|Please Try Again Later"); }
                 }
-                neodigmSodaPop.close();
+                if( (sToken.indexOf("ga4") != -1) && (Calendly) && (!Calendly.runonce) ){
+                    neodigmSodaPop.close( true ) // bFast
+                    doCal()
+                }else{
+                    neodigmSodaPop.close()
+                }
             }else{
                 neodigmSodaPop.shake();
                 if( neodigmToast ){ neodigmToast.q( valMsg, "danger" ); }
             }
         }
+    }
+</script>
+
+<script>
+    function doCal(){  //  GA4 Accl
+        setTimeout(function(){
+            neodigmSodaPop.autoOpen("js-pup-cal")
+            setTimeout(function(){
+                Calendly.initInlineWidget({
+                    url: 'https://calendly.com/machfive/machfive-ga4-intro?hide_gdpr_banner=1&hide_landing_page_details=1',
+                    parentElement: document.getElementById('js-cal-target'),
+                    prefill: {},
+                    utm: {}
+                });
+                Calendly.runonce = true
+                if( neodigmToast ){ neodigmToast.q("Let's Schedule a|Quick Consultation"); }
+            }, 600)
+        }, 600)
     }
 </script>
 
@@ -591,7 +614,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "marcom"], "random", .7)
+                    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "primary"], "random", .7)
                         neodigmMetronome.init().pause( 2400 )
                             neodigmMarquee.init().pause( 2600 )
                                 neodigmEnchantedCTA.init()
@@ -602,7 +625,7 @@ olark.identify('7233-815-10-7742');
         setTimeout(function(){
             if( neodigmSodaPop && NeodigmClaire ){
                 neodigmSodaPop.setOnClose( function(){
-                    NeodigmClaire.doWaxOff("neodigm-sodapop", ["danger", "warning", "marcom"], "random", .7)
+                    NeodigmClaire.doWaxOff("neodigm-sodapop", ["danger", "warning", "primary"], "random", .7)
                 });
             }
         }, 4e3)
