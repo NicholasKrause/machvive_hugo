@@ -3,7 +3,7 @@ let neodigmOptCustom = {
     neodigmToast: true,
     neodigmSodaPop: true,
     neodigmUtils: true,
-    neodigmWired4Sound: false,
+    .sound( 8 ): false,
     QQQQneodigmParallax: false,  //  Issue with iPhone!
     QQQQPRLX_MOBILE: true,  //  Show Parallax on Mobile
     neodigmMarquee: true}
@@ -209,6 +209,24 @@ let neodigmOptCustom = {
             }, 600)
         }, 600)
     }
+    function isCalendlyEvent(e) {
+        return e.origin === "https://calendly.com" && e.data.event && e.data.event.indexOf("calendly.") === 0;
+    };
+       
+    window.addEventListener("message", function(e) {
+    if(isCalendlyEvent(e)) {
+        /* Example to get the name of the event */
+        console.log("=== Event name:", e.data.event);
+        if( e.data.event == "calendly.event_scheduled"){
+            neodigmSodaPop.close( true )
+            neodigmWired4Sound.sound( 8 )
+            neodigmSodaPop.autoOpen("js-pup-vcf")
+        }
+        
+        /* Example to get the payload of the event */
+        console.log("=== Event details:", e.data.payload);
+    }
+    });
 </script>
 
 <script>
