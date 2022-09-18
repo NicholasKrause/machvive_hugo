@@ -81,6 +81,8 @@ href="#a11y-skipmain">Skip to Main Content</a>
                     <article class="js-art__caro h-ds__none">
                         <section class="l-caro-design__cnt">
                         
+                            
+                        
                         </section>
                     </article>
             
@@ -306,16 +308,13 @@ let neodigmOptCustom = {
        
     window.addEventListener("message", function(e) {
     if(isCalendlyEvent(e)) {
-         
-        console.log("=== Event name:", e.data.event);
+        
+        if( dataLayer ) dataLayer.push({'event':  e.data.event })
         if( e.data.event == "calendly.event_scheduled"){
             neodigmSodaPop.close( true )
             neodigmWired4Sound.sound( 8 )
             neodigmSodaPop.autoOpen("js-pup-vcf")
         }
-        
-         
-        console.log("=== Event details:", e.data.payload);
     }
     });
 </script>

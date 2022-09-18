@@ -366,7 +366,7 @@ data-n55-sodapop-id="js-cheatsheet--id">
             <div>
                 <article>
                     <h2 class="hd2">Lorem ipsum dolor sit amet</h2>
-                    <p class="txt-readable prg">In voluptatem reprehenderit ut deserunt repellat ut rerum saepe.</p>
+                    <p class="txt-readable prg">Innovative marketing teams hire us to implement a Google Analytics account that accurately measures the impact of their marketing.</p>
                 </article>
             </div>
             <div><article></article></div>
@@ -876,16 +876,13 @@ let neodigmOptCustom = {
        
     window.addEventListener("message", function(e) {
     if(isCalendlyEvent(e)) {
-         
-        console.log("=== Event name:", e.data.event);
+        
+        if( dataLayer ) dataLayer.push({'event':  e.data.event })
         if( e.data.event == "calendly.event_scheduled"){
             neodigmSodaPop.close( true )
             neodigmWired4Sound.sound( 8 )
             neodigmSodaPop.autoOpen("js-pup-vcf")
         }
-        
-         
-        console.log("=== Event details:", e.data.payload);
     }
     });
 </script>
