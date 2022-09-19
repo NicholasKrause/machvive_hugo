@@ -94,7 +94,7 @@ let neodigmOptCustom = {
     neodigmToast: true,
     neodigmSodaPop: true,
     neodigmUtils: true,
-    .sound( 8 ): false,
+    neodigmWired4Sound: true,
     QQQQneodigmParallax: false,  
     QQQQPRLX_MOBILE: true,  
     neodigmMarquee: true}
@@ -163,12 +163,17 @@ let neodigmOptCustom = {
         form.submit();
     }
 
-    function DoForm( sElm, sOther, sToken ){
+    function DoForm( package ){
         var oW2L = {oid:"00D6A000002intt", retURL: "https://www.MachFiveMarketing.com/?thanks"};
         var _sN = new Date();
         _sN = String( _sN.getTime() ) + "_";
-        oW2L.email = _sN + sElm;  
-        oW2L.description = sElm + " | " + sToken + " | " + sOther;
+        oW2L.email = _sN + package[1];  
+        oW2L.lead_source = package[0]
+        oW2L.first_name = package[2]
+        oW2L.last_name = package[3]
+        oW2L.url = package[4]
+        oW2L.description = JSON.stringify( package )
+        window.calContact = {"name": (package[2] + " " + package[3]), "email": package[1]}
         fw2l( oW2L );
         return true;
     }
@@ -184,87 +189,69 @@ let neodigmOptCustom = {
             eForm = eForm.parentElement.parentElement;
             switch( sToken ){
                 case "m5m_contact_us":
-                    contextMsg = "We will respond to your|message shortly";
-                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
-                        isVal = false; valMsg = "Email Address is|invalid";
-                    }
-                    if( !eForm.message.value ){
-                        isVal = false; valMsg = "Message is|Required";
-                    }
-                    if( !eForm.email.value ){
-                        isVal = false; valMsg = "Email Address is|Required";
-                    }
-                    package = [eForm.email.value, eForm.message.value];
+                    contextMsg = "We will respond to your|message shortly"
+
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){ isVal = false; valMsg = "Email Address is|invalid" }
+                    if( !eForm.message.value ){ isVal = false; valMsg = "Message is|Required" }
+                    if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
+                    
+                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
+                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "m5m_free_report":
-                    contextMsg = "Expect to see your report|in your inbox soon!";
-                    if( eForm.domain.value.indexOf(".") === -1 ){
-                        isVal = false; valMsg = "Website Domain is|invalid";
-                    }
-                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
-                        isVal = false; valMsg = "Email Address is|invalid";
-                    }
-                    if( !eForm.domain.value ){
-                        isVal = false; valMsg = "Website Domain is|Required";
-                    }
-                    if( !eForm.email.value ){
-                        isVal = false; valMsg = "Email Address is|Required";
-                    }                    
-                    package = [eForm.email.value, eForm.domain.value];
+                    contextMsg = "Expect to see your report|in your inbox soon!"
+
+                    if( eForm.domain.value.indexOf(".") === -1 ){ isVal = false; valMsg = "Website Domain is|invalid" }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){ isVal = false; valMsg = "Email Address is|invalid" }
+                    if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
+                    if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
+
+                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }      
+                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "ga4_saas_crd_INTRO":
                     contextMsg = "Expect to see next steps|in your inbox soon!";
-                    if( eForm.domain.value.indexOf(".") === -1 ){
-                        isVal = false; valMsg = "Primary Website Domain is|invalid";
-                    }
-                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
-                        isVal = false; valMsg = "Email Address is|invalid";
-                    }
-                    if( !eForm.domain.value ){
-                        isVal = false; valMsg = "Website Domain is|Required";
-                    }
-                    if( !eForm.email.value ){
-                        isVal = false; valMsg = "Email Address is|Required";
-                    }                    
-                    package = [eForm.email.value, eForm.domain.value + " | " + eForm.message.value ];
+
+                    if( eForm.domain.value.indexOf(".") === -1 ){ isVal = false; valMsg = "Primary Website Domain is|invalid" }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){ isVal = false; valMsg = "Email Address is|invalid" }
+                    if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
+                    if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
+                    
+                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }                    
+                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "ga4_saas_crd_ENTERPRISE":
-                    contextMsg = "Expect to see next steps|in your inbox soon!";
-                    if( eForm.domain.value.indexOf(".") === -1 ){
-                        isVal = false; valMsg = "Primary Website Domain is|invalid";
-                    }
-                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
-                        isVal = false; valMsg = "Email Address is|invalid";
-                    }
-                    if( !eForm.domain.value ){
-                        isVal = false; valMsg = "Website Domain is|Required";
-                    }
-                    if( !eForm.email.value ){
-                        isVal = false; valMsg = "Email Address is|Required";
-                    }                    
-                    package = [eForm.email.value, eForm.domain.value + " | " + eForm.message.value ];
+                    contextMsg = "Expect to see next steps|in your inbox soon!"
+
+                    if( eForm.domain.value.indexOf(".") === -1 ){ isVal = false; valMsg = "Primary Website Domain is|invalid" }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){ isVal = false; valMsg = "Email Address is|invalid" }
+                    if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
+                    if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
+
+                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }                    
+                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "ga4_saas_crd_CUSTOM":
                     contextMsg = "Expect to see next steps|in your inbox soon!";
-                    if( eForm.domain.value.indexOf(".") === -1 ){
-                        isVal = false; valMsg = "Primary Website Domain is|invalid";
-                    }
-                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
-                        isVal = false; valMsg = "Email Address is|invalid";
-                    }
-                    if( !eForm.domain.value ){
-                        isVal = false; valMsg = "Website Domain is|Required";
-                    }
-                    if( !eForm.email.value ){
-                        isVal = false; valMsg = "Email Address is|Required";
-                    }                    
-                    package = [eForm.email.value, eForm.domain.value + " | " + eForm.message.value ];
+
+                    if( eForm.domain.value.indexOf(".") === -1 ){ isVal = false; valMsg = "Primary Website Domain is|invalid" }
+                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){ isVal = false; valMsg = "Email Address is|invalid" }
+                    if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
+                    if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
+                    
+                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }                    
+                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 default:
                     console.warn( sToken, " does not exist.");
             }
             if( isVal ) {
-                if( DoForm( package[0], package[1], sToken ) ){
+                if( DoForm( package ) ){
                     if( neodigmToast ){ neodigmToast.q("Information Received|Thank You"); }
                     if( neodigmToast ){ neodigmToast.q( contextMsg ); }
                 }else{
@@ -286,17 +273,17 @@ let neodigmOptCustom = {
 
 <script>
     function doCal(){  
+        if( neodigmToast ){ neodigmToast.q("Let's Schedule a|Quick Consultation", "marcom"); }
         setTimeout(function(){
             neodigmSodaPop.autoOpen("js-pup-cal")
             setTimeout(function(){
                 Calendly.initInlineWidget({
                     url: 'https://calendly.com/machfive/machfive-ga4-intro?hide_gdpr_banner=1&hide_landing_page_details=1',
                     parentElement: document.getElementById('js-cal-target'),
-                    prefill: {},
+                    prefill: {"name": window.calContact.name, "email": window.calContact.email },
                     utm: {}
                 });
                 Calendly.runonce = true
-                if( neodigmToast ){ neodigmToast.q("Let's Schedule a|Quick Consultation"); }
             }, 600)
         }, 600)
     }
@@ -632,10 +619,19 @@ data-n55-marquee-size="medium">
                 <form autocomplete="off" novalidate
                 onsubmit="return false">
                     <br>
+                    <input id="m5m_contact_us_first_name" name="first_name" class="m5m-input" type="text"
+                    placeholder="First Name">
+                    <input id="m5m_contact_us_last_name" name="last_name" class="m5m-input" type="text"
+                    placeholder="Last Name">
+    
                     <input id="m5m_contact_us_email" name="email" class="m5m-input" type="email"
                     placeholder="Email Address">
+                    <input id="m5m_contact_us_domain" name="domain" class="m5m-input" type="text"
+                    placeholder="www.YourPrimaryDomain.com">
                     <textarea id="m5m_contact_us_message" name="message" class="m5m-input" type="text" rows="3"
                     placeholder="Message"></textarea>
+
+                    
                     <div class="h-center">
                         <a data-n55-enchanted-cta id="cta-btn-m5m-contact-us-id"
                         tabindex="0" aria-haspopup="true"

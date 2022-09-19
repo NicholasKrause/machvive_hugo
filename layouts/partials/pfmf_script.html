@@ -1,5 +1,5 @@
 <script>
-let neodigmOptCustom = {
+var neodigmOptCustom = {
     neodigmToast: true,
     neodigmSodaPop: true,
     neodigmUtils: true,
@@ -82,6 +82,7 @@ let neodigmOptCustom = {
         oW2L.last_name = package[3]
         oW2L.url = package[4]
         oW2L.description = JSON.stringify( package )
+        window.calContact = {"name": (package[2] + " " + package[3]), "email": package[1]} // hold contact for calandarly
         fw2l( oW2L );
         return true;
     }
@@ -103,8 +104,8 @@ let neodigmOptCustom = {
                     if( !eForm.message.value ){ isVal = false; valMsg = "Message is|Required" }
                     if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
                     
-                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
                     if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
+                    if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
                     package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "m5m_free_report":
@@ -115,8 +116,8 @@ let neodigmOptCustom = {
                     if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
                     if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
 
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
                     if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
-                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }      
                     package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "ga4_saas_crd_INTRO":
@@ -127,8 +128,8 @@ let neodigmOptCustom = {
                     if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
                     if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
                     
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
                     if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
-                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }                    
                     package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "ga4_saas_crd_ENTERPRISE":
@@ -139,8 +140,8 @@ let neodigmOptCustom = {
                     if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
                     if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
 
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
                     if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
-                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }                    
                     package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 case "ga4_saas_crd_CUSTOM":
@@ -151,8 +152,8 @@ let neodigmOptCustom = {
                     if( !eForm.domain.value ){ isVal = false; valMsg = "Website Domain is|Required" }
                     if( !eForm.email.value ){ isVal = false; valMsg = "Email Address is|Required" }
                     
+                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
                     if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
-                    if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }                    
                     package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
                     break;
                 default:
@@ -188,7 +189,7 @@ let neodigmOptCustom = {
                 Calendly.initInlineWidget({
                     url: 'https://calendly.com/machfive/machfive-ga4-intro?hide_gdpr_banner=1&hide_landing_page_details=1',
                     parentElement: document.getElementById('js-cal-target'),
-                    prefill: {},
+                    prefill: {"name": window.calContact.name, "email": window.calContact.email },
                     utm: {}
                 });
                 Calendly.runonce = true

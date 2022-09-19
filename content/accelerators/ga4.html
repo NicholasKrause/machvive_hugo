@@ -7,7 +7,7 @@ description: Google Analytics 4 Migration Services
 slug: google_analytics_ga4_migration
 ---
 <script>
-    let neodigmOptCustom = {
+    var neodigmOptCustom = {
         neodigmToast: true,
         neodigmSodaPop: true,
         neodigmUtils: true,
@@ -186,7 +186,6 @@ style="padding: 0">
             data-n55-flash-theme="primary" 
             data-n55-sodapop-id="js-pup-saas-crd-1"
             data-n55-theme="danger"
-            data-n55-wired4sound-click="5"
             >
                 <span>Get Started</span>
                 <span>Let's Do This!</span>
@@ -220,7 +219,6 @@ style="padding: 0">
             data-n55-flash-theme="primary" 
             data-n55-sodapop-id="js-pup-saas-crd-2"
             data-n55-theme="danger"
-            data-n55-wired4sound-click="5"
             >
                 <span>Get Started</span>
                 <span>Let's Do This!</span>
@@ -251,7 +249,6 @@ style="padding: 0">
             data-n55-flash-theme="primary" 
             data-n55-sodapop-id="js-pup-saas-crd-3"
             data-n55-theme="danger"
-            data-n55-wired4sound-click="5"
             >
                 <span>Get Started</span>
                 <span>Let's Do This!</span>
@@ -342,6 +339,7 @@ data-n55-sodapop-id="js-cheatsheet--id">
 </div>
 
 <section class="eIF__js pfmf-grid pfmf-grid__100 readable__doc h-ds__none">
+    <p class="txt-readable prg">Time is fleeting. This graph demonstrates that the interest in GA4 conversions is rapidly increasing. Act now. The demand for GA4 migration know-how is only going up.</p>
     <div>
         <article class="l-favs" style="padding: 12px 12px;"></article>        
     </div>
@@ -508,7 +506,9 @@ tabindex="0">
             </section>
 
             <a class="h-txt-dec-unset" href="https://www.machfivemarketing.com/contact.vcf"
-            data-n55-wired4sound-click="5">
+            onclick="if( dataLayer ) dataLayer.push({'event': 'download_vcard' }); neodigmToast.q('Click or Tap on the Contact.vcf|to add to contacts.', 'marcom'); neodigmSodaPop.close();"
+            data-n55-wired4sound-click="5"
+            data-n55-toast>
                 <img src="/img/contact_m5m.png" alt="M5M Contact Card"
                 style="max-width: 124px; height: auto">
             </a>
