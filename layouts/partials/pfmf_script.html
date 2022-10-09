@@ -98,7 +98,7 @@ var neodigmOptCustom = {
             eForm = eForm.parentElement.parentElement;
             switch( sToken ){
                 case "m5m_contact_us":
-                    contextMsg = "We will respond to your|message shortly"
+                    contextMsg = "We will respond to|your message shortly"
 
                     if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){ isVal = false; valMsg = "Email Address is|invalid" }
                     if( !eForm.message.value ){ isVal = false; valMsg = "Message is|Required" }
@@ -118,7 +118,7 @@ var neodigmOptCustom = {
 
                     if( !eForm.last_name.value ){ isVal = false; valMsg = "Last Name is|Required" }
                     if( !eForm.first_name.value ){ isVal = false; valMsg = "First Name is|Required" }
-                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value, eForm.message.value ]
+                    package = [sToken, eForm.email.value, eForm.first_name.value, eForm.last_name.value, eForm.domain.value ]
                     break;
                 case "ga4_saas_crd_INTRO":
                     contextMsg = "Expect to see next steps|in your inbox soon!";
@@ -501,6 +501,10 @@ data-n55-marquee-size="medium">
                 <form autocomplete="off" novalidate
                 onsubmit="return false">
                     <br>
+                    <input id="m5m_free_report_first_name" name="first_name" class="m5m-input" type="text"
+                    placeholder="First Name">
+                    <input id="m5m_free_report_last_name" name="last_name" class="m5m-input" type="text"
+                    placeholder="Last Name">
                     <input id="m5m_free_report_email" name="email" class="m5m-input" type="email"
                     placeholder="Email Address">
                     <input id="m5m_free_report_domain" name="domain" class="m5m-input" type="text"
