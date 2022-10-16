@@ -658,25 +658,105 @@ tabindex="0">
 
 <template id="js-pup-vcf" data-n55-sodapop-modal="false" data-n55-sodapop-size="small" data-n55-sodapop-fullscreen="false">
     <article class="rev-artc h-center" style="padding: 12px;">
+
+                <section style="background-color: #242424;border-radius: 8px;">
+                    <h4 class="h-center readable__caption_white">Create a Contact</h4>
+                    <neodigm-marquee data-n55-marquee-text=" Thanks for reaching out.  Please add M5M to your contacts, so that our email will not get lost in your spam folder.  Click the QR code below!  "
+                    data-n55-marquee-size="small">
+                    <pre data-n55-theme="warning"></pre>
+                    </neodigm-marquee>
+                </section>
+
+                <a class="h-txt-dec-unset" href="https://www.machfivemarketing.com/contact.vcf"
+                onclick="if( dataLayer ) dataLayer.push({'event': 'download_vcard' }); neodigmToast.q('Click or Tap on the Contact.vcf|to add to contacts.', 'marcom'); neodigmSodaPop.close(); doPWA(6800)"
+                data-n55-wired4sound-click="5"
+                data-n55-toast>
+                    <img src="/img/contact_m5m.png" alt="M5M Contact Card"
+                    style="max-width: 124px; height: auto">
+                </a>
+                <br>
+    <a id="js-down-vcf" href="https://www.machfivemarketing.com/contact.vcf"
+    rel="noopener" tabindex="0" aria-haspopup="true"
+    data-n55-enchanted-cta
+    onclick="if( dataLayer ) dataLayer.push({'event': 'download_vcard_qr' }); neodigmSodaPop.close(); doPWA(6800)"
+    data-n55-enchanted-cta-alt="You'll Remember How|to Contact Us"
+    data-n55-enchanted-cta-ambient="radius"
+    data-n55-enchanted-cta-dont-touch="false"
+    data-n55-enchanted-cta-shape-off="false"
+    data-n55-enchanted-cta-size="large"
+    data-n55-flash-theme="marcom"
+    data-n55-theme="danger"
+    data-n55-toast="Click or Tap on the Contact.vcf|to add to contacts."
+    data-n55-wired4sound-click="7"
+    ><span data-n55-wired4sound-mouseover="3">Add to Contacts</span><span>Save Us from Spam</span>
+    </a>
+
+    </article>
+</template>
+
+<template id="js-pup-pwa" data-n55-sodapop-modal="true" data-n55-sodapop-size="small" data-n55-sodapop-fullscreen="false">
+    <article class="rev-artc h-center" style="padding: 12px;">
         <div>
             <section style="background-color: #242424;border-radius: 8px;">
-                <h4 class="h-center readable__caption_white">Create a Contact</h4>
-                <neodigm-marquee data-n55-marquee-text=" Thanks for reaching out.  Please add M5M to your contacts, so that our email will not get lost in your spam folder.  Click the QR code below!  "
-                data-n55-marquee-size="small">
-                <pre data-n55-theme="warning"></pre>
+                <h4 class="h-center readable__caption_white">Install the M5M Web App</h4>
+                <neodigm-marquee data-n55-marquee-text=" Did you know that you can add this website to your desktop / home screen.  It's true and it's easy!  You can install it as a Web App.  That way it is easily accessible and will even work when you are disconnected from the Internet.  How Convenient! "
+                data-n55-marquee-size="medium">
+                <pre data-n55-theme="marcom"></pre>
                 </neodigm-marquee>
             </section>
-
-            <a class="h-txt-dec-unset" href="https://www.machfivemarketing.com/contact.vcf"
-            onclick="if( dataLayer ) dataLayer.push({'event': 'download_vcard' }); neodigmToast.q('Click or Tap on the Contact.vcf|to add to contacts.', 'marcom'); neodigmSodaPop.close();"
-            data-n55-wired4sound-click="5"
-            data-n55-toast>
-                <img src="/img/contact_m5m.png" alt="M5M Contact Card"
-                style="max-width: 124px; height: auto">
+            <br>
+            <img src="/android-chrome-256x256.png" alt="M5M Chicago - Install Progressive Web App"
+            data-n55-wired4sound-mouseover="5"
+            style="max-width: 256px; height: auto">
+            <br><br><br>
+            <a id="js-down-vcf" href="https://www.machfivemarketing.com/contact.vcf"
+            rel="noopener" tabindex="0" aria-haspopup="true"
+            data-n55-enchanted-cta
+            onclick="neodigmSodaPop.close(); if( _beforeinstallprompt ) _beforeinstallprompt.prompt(); _beforeinstallprompt = null"
+            data-n55-enchanted-cta-alt="Install M5M|Add to Home Screen"
+            data-n55-enchanted-cta-ambient="emit"
+            data-n55-enchanted-cta-dont-touch="false"
+            data-n55-enchanted-cta-shape-off="false"
+            data-n55-enchanted-cta-size="medium"
+            data-n55-flash-theme="marcom"
+            data-n55-theme="danger"
+            data-n55-toast="Click the INSTALL button"
+            data-n55-wired4sound-click="7"
+            ><span data-n55-wired4sound-mouseover="3">Install</span><span>Add to Home Screen</span>
             </a>
+            <a id="js-down-vcf" href="https://www.machfivemarketing.com/contact.vcf"
+            rel="noopener" tabindex="0" aria-haspopup="true"
+            data-n55-enchanted-cta
+            onclick="neodigmSodaPop.close();"
+            data-n55-enchanted-cta-ambient="emit"
+            data-n55-enchanted-cta-dont-touch="false"
+            data-n55-enchanted-cta-shape-off="false"
+            data-n55-enchanted-cta-size="medium"
+            data-n55-flash-theme="marcom"
+            data-n55-theme="primary"
+            data-n55-toast="You can install later ...|Install from the Omnibox"
+            data-n55-wired4sound-click="7"
+            ><span data-n55-wired4sound-mouseover="3">Cancel</span><span>Maybe Later</span>
+            </a>
+            <br><br>
         </div>
     </article>
 </template>
+<script>
+/* PWA via SodaPop > CTA */
+
+let _beforeinstallprompt = null;  //  Event
+
+window.addEventListener('DOMContentLoaded', function(){
+    window.addEventListener("beforeinstallprompt", function( ev ){ _beforeinstallprompt = ev })
+})
+
+let doPWA = function( pause = 0 ){
+    setTimeout(function(){
+        if( _beforeinstallprompt ) neodigmSodaPop.autoOpen("js-pup-pwa") // check standalone
+    }, pause)
+}
+</script>
 
 <script type='application/ld+json'>
     {

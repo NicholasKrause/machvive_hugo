@@ -2,12 +2,14 @@ importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
 );
 
+workbox.setConfig({ debug: false });
+
 console.log( "workbox 6.5.4 | 20221014 (5s timeout)", workbox )
 const {registerRoute} = workbox.routing;
 const {NetworkFirst} = workbox.strategies;
 //  const {CacheableResponsePlugin} = workbox.cacheable.response;
 
-workbox.LOG_LEVEL = "debug";
+//workbox.LOG_LEVEL = "debug";
 try {
   self.skipWaiting()
   clients.claim();
