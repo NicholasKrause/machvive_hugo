@@ -58,7 +58,7 @@ slug: google_analytics_ga4_migration
                     <div style="width: 62%; height: 62%;
                     position: relative; top: 4vh;margin: 4px auto;"
                     onclick="NeodigmClaire.showCanv('#intro-gray', .5).setTheme('danger').initCanvOn('#intro-gray').waxOn('#intro-gray'); neodigmEnchantedCTA.flashTheme('warning');neodigmWired4Sound.sound(4)">
-                        <lottie-player src="/lottie/m5m_lgo_1000_blue.json" background="transparent" speed=".3" style="width: 100%; height: 100%;" autoplay></lottie-player>
+                        <lottie-player src="/lottie/m5m_lgo_1000_blue.json" background="transparent" speed=".6" style="width: 100%; height: 100%;" autoplay></lottie-player>
                     </div>
                 </article>
             </div>
@@ -526,7 +526,7 @@ data-n55-sodapop-id="js-cheatsheet--id">
     function ga4_infographic(){
         neodigmToast.q("ga4_infographic|controller", "party")
         // turn on marq
-        fetch("m5m_ga4_interactive_infographic.json")
+        fetch("/accelerators/m5m_ga4_interactive_infographic.json")
         .then(response => response.json()) // Get cheetsheat
         .then(( aCards ) => {
 console.log( JSON.stringify( aCards), aCards ) ;
