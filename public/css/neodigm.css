@@ -233,7 +233,7 @@ div.caro-target__js:not(.h--select) {
 .lgo-grid__in-tab svg, .cont__mobile svg {
     border: solid 1px var( --machfive-theme-secondary );
     border-radius: 100%;
-    width: 124px;
+    width: 96px;
     margin: 6px; padding: 6px;
 }
 
