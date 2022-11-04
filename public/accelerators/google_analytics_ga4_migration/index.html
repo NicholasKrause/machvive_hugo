@@ -96,6 +96,17 @@ var neodigmOptCustom = {
             }
         }, 4800)
     })
+    function doCopyString( sTxt, sTheme="night" ){
+        if( sTxt ) {
+            sTxt = sTxt.replaceAll("__","'")
+            try {
+                navigator.clipboard.writeText( sTxt );
+                neodigmToast.q( sTxt+"|Copied to Clipboard", sTheme )
+            } catch (err) {
+                console.warn('Failed to copy', err)
+            }
+        }
+    }
 </script>
 <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v2_4.css"></link>
 <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v2_4.js"></script>
@@ -648,7 +659,7 @@ data-n55-marquee-size="medium">
             style="max-width: 256px; height: auto; border-radius: 20%">
             <br><br><br>
 
-            <a id="js-down-vcf" href="#"
+            <a id="js-pwa-install" href="#"
             rel="noopener" tabindex="0" aria-haspopup="true"
             data-n55-enchanted-cta
             onclick="neodigmSodaPop.close(); neodigmPWA.install()"
@@ -663,7 +674,7 @@ data-n55-marquee-size="medium">
             data-n55-wired4sound-click="7"
             ><span data-n55-wired4sound-mouseover="3">Install</span><span>Add to Home Screen</span>
             </a>
-            <a id="js-down-vcf" href="#"
+            <a id="js-pwa-canc" href="#"
             rel="noopener" tabindex="0" aria-haspopup="true"
             data-n55-enchanted-cta
             onclick="neodigmSodaPop.close();"
@@ -1534,7 +1545,7 @@ tabindex="0">
                 </a>
                 <br>
     <a id="js-down-vcf" href="https://www.machfivemarketing.com/contact.vcf"
-    rel="noopener" tabindex="0" aria-haspopup="true"
+    rel="noopener" tabindex="0"
     data-n55-enchanted-cta
     onclick="if( dataLayer ) dataLayer.push({'event': 'download_vcard_qr' }); neodigmSodaPop.close(); neodigmPWA.autoOpen(6800)"
     data-n55-enchanted-cta-alt="You'll Remember How|to Contact Us"
@@ -1548,7 +1559,12 @@ tabindex="0">
     data-n55-wired4sound-click="7"
     ><span data-n55-wired4sound-mouseover="3">Add to Contacts</span><span>Save Us from Spam</span>
     </a>
-
+    &nbsp; <a id="js-share-copy" href="#price-crds" style="position: absolute; right: 32px; bottom: 32px;"
+    onclick="doCopyString('https://www.machfivemarketing.com/accelerators/google_analytics_ga4_migration/','danger')"
+    data-n55-wired4sound-click="9" data-n55-wired4sound-mouseover="3">
+        <svg height="24" width="24" style="fill: #DD4124"
+        viewbox="5 5 38 38"><path d="M22.5 34H14q-4.15 0-7.075-2.925T4 24q0-4.15 2.925-7.075T14 14h8.5v3H14q-2.9 0-4.95 2.05Q7 21.1 7 24q0 2.9 2.05 4.95Q11.1 31 14 31h8.5Zm-6.25-8.5v-3h15.5v3ZM25.5 34v-3H34q2.9 0 4.95-2.05Q41 26.9 41 24q0-2.9-2.05-4.95Q36.9 17 34 17h-8.5v-3H34q4.15 0 7.075 2.925T44 24q0 4.15-2.925 7.075T34 34Z"/></svg>
+    </a>
     </article>
 </template>
 

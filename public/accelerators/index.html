@@ -105,6 +105,17 @@ var neodigmOptCustom = {
             }
         }, 4800)
     })
+    function doCopyString( sTxt, sTheme="night" ){
+        if( sTxt ) {
+            sTxt = sTxt.replaceAll("__","'")
+            try {
+                navigator.clipboard.writeText( sTxt );
+                neodigmToast.q( sTxt+"|Copied to Clipboard", sTheme )
+            } catch (err) {
+                console.warn('Failed to copy', err)
+            }
+        }
+    }
 </script>
 <link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55__v2_4.css"></link>
 <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55__v2_4.js"></script>
@@ -657,7 +668,7 @@ data-n55-marquee-size="medium">
             style="max-width: 256px; height: auto; border-radius: 20%">
             <br><br><br>
 
-            <a id="js-down-vcf" href="#"
+            <a id="js-pwa-install" href="#"
             rel="noopener" tabindex="0" aria-haspopup="true"
             data-n55-enchanted-cta
             onclick="neodigmSodaPop.close(); neodigmPWA.install()"
@@ -672,7 +683,7 @@ data-n55-marquee-size="medium">
             data-n55-wired4sound-click="7"
             ><span data-n55-wired4sound-mouseover="3">Install</span><span>Add to Home Screen</span>
             </a>
-            <a id="js-down-vcf" href="#"
+            <a id="js-pwa-canc" href="#"
             rel="noopener" tabindex="0" aria-haspopup="true"
             data-n55-enchanted-cta
             onclick="neodigmSodaPop.close();"
@@ -835,10 +846,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
         <script>
             document.addEventListener( "contextmenu", function(e) { neodigmWired4Sound.sound( 7 ) });  
             console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
-        </script>
-    </body>
-</html>
-t-size: 28px");
         </script>
     </body>
 </html>
