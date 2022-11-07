@@ -765,7 +765,7 @@ olark.identify('7233-815-10-7742');
                         neodigmMetronome.init().pause( 2400 )
                             neodigmMarquee.init().pause( 2600 )
                                 neodigmEnchantedCTA.init()
-                    });
+                });
                 neodigmSodaPop.setOnBeforeUserExit( function(){ neodigmToast.q("Act Now! Time is Fleeting ...|Let's chat before its too late", "danger"); neodigmWired4Sound.sound( 5 ); olark('api.box.expand'); } )
             }
         }, 3e3)
@@ -947,13 +947,30 @@ style="padding: 0">
                         <br>
                         <div><p>Is how long Google has said we will have access to our older data.</p></div>
                     </section>
+                    <section class="h-center">
+                        <a id="cta-cheat-sheet-rio" href="#saas-crd-1"
+                        onclick="open_ga4_infographic_cb()"
+                        tabindex="0" aria-haspopup="true"
+                        data-n55-enchanted-cta
+                        data-n55-wired4sound-click="5"
+                        data-n55-flash-theme="primary" 
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-theme="danger"
+                        data-n55-sodapop-id="ga4_infographic">
+                            <span>GA4 Cheet Sheet</span>
+                            <span>
+                                <neodigm-marquee data-n55-marquee-text=" Google Analytics 4 (GA4) Dimensions and Metrics Interactive Cheatsheet. You can add this to your desktop so it can be accessed quickly anytime, even while offline.  "
+                                data-n55-flash-theme="primary"
+                                data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                                data-n55-marquee-size="small" data-n55-marquee-direction="false"><pre data-n55-theme="warning" data-n55-sodapop-id="ga4_infographic" onclick="open_ga4_infographic_cb()"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </section>
                 </article>
             </div>
         </section>
     </section>
 </div>
-
-
 
 
 <section id="price-crds" class="pfmf-grid pfmf-grid__33_33_33 l-saas-crd">
@@ -1059,26 +1076,44 @@ style="padding: 0">
 </section>
 
 
-<neodigm-parallax data-n55-parallax="../google_analytics_ga4_migration_tn.webp"
+<neodigm-parallax id="ga4-chat-cheatsheet" data-n55-parallax="../google_analytics_ga4_migration_tn.webp"
 data-n55-parallax-size="small"
 onmouseenter='NeodigmClaire.doWaxOn("neodigm-parallax", ["danger","primary"], "circle", .4)'>
 <section>
-<aside class="h-center" onclick="olark('api.box.expand')">
+<aside class="h-center" >
 <a id="cta-paral" href="#saas-crd-1"
-target="_blank" rel="noopener" tabindex="0" aria-haspopup="true"
+onclick="olark('api.box.expand')"
+tabindex="0" aria-haspopup="true"
 data-n55-enchanted-cta
 data-n55-wired4sound-click="5"
 data-n55-flash-theme="primary" 
 data-n55-enchanted-cta-size="xlarge"
 data-n55-theme="night"
-data-n55-enchanted-cta-ambient="emit"
-data-n55-sodapop-id="js-cheatsheet--id">
+data-n55-enchanted-cta-ambient="emit">
     <span>Let's Chat</span>
     <span>
         <neodigm-marquee data-n55-marquee-text=" Innovative marketing teams trust us to implement a Google Analytics account that accurately measures the impact of their marketing.  "
         data-n55-flash-theme="primary"
         data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
         data-n55-marquee-size="small" data-n55-marquee-direction="false"><pre data-n55-theme="warninig"></pre></neodigm-marquee>
+    </span>
+</a>
+<a id="cta-cheat-sheet" href="#ga4-chat-cheatsheet"
+onclick="open_ga4_infographic_cb()"
+tabindex="0" aria-haspopup="true"
+data-n55-enchanted-cta
+data-n55-wired4sound-click="5"
+data-n55-flash-theme="primary" 
+data-n55-enchanted-cta-size="xlarge"
+data-n55-theme="danger"
+data-n55-enchanted-cta-ambient="emit"
+data-n55-sodapop-id="ga4_infographic">
+    <span>GA4 Cheet Sheet</span>
+    <span>
+        <neodigm-marquee data-n55-marquee-text=" Google Analytics 4 (GA4) Dimensions and Metrics Interactive Cheatsheet. You can add this to your desktop so it can be accessed quickly anytime, even while offline.  "
+        data-n55-flash-theme="primary"
+        data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+        data-n55-marquee-size="small" data-n55-marquee-direction="false"><pre data-n55-theme="warning" data-n55-sodapop-id="ga4_infographic" onclick="open_ga4_infographic_cb()"></pre></neodigm-marquee>
     </span>
 </a>
 </aside>
@@ -1327,66 +1362,70 @@ data-n55-sodapop-id="js-cheatsheet--id">
 </script>
 
 <script type="text/javascript">
-    // pre-cache json
-    function ga4_infographic(){
-        neodigmToast.q("ga4_infographic|controller", "party")
-        // turn on marq
-        fetch("/accelerators/m5m_ga4_interactive_infographic.json")
-        .then(response => response.json()) // Get cheetsheat
-        .then(( aCards ) => {
-console.log( JSON.stringify( aCards), aCards ) ;
-        });
-
+    open_ga4_infographic_cb = function(){ setTimeout(function(){ ga4_infographic_cb() }, 1600)
     }
-    setTimeout(()=>{  //  autoOpen if in query string
-        let autoOpenParm = new URLSearchParams( document.location.search )
-        autoOpenParm = autoOpenParm.get("autoOpen")
-        if( autoOpenParm && neodigmSodaPop ) {  // Callback by naming convention
-            if(typeof window[autoOpenParm] === "function") neodigmSodaPop.setOnAfterOpen( window[autoOpenParm] )
-            neodigmSodaPop.autoOpen( autoOpenParm )
+    ga4_infographic_cb = function(){
+        NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "primary"], "random", .7)
+        neodigmMetronome.init().pause( 2400 )
+            neodigmMarquee.init().pause( 2600 )
+                neodigmEnchantedCTA.init()
+        let elSec = document.getElementById("ga4_infographic__cheatsheet")
+        if( elSec ){
+            let sMU_crd = `<article class="sm-crd-inver__night-alt h-pos__rel" data-pref-scheme="dark">
+<br><div class="saas-crd__rib--side" data-pref-scheme="dark" data-n55-flash-theme="primary" data-n55-wired4sound-click="6"><div class="h-center"><span class="banner-cap h-nowrap">
+##length##
+</span></div></div>
+<details>
+    <summary class="hd3 h-center h-marker__danger txt-readable prg h-hvr__danger txt-read" data-n55-wired4sound-mouseover="3">##card##</summary>
+    <aside></aside>
+</details>
+</article>`
+let sMU_line = `<p class="txt-readable prg">##name##</p>
+<p class="txt-readable prg txt-read__16">##desc##</p>
+<br>`
+            fetch("/accelerators/m5m_ga4_interactive_infographic.json").then(response => response.json()) // Get Cheat Sheet
+                .then(( oCards ) => {
+                    for (sK in oCards) {
+                        let elArt = document.createElement("article");
+                        elArt.id = sK + "_id";
+                        elArt.innerHTML = sMU_crd.replaceAll("##card##", sK).replaceAll("##length##", oCards[ sK ].lines.length)
+                        elSec.appendChild( elArt );
+                        oCards[ sK ].lines.forEach(function( oLine ){
+                            let elAside = elArt.querySelector("aside")
+                            if( elAside ){
+                                let elLine = document.createElement("p");
+                                if( oLine.desc.indexOf("-") != -1 ) sMU_line = sMU_line.replaceAll("<br>","")
+                                elLine.innerHTML = sMU_line.replaceAll("##name##", oLine.name).replaceAll("##desc##", oLine.desc)
+                                elAside.appendChild( elLine );
+                            }
+                        })
+                    }
+            })
         }
-    }, 1256)
+    }
+</script>
+<script>
+setTimeout(()=>{  //  autoOpen if in query string
+    let autoOpenParm = new URLSearchParams( document.location.search )
+    autoOpenParm = autoOpenParm.get("autoOpen")
+    if( autoOpenParm && neodigmSodaPop ) {
+        neodigmSodaPop.autoOpen( autoOpenParm )
+        autoOpenParm = autoOpenParm + "_cb"  // Callback by append naming convention
+        if(typeof window[ autoOpenParm ] === "function") neodigmSodaPop.setOnAfterOpen( window[ autoOpenParm ] )
+    } // Note: Cannot open in fullscreen mode when opened via URL param
+}, 1256)
 </script>
 
 <template id="ga4_infographic" data-n55-sodapop-modal="false" data-n55-sodapop-size="large"  data-n55-sodapop-fullscreen="true">
     <article class="rev-artc">
         <section style="background-color: #242424;border-radius: 8px;">
-            <h4 class="h-center readable__caption_white">Cheetsheet</h4>
-            <neodigm-marquee data-n55-marquee-text="  Introduction Solution in 7-14 Days for $450.  Let's Schedule a Quick Consultation.  You can't bring over your data from Universal Analytics. The sooner you install GA4, the sooner you'll start collecting data you'll need for your website's historical analysis."
-            data-n55-marquee-size="small">
+            <h4 class="h-center readable__caption_white">GA4 Cheat Sheet</h4>
+            <neodigm-marquee data-n55-marquee-text=" Google Analytics 4 (GA4) Dimensions and Metrics Interactive Cheatsheet | You can add this to your desktop so it can be accessed quickly anytime, even while offline. "
+            data-n55-marquee-size="medium">
             <pre data-n55-theme="warning"></pre>
             </neodigm-marquee>
         </section>
-        <section class="readable__doc" style="border-top: solid #DD4326 1px;">
-            <form autocomplete="off" novalidate
-            onsubmit="return false">
-                <br>
-                <input id="ga4_saas_crd_1_first_name" name="first_name" class="m5m-input" type="text"
-                placeholder="First Name">
-                <input id="ga4_saas_crd_1_last_name" name="last_name" class="m5m-input" type="text"
-                placeholder="Last Name">
-
-                <input id="ga4_saas_crd_1_email" name="email" class="m5m-input" type="email"
-                placeholder="Email Address">
-                <input id="ga4_saas_crd_1_domain" name="domain" class="m5m-input" type="text"
-                placeholder="www.YourDomain.com">
-                <textarea id="ga4_saas_crd_1_message" name="message" class="m5m-input" type="text" rows="3"
-                placeholder="Message"></textarea>
-                <div class="h-center">
-                    <br>
-                    <a id="cta-btn-free-dla-id" data-n55-enchanted-cta
-data-n55-enchanted-cta-ambient="radius"
-data-n55-enchanted-cta-dont-touch="true"
-data-n55-enchanted-cta-size="large"
-data-n55-theme="danger"
-data-n55-wired4sound-click="7"
-onclick="valForm('ga4_saas_crd_INTRO', this )"
-tabindex="0">
-                        <span>Submit Info</span><span data-n55-wired4sound-mouseover="3">Let's Get Started ...</span>
-                    </a>
-                </div>  
-            </form>
-        </section>
+        <section id="ga4_infographic__cheatsheet" class="pfmf-grid pfmf-grid__33_33_33 l-saas-crd"></section>
     </article>
 </template>
 
@@ -1520,7 +1559,7 @@ tabindex="0">
 <template id="js-pup-cal" data-n55-sodapop-modal="false" data-n55-sodapop-size="small" data-n55-sodapop-fullscreen="true">
     <article class="rev-artc">
         <section class="readable__doc" style="padding: 0; margin: 0;">
-            <div id="js-cal-target" style="height: 80vh;"></div>
+            <div id="js-cal-target" style="height: 98vh;"></div>
         </section>
     </article>
 </template>
