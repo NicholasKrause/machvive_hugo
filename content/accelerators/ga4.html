@@ -605,7 +605,7 @@ setTimeout(()=>{  //  autoOpen if in query string
     autoOpenParm = autoOpenParm.get("autoOpen")
     if( autoOpenParm && neodigmSodaPop ) {
         neodigmSodaPop.autoOpen( autoOpenParm )
-        autoOpenParm = autoOpenParm + "_cb"  // Callback by append naming convention
+        autoOpenParm = autoOpenParm +   // Callback by append naming convention
         if(typeof window[ autoOpenParm ] === "function") neodigmSodaPop.setOnAfterOpen( window[ autoOpenParm ] )
     } // Note: Cannot open in fullscreen mode when opened via URL param
 }, 1256)
