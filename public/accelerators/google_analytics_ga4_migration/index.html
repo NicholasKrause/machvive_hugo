@@ -1363,8 +1363,21 @@ data-n55-sodapop-id="ga4_infographic">
 </script>
 
 <script type="text/javascript">
-    open_ga4_infographic_cb = function(){ setTimeout(function(){ ga4_infographic_cb() }, 1600)
+    let doExpand = function( bExp = true ){  //  Toggle OPEN all details children
+        let elSec = document.getElementById("ga4_infographic__cheatsheet")
+        let isOpen = elSec.querySelector("details").getAttribute("open")
+        if( elSec ){
+            [ ... elSec.querySelectorAll("summary") ].forEach( function( eS ){
+                if( !isOpen ){
+                    eS.parentElement.setAttribute( "open", "true" )
+                }else{
+                    eS.parentElement.removeAttribute( "open" )
+                }
+            } )
+        }
     }
+    open_ga4_infographic_cb = function(){ setTimeout(function(){ ga4_infographic_cb() }, 1600) }
+
     ga4_infographic_cb = function(){
         NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "primary"], "random", .7)
         neodigmMetronome.init().pause( 2400 )
@@ -1434,8 +1447,24 @@ setTimeout(()=>{  //  autoOpen if in query string
             <neodigm-carousel id="js-caro-cheatsheet">
                 <section>
                     <section>
-<section  id="ga4_infographic__cheatsheet" class="pfmf-grid pfmf-grid__33_33_33 l-saas-crd">
-</section>
+<nav class="h-center">
+<a id="js-cs-exp" tabindex="0" aria-haspopup="true"
+onclick="doExpand()"
+data-n55-enchanted-cta
+data-n55-enchanted-cta-dont-touch="true"
+data-n55-enchanted-cta-shape-off="true"
+data-n55-enchanted-cta-hover-an="true"
+data-n55-enchanted-cta-size="xsmall"
+data-n55-flash-theme="danger"
+data-n55-theme="secondary"
+data-n55-toast="Toggle|Expand / Collapse All"
+data-n55-wired4sound-click="7"
+><span data-n55-wired4sound-mouseover="3">Expand / Collapse All</span><span>Open or Close All</span>
+</a>
+
+</nav>
+
+                        <section  id="ga4_infographic__cheatsheet" class="pfmf-grid pfmf-grid__33_33_33 l-saas-crd"></section>
                     </section>
                     <section>
                         <h6>Page Tab Region 1</h6><p>QQQQ</p><p>QQQQ</p>
