@@ -570,7 +570,7 @@ data-n55-sodapop-id="ga4_infographic">
     let doSideContent = function( aSideTab = null ){  //  
         let elTable = document.getElementById("js-caro-cheatsheet-table")
         if( aSideTab && elTable && window.oM5M_tool ){
-            let sMU = '<p>##TD##</p>', sOut = ""
+            let sMU = '<div class="txt-readable prg">##TD##</div>', sOut = ""
             aSideTab = aSideTab.split(",")
             window.oM5M_tool[aSideTab[0]].lines[aSideTab[1]].table.forEach(function( sTD ){
                 sOut = sOut + sMU.replace("##TD##", sTD)
@@ -697,7 +697,8 @@ setTimeout(()=>{  //  autoOpen if in query string
                             <svg data-n55-wired4sound-click="9" height="48px" viewBox="0 0 26 26" width="48px"
                             style="transform: rotate(-90deg); cursor: pointer;" fill="#DD4124"><rect fill="none" height="48" width="48"/><path d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M12,15.5L7.5,11l1.42-1.41L12,12.67 l3.08-3.08L16.5,11L12,15.5z"/></svg>
                         </nav>
-                        <section id="js-caro-cheatsheet-table">
+                        <section id="js-caro-cheatsheet-table"
+                        style="display: grid; grid-template-columns: 256px 1fr;" >
                             <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/32.webp" alt="GA4 Shopify Infographic White Label [UA→GA4] upgrade to Google Analytics 4">
                         </section>
                     </section>
