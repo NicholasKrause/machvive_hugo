@@ -566,6 +566,19 @@ data-n55-sodapop-id="ga4_infographic">
 </script>
 
 <script type="text/javascript">
+
+    let doSideContent = function( aSideTab = null ){  //  
+        let elTable = document.getElementById("js-caro-cheatsheet-table")
+        if( aSideTab && elTable && window.oM5M_tool ){
+            let sMU = '<p>##TD##</p>', sOut = ""
+            aSideTab = aSideTab.split(",")
+            window.oM5M_tool[aSideTab[0]].lines[aSideTab[1]].table.forEach(function( sTD ){
+                sOut = sOut + sMU.replace("##TD##", sTD)
+            })
+            elTable.innerHTML = sOut
+            neodigmCarousel.nav({id:'js-caro-cheatsheet', nav:'1.6'})
+        }
+    }
     let doExpand = function( bExp = true ){  //  Toggle OPEN all details children
         let elSec = document.getElementById("ga4_infographic__cheatsheet")
         let isOpen = elSec.querySelector("details").getAttribute("open")
@@ -596,27 +609,39 @@ let sMU_crd = `
 ##card##
 </span></div></div>
 <details>
-<summary class="hd3 h-center h-marker__danger txt-readable prg h-hvr__danger txt-read" data-n55-wired4sound-mouseover="3">##length## Metrics</summary>
+<summary class="hd3 h-center h-marker__danger txt-readable prg h-hvr__danger txt-read" data-n55-wired4sound-mouseover="3">##length## Attributes</summary>
 <aside></aside>
 </details>
 </article>`
 
-let sMU_line = `<p class="txt-readable prg">##name##</p>
+let sMU_line = `<p class="txt-readable prg">##name##
+<a idQ="js-caro-slide_" tabindex="0" aria-haspopup="true"
+style="float: right;"
+onclick="doSideContent('##sidetab##')"
+data-n55-enchanted-cta data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta-shape-off="true" data-n55-enchanted-cta-hover-an="false"
+data-n55-enchanted-cta-size="xsmall"
+data-n55-flash-theme="party"
+data-n55-theme="night"
+data-n55-wired4sound-click="8"
+><span data-n55-wired4sound-mouseover="3">##type##</span><span> </span>
+</a>
+</p>
 <p class="txt-readable prg txt-read__16">##desc##</p>
 <br>`
             fetch("/accelerators/m5m_ga4_interactive_infographic.json").then(response => response.json()) // Get Cheat Sheet
                 .then(( oCards ) => {
+                    window.oM5M_tool = oCards
                     for (sK in oCards) {
                         let elArt = document.createElement("article");
                         elArt.id = sK + "_id";
                         elArt.innerHTML = sMU_crd.replaceAll("##card##", sK).replaceAll("##length##", oCards[ sK ].lines.length)
                         elSec.appendChild( elArt );
-                        oCards[ sK ].lines.forEach(function( oLine ){
+                        oCards[ sK ].lines.forEach(function( oLine, nDx ){
                             let elAside = elArt.querySelector("aside")
                             if( elAside ){
                                 let elLine = document.createElement("p");
                                 if( oLine.desc.indexOf("-") != -1 ) sMU_line = sMU_line.replaceAll("<br>","")
-                                elLine.innerHTML = sMU_line.replaceAll("##name##", oLine.name).replaceAll("##desc##", oLine.desc)
+                                elLine.innerHTML = sMU_line.replaceAll("##name##", oLine.name).replaceAll("##desc##", oLine.desc).replaceAll("##type##", oLine.type).replaceAll("##sidetab##", [ sK, nDx ])
                                 elAside.appendChild( elLine );
                             }
                         })
@@ -667,10 +692,14 @@ setTimeout(()=>{  //  autoOpen if in query string
                         <section  id="ga4_infographic__cheatsheet" class="pfmf-grid pfmf-grid__33_33_33 l-saas-crd"></section>
                     </section>
                     <section>
-                        <h6>Page Tab Region 1</h6><p>QQQQ</p><p>QQQQ</p>
-                        <a data-n55-carousel-nav='{"id": "js-caro-cheatsheet", "nav": "next"}'>next</a>
-                        <a data-n55-carousel-nav='{"id": "js-caro-cheatsheet", "nav": 1}'>1</a>
-                        <a data-n55-carousel-nav='{"id": "js-caro-cheatsheet", "nav": "prev"}'>prev</a>
+                        <nav onclick="neodigmCarousel.nav({id:'js-caro-cheatsheet',nav:'1'})"
+                        data-n55-wired4sound-click="9">
+                            <svg data-n55-wired4sound-click="9" height="48px" viewBox="0 0 26 26" width="48px"
+                            style="transform: rotate(-90deg); cursor: pointer;" fill="#DD4124"><rect fill="none" height="48" width="48"/><path d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M12,15.5L7.5,11l1.42-1.41L12,12.67 l3.08-3.08L16.5,11L12,15.5z"/></svg>
+                        </nav>
+                        <section id="js-caro-cheatsheet-table">
+                            <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/32.webp" alt="GA4 Shopify Infographic White Label [UA→GA4] upgrade to Google Analytics 4">
+                        </section>
                     </section>
                 </section>
                 </neodigm-carousel>
