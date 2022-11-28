@@ -3,8 +3,6 @@
     "languageCode": "en-us",
     "title": "Mach Five Marketing | Chicago",
     "taxonomies": {
-      "category": "categories",
-      "tag": "tags",
       "accelerator": "accelerators"
    }
  }
